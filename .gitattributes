@@ -1,0 +1,12 @@
+# Text files keep Unix line endings everywhere, so Netlify's and GitHub's
+# Linux builds and the Android gradlew script see the same files as Windows.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.jar binary
