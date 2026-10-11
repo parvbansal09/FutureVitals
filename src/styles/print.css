@@ -1,0 +1,24 @@
+/* The printed plan: one page, the plan's items and questions only. No names,
+   no answers, so it is safe to hand over at a front desk. The summary is
+   rendered straight into <body>, so print can show it and nothing else. */
+.print-only { display: none; }
+
+@media print {
+  @page { size: letter; margin: 0.45in; }
+  html, body { overflow: visible !important; height: auto !important; background: #fff !important; }
+  body > *:not(.print-only) { display: none !important; }
+  .print-only {
+    display: block !important;
+    font-family: 'Times New Roman', Times, Tinos, serif;
+    color: #000;
+    font-size: 10.5pt;
+    line-height: 1.3;
+  }
+  .print-only h1 { font-size: 17pt; margin: 0 0 2pt; }
+  .print-only h2 { font-size: 11.5pt; margin: 8pt 0 1pt; }
+  .print-only h2 small { font-weight: 400; font-size: 9.5pt; }
+  .print-only ul { margin: 0; padding-left: 14pt; }
+  .print-only li { margin: 1pt 0; }
+  .print-only .print-block { break-inside: avoid; }
+  .print-only .print-meta { font-size: 9pt; margin: 3pt 0; }
+}

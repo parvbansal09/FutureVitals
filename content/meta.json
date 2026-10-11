@@ -1,0 +1,165 @@
+{
+  "appVersion": "2.0.0",
+  "contentVersion": "2026.10.07",
+  "contentUpdated": "2026-10-07",
+  "clinicalReviewer": {
+    "name": null,
+    "credentials": null,
+    "reviewedOn": null,
+    "note": "Required before any public release. Signs off the screening rules, relative risks, prevention entries, scanner rules and the Spanish text."
+  },
+  "spanish": {
+    "status": "draft",
+    "reviewer": null,
+    "reviewedOn": null,
+    "note": "Every screen has Spanish text. It is a draft until a native-speaking health communicator reviews it, and the Language screen says so."
+  },
+  "feedbackEmail": "engagemassey@vcu.edu",
+  "feedbackEmailNote": "Massey-owned address. Confirm with Massey's Community Outreach and Engagement office before release.",
+  "guidelineOrgs": [
+    {
+      "name": "U.S. Preventive Services Task Force (USPSTF)",
+      "url": "https://www.uspreventiveservicestaskforce.org/"
+    },
+    {
+      "name": "American Cancer Society (ACS)",
+      "url": "https://www.cancer.org/"
+    },
+    {
+      "name": "Centers for Disease Control and Prevention (CDC)",
+      "url": "https://www.cdc.gov/"
+    },
+    {
+      "name": "National Cancer Institute (NCI)",
+      "url": "https://www.cancer.gov/"
+    },
+    {
+      "name": "International Agency for Research on Cancer (IARC)",
+      "url": "https://monographs.iarc.who.int/"
+    },
+    {
+      "name": "World Cancer Research Fund / AICR (WCRF)",
+      "url": "https://www.wcrf.org/"
+    },
+    {
+      "name": "U.S. Environmental Protection Agency (EPA)",
+      "url": "https://www.epa.gov/radon"
+    },
+    {
+      "name": "Virginia Department of Health (VDH)",
+      "url": "https://www.vdh.virginia.gov/"
+    },
+    {
+      "name": "American Association for the Study of Liver Diseases (AASLD)",
+      "url": "https://www.aasld.org/practice-guidelines"
+    },
+    {
+      "name": "Pan American Health Organization, WHO Regional Office for the Americas",
+      "url": "https://iris.paho.org/handle/10665.2/18621"
+    }
+  ],
+  "productData": {
+    "name": "Open Food Facts",
+    "url": "https://world.openfoodfacts.org/",
+    "license": "Open Database License (ODbL)",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "note": "The ODbL requires a visible credit with links wherever product data is shown: the scanner result and the About screen. See OPEN-FOOD-FACTS.md."
+  },
+  "changelog": [
+    {
+      "date": "2026-10-07",
+      "en": "The health check only points out a missing answer after you try to continue. Small text is larger and darker, and Home is simpler.",
+      "es": "El chequeo solo señala una respuesta que falta después de intentar continuar. El texto pequeño es más grande y oscuro, y el Inicio es más sencillo."
+    },
+    {
+      "date": "2026-10-05",
+      "en": "The food diary now covers your last 7 days, ending today. Older days drop off, so last week never counts as this week.",
+      "es": "El diario de comidas ahora cubre sus últimos 7 días, hasta hoy. Los días más viejos salen, así que la semana pasada nunca cuenta como esta."
+    },
+    {
+      "date": "2026-10-05",
+      "en": "Brain tumors now get a score: family history, radiation to the head when young, and weight. The check asks about BRCA, Lynch and other gene changes one by one.",
+      "es": "Los tumores cerebrales ahora tienen puntaje: historia familiar, radiación en la cabeza de joven y peso. El chequeo pregunta por BRCA, Lynch y otros cambios genéticos uno por uno."
+    },
+    {
+      "date": "2026-10-05",
+      "en": "Skin, cervical, bladder and lung scores now use every answer that bears on them, such as sun protection and the HPV vaccine.",
+      "es": "Los puntajes de piel, cuello uterino, vejiga y pulmón ahora usan cada respuesta que les toca, como la protección del sol y la vacuna contra el VPH."
+    },
+    {
+      "date": "2026-10-04",
+      "en": "Answers you change in the risk calculator are now saved, so your plan and How you compare always match them.",
+      "es": "Las respuestas que cambia en la calculadora de riesgo ahora se guardan, así que su plan y Cómo se compara siempre coinciden."
+    },
+    {
+      "date": "2026-10-03",
+      "en": "Every product in the scanner gets a grade from A to F, from the ingredients linked to cancer in it.",
+      "es": "Cada producto del escáner tiene una calificación de la A a la F, según los ingredientes ligados al cáncer."
+    },
+    {
+      "date": "2026-10-03",
+      "en": "Scan a barcode now takes a picture of it, which reads far more reliably.",
+      "es": "Escanear un código de barras ahora le toma una foto, que se lee mucho mejor."
+    },
+    {
+      "date": "2026-10-02",
+      "en": "Light and dark mode: tap the sun or moon at the top of any screen. The app remembers your pick. Settings can also follow your phone.",
+      "es": "Modo claro y oscuro: toque el sol o la luna arriba en cualquier pantalla. La app recuerda lo que elige. En Ajustes también puede seguir a su teléfono."
+    },
+    {
+      "date": "2026-10-02",
+      "en": "Ingredient photos are read more clearly. If a photo cannot be read, the app says so and gives tips, instead of showing scrambled text. A barcode in the photo is used when there is one.",
+      "es": "Las fotos de ingredientes se leen mejor. Si una foto no se puede leer, la app lo dice y da consejos, en vez de mostrar texto revuelto. Si hay un código de barras en la foto, se usa."
+    },
+    {
+      "date": "2026-10-02",
+      "en": "Scan a barcode from a photo. If the bars do not read, the app reads the numbers under them. The app now has a light teal look.",
+      "es": "Escanee un código de barras con una foto. Si las barras no se leen, la app lee los números de abajo. La app ahora tiene un color verde azulado claro."
+    },
+    {
+      "date": "2026-10-02",
+      "en": "The scanner now has 80,000 U.S. products from Open Food Facts inside the app. Type a barcode or search by name, even offline. Looking one up sends nothing.",
+      "es": "El escáner ahora tiene 80,000 productos de EE. UU. de Open Food Facts dentro de la app. Escriba un código o busque por nombre, incluso sin conexión. Buscar uno no envía nada."
+    },
+    {
+      "date": "2026-10-01",
+      "en": "New: a risk score calculator. See a score for each cancer and change any answer to watch the scores move. Stomach, pancreatic and brain are now in it.",
+      "es": "Nuevo: una calculadora de riesgo. Vea un puntaje para cada cáncer y cambie cualquier respuesta para ver cómo se mueven. Ahora incluye estómago, páncreas y cerebro."
+    },
+    {
+      "date": "2026-10-01",
+      "en": "The Connect to care page is gone for now. The printed plan now points to 2-1-1 for help finding care.",
+      "es": "La página Conectar con atención no está por ahora. El plan impreso ahora indica marcar 2-1-1 para encontrar atención."
+    },
+    {
+      "date": "2026-09-29",
+      "en": "The scanner counts milk, grains and beans only when they are a main ingredient. It also shows the list of ingredients it checked.",
+      "es": "El escáner cuenta la leche, los granos y los frijoles solo cuando son un ingrediente principal. También muestra la lista de ingredientes que revisó."
+    },
+    {
+      "date": "2026-09-29",
+      "en": "On Android, the app keeps your data out of phone backups. The privacy policy now says how iPhone backups work.",
+      "es": "En Android, la app deja sus datos fuera de las copias de seguridad. La política de privacidad ahora explica las copias del iPhone."
+    },
+    {
+      "date": "2026-09-28",
+      "en": "Version 2. Age is now asked in 5-year bands, so start and stop ages match the guidelines exactly.",
+      "es": "Versión 2. Ahora la edad se pregunta en grupos de 5 años, así las edades de inicio y fin coinciden con las guías."
+    },
+    {
+      "date": "2026-09-28",
+      "en": "Lung screening follows the American Cancer Society 2023 rule: 50 to 80, 20 pack-years, now or in the past. The plan notes the Task Force 15-year limit, because some insurance uses it.",
+      "es": "La prueba de pulmón sigue la regla de la Sociedad Americana contra el Cáncer de 2023: de 50 a 80 años, 20 paquetes-año, ahora o antes. El plan menciona el límite de 15 años del Grupo de Trabajo, porque algunos seguros lo usan."
+    },
+    {
+      "date": "2026-09-28",
+      "en": "The risk picture shows bands in words, not numbers first. It no longer shows lifetime percentages or compares cancers.",
+      "es": "El perfil de riesgo muestra niveles en palabras, no números primero. Ya no muestra porcentajes de por vida ni compara cánceres."
+    },
+    {
+      "date": "2026-09-28",
+      "en": "ZIP codes are now looked up on your phone. They are never sent anywhere.",
+      "es": "Los códigos postales ahora se buscan en su teléfono. Nunca se envían a ningún lugar."
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "version": "2026.09.28",
+  "notes": "Every link and number here is checked by 'npm run check:links'. The app opens links in the phone's own browser and sends nothing with them. Block order changes with the person's plan (see src/engine/connect.ts).",
+  "phoneDiscrepancy": "Massey's breast and lung screening pages print (800) 792-6161. Massey's appointment page and VCU Health print (800) 762-6161, which is used here. Ask Massey to confirm and correct the other pages.",
+  "blocks": [
+    {
+      "id": "appointment",
+      "icon": "calendar",
+      "title": {
+        "en": "Make an appointment",
+        "es": "Pedir una cita"
+      },
+      "desc": {
+        "en": "Call the cancer center or send a request online.",
+        "es": "Llame al centro de cáncer o envíe una solicitud en línea."
+      },
+      "actions": [
+        {
+          "type": "tel",
+          "value": "(877) 462-7739",
+          "label": {
+            "en": "Call the appointment line",
+            "es": "Llamar a la línea de citas"
+          }
+        },
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/request-an-appointment/",
+          "label": {
+            "en": "Request an appointment",
+            "es": "Solicitar una cita"
+          }
+        },
+        {
+          "type": "tel",
+          "value": "(800) 762-6161",
+          "label": {
+            "en": "Screening appointments",
+            "es": "Citas para pruebas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "screening",
+      "icon": "stethoscope",
+      "title": {
+        "en": "Screening programs",
+        "es": "Programas de detección"
+      },
+      "desc": {
+        "en": "The cancer center’s page for each screening test.",
+        "es": "La página del centro de cáncer sobre cada prueba."
+      },
+      "actions": [
+        {
+          "id": "breast",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/breast-cancer-screening/",
+          "label": {
+            "en": "Breast",
+            "es": "Mama"
+          }
+        },
+        {
+          "id": "colorectal",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/colon-cancer-screening/",
+          "label": {
+            "en": "Colorectal",
+            "es": "Colorrectal"
+          }
+        },
+        {
+          "id": "lung",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/lung-cancer-screening/",
+          "label": {
+            "en": "Lung",
+            "es": "Pulmón"
+          }
+        },
+        {
+          "id": "cervical",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/gynecologic-health-resources/",
+          "label": {
+            "en": "Cervical",
+            "es": "Cuello uterino"
+          }
+        },
+        {
+          "id": "prostate",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/prostate-cancer-screening/",
+          "label": {
+            "en": "Prostate",
+            "es": "Próstata"
+          }
+        },
+        {
+          "id": "skin",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/skin-cancer-screening/",
+          "label": {
+            "en": "Skin",
+            "es": "Piel"
+          }
+        },
+        {
+          "id": "lungline",
+          "type": "tel",
+          "value": "(804) 827-5864",
+          "label": {
+            "en": "Lung screening line",
+            "es": "Línea de pulmón"
+          }
+        }
+      ]
+    },
+    {
+      "id": "prevention",
+      "icon": "leaf",
+      "title": {
+        "en": "Prevention services",
+        "es": "Servicios de prevención"
+      },
+      "desc": {
+        "en": "Free help to quit tobacco, eat well and find resources.",
+        "es": "Ayuda gratis para dejar el tabaco, comer bien y encontrar recursos."
+      },
+      "actions": [
+        {
+          "id": "quit",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/community-outreach-and-engagement/prevention-services-and-screening/",
+          "label": {
+            "en": "We CAN Quit (free)",
+            "es": "We CAN Quit (gratis)"
+          }
+        },
+        {
+          "id": "quitline",
+          "type": "tel",
+          "value": "1-800-784-8669",
+          "label": {
+            "en": "Quit Now Virginia",
+            "es": "Quit Now Virginia"
+          }
+        },
+        {
+          "id": "quitlineEs",
+          "type": "tel",
+          "value": "1-855-335-3569",
+          "label": {
+            "en": "Quit line in Spanish",
+            "es": "Línea para dejar de fumar en español"
+          }
+        },
+        {
+          "id": "eatwell",
+          "type": "email",
+          "value": "engagemassey@vcu.edu",
+          "label": {
+            "en": "We Can Eat Well",
+            "es": "We Can Eat Well"
+          }
+        },
+        {
+          "id": "food",
+          "type": "url",
+          "value": "https://www.masseyfoodrx.com/",
+          "label": {
+            "en": "Food is Medicine (for patients)",
+            "es": "Food is Medicine (para pacientes)"
+          }
+        },
+        {
+          "id": "crc",
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/cancer-research-and-resource-centers/",
+          "label": {
+            "en": "Community Resource Centers",
+            "es": "Centros de Recursos Comunitarios"
+          }
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "icon": "users",
+      "title": {
+        "en": "Community",
+        "es": "Comunidad"
+      },
+      "desc": {
+        "en": "Talks, events and grants with Richmond communities.",
+        "es": "Charlas, eventos y becas con las comunidades de Richmond."
+      },
+      "actions": [
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/facts-and-faith-fridays/",
+          "label": {
+            "en": "Facts & Faith Fridays",
+            "es": "Facts & Faith Fridays"
+          }
+        },
+        {
+          "type": "tel",
+          "value": "(804) 628-0896",
+          "label": {
+            "en": "Mobile health vans",
+            "es": "Camionetas móviles de salud"
+          }
+        },
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/community-outreach-and-engagement/community-seed-grant-program/",
+          "label": {
+            "en": "Community grants",
+            "es": "Becas comunitarias"
+          }
+        },
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/community-outreach-and-engagement/",
+          "label": {
+            "en": "Community outreach",
+            "es": "Alcance comunitario"
+          }
+        }
+      ]
+    },
+    {
+      "id": "trials",
+      "icon": "flask",
+      "title": {
+        "en": "Clinical trials",
+        "es": "Ensayos clínicos"
+      },
+      "desc": {
+        "en": "Could a trial be right for me?",
+        "es": "¿Podría un ensayo ser bueno para mí?"
+      },
+      "body": {
+        "en": "A clinical trial is a careful study of a new way to find, prevent or treat cancer. Joining is your choice, and you can stop at any time. Ask your care team if one fits you.",
+        "es": "Un ensayo clínico es un estudio cuidadoso de una nueva forma de encontrar, prevenir o tratar el cáncer. Participar es su decisión y puede dejarlo cuando quiera. Pregunte a su equipo de salud si hay uno para usted."
+      },
+      "actions": [
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/clinical-trials/clinical-trial-interest-form/",
+          "label": {
+            "en": "Trial interest form",
+            "es": "Formulario de interés"
+          }
+        },
+        {
+          "type": "tel",
+          "value": "(804) 628-6430",
+          "label": {
+            "en": "Call about trials",
+            "es": "Llamar sobre ensayos"
+          }
+        }
+      ]
+    },
+    {
+      "id": "afford",
+      "icon": "wallet",
+      "title": {
+        "en": "Can’t afford care?",
+        "es": "¿No puede pagar la atención?"
+      },
+      "desc": {
+        "en": "Free screening, Medicaid and money help.",
+        "es": "Pruebas gratis, Medicaid y ayuda con los costos."
+      },
+      "actions": [
+        {
+          "id": "ewl",
+          "type": "tel",
+          "value": "1-866-395-4968",
+          "label": {
+            "en": "Every Woman’s Life",
+            "es": "Every Woman’s Life"
+          }
+        },
+        {
+          "id": "medicaid",
+          "type": "tel",
+          "value": "1-833-522-5582",
+          "label": {
+            "en": "Cover Virginia (Medicaid)",
+            "es": "Cover Virginia (Medicaid)"
+          }
+        },
+        {
+          "id": "medicaidWeb",
+          "type": "url",
+          "value": "https://coverva.dmas.virginia.gov/apply/",
+          "label": {
+            "en": "Medicaid basics",
+            "es": "Medicaid: lo básico"
+          }
+        },
+        {
+          "id": "211",
+          "type": "tel",
+          "value": "211",
+          "label": {
+            "en": "211 Virginia",
+            "es": "211 Virginia"
+          }
+        },
+        {
+          "id": "vcuFinancial",
+          "type": "tel",
+          "value": "(804) 828-0966",
+          "label": {
+            "en": "VCU Health financial help",
+            "es": "Ayuda económica de VCU Health"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "icon": "mail",
+      "title": {
+        "en": "Ask a question",
+        "es": "Haga una pregunta"
+      },
+      "desc": {
+        "en": "Send a general question by email.",
+        "es": "Envíe una pregunta general por correo."
+      },
+      "actions": [
+        {
+          "type": "email",
+          "value": "askmassey@vcu.edu",
+          "label": {
+            "en": "askmassey@vcu.edu",
+            "es": "askmassey@vcu.edu"
+          }
+        }
+      ]
+    }
+  ]
+}

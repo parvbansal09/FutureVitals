@@ -1,0 +1,13 @@
+// From src/engine/content.ts. Put back above the Virginia ZIP section, and add
+// `import masseyJson from '../../content/massey.json';` to the imports.
+// ── Connect ────────────────────────────────────────────────────────
+export interface ConnectBlock {
+  id: string;
+  icon: string;
+  title: Bi;
+  desc: Bi;
+  body?: Bi;
+  actions: Action[];
+}
+export const massey = masseyJson as unknown as { blocks: ConnectBlock[] };
+

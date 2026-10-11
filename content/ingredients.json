@@ -1,0 +1,229 @@
+{
+  "version": "2026.09.29",
+  "notes": "Product scanner rules. Labels are decided by rules, never by a score (see src/engine/scanner.ts); the ingredient grade below is shown beside the label and never changes it. Worth limiting: an IARC Group 1 or 2A item, or NOVA 4 with added sugar or salt above the WHO (PAHO) thresholds. Fine in moderation: NOVA 3 or 4 with no Group 1 or 2A item, or any Group 2B additive, or a WCRF risk item. No cancer evidence: nothing on the IARC or WCRF risk lists. Protective WCRF items are shown separately and do not change the label. A rule with \"lead\": true only counts its words among the first three ingredients, so 8% milk powder in a sweet spread is not 'dairy' and wine cooked into a sauce is not 'alcohol' (category tags and the alcohol figure still count). 'exclude' phrases are removed before matching (goat cheese is not red meat). Products tagged with a 'meatFreeTags' category are never matched as meat. Every quote is in the source's own words; 'quoteChecked' turns true once the clinical reviewer confirms it against the live page.",
+
+  "thresholds": {
+    "freeSugarEnergyShare": 0.10,
+    "sodiumMgPerKcal": 1.0,
+    "source": { "name": "WHO Regional Office for the Americas (PAHO) Nutrient Profile Model, 2016", "url": "https://iris.paho.org/handle/10665.2/18621" }
+  },
+
+  "grade": {
+    "notes": "The ingredient grade, A to F, shown for every product and item looked up (added at the product owner's request, October 2026). Each item linked to cancer in a product adds points once, by how strong the evidence is that it can cause cancer: IARC Group 1, Group 2A, a WCRF 'probable' cause, Group 2B, and ultra-processing with added sugar or salt over the WHO (PAHO) limits (linked to weight gain). 'limited' is for diary foods with only limited evidence. Protective foods add nothing and take nothing away. The grade counts items, not amounts: it cannot tell a trace from a main ingredient, or how much a person eats. Bands are the lowest point total for each grade. Changing points or bands changes the grade of every product in content/products: run npm run grades afterwards (a test checks).",
+    "points": { "iarc1": 4, "iarc2A": 3, "wcrf": 2, "iarc2B": 1, "weight": 1, "limited": 1 },
+    "bands": [["A", 0], ["B", 1], ["C", 2], ["D", 4], ["F", 6]]
+  },
+
+  "addedSugarWords": ["sugar", "cane sugar", "brown sugar", "corn syrup", "high fructose corn syrup", "glucose syrup", "glucose-fructose", "dextrose", "fructose", "sucrose", "invert sugar", "honey", "molasses", "maltose", "agave", "syrup", "azúcar", "azucar", "jarabe", "miel", "sacarosa"],
+  "addedSaltWords": ["salt", "sea salt", "sodium chloride", "sal", "cloruro de sodio"],
+
+  "nova4Markers": ["natural flavor", "natural flavour", "artificial flavor", "flavoring", "flavouring", "high fructose corn syrup", "corn syrup solids", "maltodextrin", "dextrose", "invert sugar", "hydrogenated", "interesterified", "modified starch", "modified food starch", "modified corn starch", "soy protein isolate", "whey protein isolate", "hydrolyzed", "hydrolysed", "mono and diglycerides", "mono- and diglycerides", "polysorbate", "carrageenan", "xanthan gum", "guar gum", "cellulose gum", "sucralose", "acesulfame", "aspartame", "saccharin", "artificial color", "red 40", "yellow 5", "yellow 6", "blue 1", "caramel color", "monosodium glutamate", "disodium inosinate", "disodium guanylate", "sabor artificial", "saborizante", "jarabe de maíz", "maltodextrina", "colorante"],
+
+  "meatFreeTags": ["en:meat-analogues", "en:meat-alternatives", "en:plant-based-meat-alternatives", "en:vegetarian-sausages", "en:veggie-burgers", "en:vegan-sausages"],
+
+  "hazards": [
+    {
+      "id": "processed-meat",
+      "iarc": "1",
+      "diary": "proc",
+      "label": { "en": "Processed meat", "es": "Carne procesada" },
+      "classification": { "en": "IARC Group 1: carcinogenic to humans", "es": "IARC Grupo 1: carcinógeno para los humanos" },
+      "quote": "The experts concluded that each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%.",
+      "quoteEs": "Los expertos concluyeron que cada porción de 50 gramos de carne procesada comida a diario aumenta el riesgo de cáncer colorrectal en 18%.",
+      "quoteChecked": false,
+      "exposure": { "en": "50 g of processed meat a day (about one hot dog)", "es": "50 g de carne procesada al día (más o menos una salchicha)" },
+      "source": { "org": "IARC", "name": "IARC Press Release No. 240 (2015)", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf" },
+      "words": ["bacon", "ham", "salami", "pepperoni", "sausage", "hot dog", "frankfurter", "wiener", "bologna", "pastrami", "corned beef", "beef jerky", "jerky", "prosciutto", "chorizo", "kielbasa", "luncheon meat", "deli meat", "cured meat", "smoked meat", "mortadella", "tocino", "jamón", "jamon", "salchicha", "embutido", "mortadela", "cecina"],
+      "exclude": ["imitation bacon", "bacon flavor", "bacon flavour", "bacon flavored", "bacon-flavored", "ham flavor", "sausage flavor", "sausage seasoning", "soy chorizo", "vegan chorizo", "vegetarian sausage", "vegan sausage", "veggie sausage", "plant-based sausage", "plant based sausage", "meatless sausage", "vegan bacon", "chorizo de soya", "chorizo de soja", "salchicha vegetal", "salchicha vegana", "tocino vegano"],
+      "curingWords": ["sodium nitrite", "potassium nitrite", "sodium nitrate", "potassium nitrate", "e250", "e249", "e251", "e252", "nitrito de sodio", "nitrato de sodio", "cultured celery", "celery powder"],
+      "tags": ["en:processed-meats", "en:prepared-meats", "en:sausages", "en:hams", "en:bacons", "en:salamis", "en:hot-dogs", "en:cured-meats"]
+    },
+    {
+      "id": "red-meat",
+      "iarc": "2A",
+      "diary": "red",
+      "label": { "en": "Red meat", "es": "Carne roja" },
+      "classification": { "en": "IARC Group 2A: probably carcinogenic to humans", "es": "IARC Grupo 2A: probablemente carcinógeno para los humanos" },
+      "quote": "classified the consumption of red meat as probably carcinogenic to humans (Group 2A), based on limited evidence that the consumption of red meat causes cancer in humans and strong mechanistic evidence supporting a carcinogenic effect.",
+      "quoteEs": "clasificó el consumo de carne roja como probablemente carcinógeno para los humanos (Grupo 2A), por evidencia limitada en humanos y fuerte evidencia sobre cómo actúa.",
+      "quoteChecked": false,
+      "exposure": { "en": "100 g of red meat a day (a palm-sized piece)", "es": "100 g de carne roja al día (un pedazo del tamaño de la palma)" },
+      "source": { "org": "IARC", "name": "IARC Press Release No. 240 (2015)", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf" },
+      "words": ["beef", "pork", "lamb", "veal", "mutton", "goat", "carne de res", "res", "cerdo", "puerco", "cordero", "ternera", "cabra"],
+      "exclude": ["beef broth", "beef stock", "beef bouillon", "beef extract", "beef flavor", "beef flavour", "beef tallow", "beef fat", "beef gelatin", "pork broth", "pork stock", "pork fat", "pork gelatin", "pork rinds", "pork rind", "pork skin", "goat cheese", "goat's cheese", "goats cheese", "goat milk", "goat's milk", "goats milk", "goat whey", "goat butter", "lamb's lettuce", "lambs lettuce", "gelatin", "gelatina", "caldo de res", "consome de res", "grasa de res", "grasa de cerdo", "manteca de cerdo", "piel de cerdo", "queso de cabra", "leche de cabra"],
+      "tags": ["en:beef", "en:pork", "en:lamb", "en:meats"]
+    },
+    {
+      "id": "alcohol",
+      "iarc": "1",
+      "diary": "alcohol",
+      "label": { "en": "Alcohol", "es": "Alcohol" },
+      "classification": { "en": "IARC Group 1: carcinogenic to humans", "es": "IARC Grupo 1: carcinógeno para los humanos" },
+      "quote": "Alcohol consumption is carcinogenic to humans (Group 1).",
+      "quoteEs": "El consumo de alcohol es carcinógeno para los humanos (Grupo 1).",
+      "quoteChecked": false,
+      "exposure": { "en": "10 g of alcohol a day (less than one standard drink)", "es": "10 g de alcohol al día (menos de un trago estándar)" },
+      "source": { "org": "IARC", "name": "IARC Monographs Volume 96 (2010)", "url": "https://publications.iarc.who.int/114" },
+      "words": ["beer", "wine", "rum", "vodka", "whiskey", "whisky", "bourbon", "brandy", "liqueur", "tequila", "gin", "sake", "ethanol", "ethyl alcohol", "cerveza", "vino", "ron", "licor"],
+      "lead": true,
+      "exclude": ["sugar alcohol", "wine vinegar", "vinegar", "vinagre", "non-alcoholic", "alcohol-free", "alcohol free", "sin alcohol", "benzyl alcohol", "cetyl alcohol", "root beer", "ginger beer", "ginger ale", "gingerbread", "rum flavor", "rum flavour", "rum extract", "brandy flavor", "brandy extract", "whiskey flavor", "bourbon flavor", "wine flavor", "beer batter", "beer-battered", "beer battered", "sabor a ron"],
+      "tags": ["en:alcoholic-beverages", "en:beers", "en:wines", "en:spirits", "en:liqueurs", "en:ciders"]
+    },
+    {
+      "id": "salted-food",
+      "wcrf": "probable-increase",
+      "diary": "salted",
+      "label": { "en": "Food preserved in salt", "es": "Comida conservada en sal" },
+      "classification": { "en": "WCRF: probably a cause of stomach cancer", "es": "WCRF: probablemente causa cáncer de estómago" },
+      "quote": "Consuming foods preserved by salting is probably a cause of stomach cancer.",
+      "quoteEs": "Comer alimentos conservados en sal probablemente es una causa de cáncer de estómago.",
+      "quoteChecked": false,
+      "exposure": { "en": "Eating salt-preserved foods often, over years", "es": "Comer seguido alimentos conservados en sal, durante años" },
+      "source": { "org": "WCRF", "name": "WCRF Continuous Update Project: stomach cancer (2016)", "url": "https://www.wcrf.org/diet-activity-and-cancer/" },
+      "words": ["salted fish", "salt fish", "salted cod", "salt cod", "bacalao", "pescado salado", "salted plum", "salted vegetables"],
+      "tags": ["en:salted-fishes"]
+    },
+    {
+      "id": "aspartame",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "Aspartame", "es": "Aspartame" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "IARC classified aspartame as possibly carcinogenic to humans (IARC Group 2B).",
+      "quoteEs": "La IARC clasificó el aspartame como posiblemente carcinógeno para los humanos (Grupo 2B de la IARC).",
+      "quoteChecked": false,
+      "exposure": { "en": "The safe limit is 40 mg per kg of body weight a day. A 150 lb adult would need more than 9 to 14 cans of diet soda a day to pass it.", "es": "El límite seguro es 40 mg por kg de peso al día. Un adulto de 70 kg tendría que tomar más de 9 a 14 latas de refresco de dieta al día para pasarlo." },
+      "source": { "org": "WHO / IARC", "name": "WHO news release, 14 July 2023", "url": "https://www.who.int/news/item/14-07-2023-aspartame-hazard-and-risk-assessment-results-released" },
+      "words": ["aspartame", "e951", "aspartamo"],
+      "tags": ["en:e951"]
+    },
+    {
+      "id": "potassium-bromate",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "Potassium bromate", "es": "Bromato de potasio" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "Potassium bromate is possibly carcinogenic to humans (Group 2B).",
+      "quoteEs": "El bromato de potasio es posiblemente carcinógeno para los humanos (Grupo 2B).",
+      "quoteChecked": false,
+      "exposure": { "en": "IARC does not give a typical amount in food.", "es": "La IARC no da una cantidad típica en la comida." },
+      "source": { "org": "IARC", "name": "IARC Monographs, list of classifications", "url": "https://monographs.iarc.who.int/list-of-classifications" },
+      "words": ["potassium bromate", "bromated flour", "bromated", "e924", "bromato de potasio"],
+      "tags": ["en:e924"]
+    },
+    {
+      "id": "bha",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "BHA (butylated hydroxyanisole)", "es": "BHA (butilhidroxianisol)" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "Butylated hydroxyanisole (BHA) is possibly carcinogenic to humans (Group 2B).",
+      "quoteEs": "El butilhidroxianisol (BHA) es posiblemente carcinógeno para los humanos (Grupo 2B).",
+      "quoteChecked": false,
+      "exposure": { "en": "IARC does not give a typical amount in food.", "es": "La IARC no da una cantidad típica en la comida." },
+      "source": { "org": "IARC", "name": "IARC Monographs, list of classifications", "url": "https://monographs.iarc.who.int/list-of-classifications" },
+      "words": ["butylated hydroxyanisole", "bha", "e320", "butilhidroxianisol"],
+      "tags": ["en:e320"]
+    },
+    {
+      "id": "titanium-dioxide",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "Titanium dioxide", "es": "Dióxido de titanio" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "Titanium dioxide is possibly carcinogenic to humans (Group 2B).",
+      "quoteEs": "El dióxido de titanio es posiblemente carcinógeno para los humanos (Grupo 2B).",
+      "quoteChecked": false,
+      "exposure": { "en": "The IARC finding is about breathing in the dust at work, not eating it.", "es": "El hallazgo de la IARC es sobre respirar el polvo en el trabajo, no sobre comerlo." },
+      "source": { "org": "IARC", "name": "IARC Monographs Volume 93 (2010)", "url": "https://publications.iarc.who.int/111" },
+      "words": ["titanium dioxide", "e171", "dióxido de titanio", "dioxido de titanio"],
+      "tags": ["en:e171"]
+    },
+    {
+      "id": "caramel-4mei",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "Caramel color III or IV (4-MEI)", "es": "Color caramelo III o IV (4-MEI)" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "4-Methylimidazole is possibly carcinogenic to humans (Group 2B).",
+      "quoteEs": "El 4-metilimidazol es posiblemente carcinógeno para los humanos (Grupo 2B).",
+      "quoteChecked": false,
+      "exposure": { "en": "Some caramel colors (classes III and IV) can hold small amounts of 4-MEI.", "es": "Algunos colores caramelo (clases III y IV) pueden tener pequeñas cantidades de 4-MEI." },
+      "source": { "org": "IARC", "name": "IARC Monographs Volume 101 (2013)", "url": "https://publications.iarc.who.int/125" },
+      "words": ["caramel color iii", "caramel color iv", "caramel colour iii", "caramel colour iv", "ammonia caramel", "sulfite ammonia caramel", "sulphite ammonia caramel", "e150c", "e150d"],
+      "tags": ["en:e150c", "en:e150d"]
+    },
+    {
+      "id": "aloe-whole-leaf",
+      "iarc": "2B",
+      "diary": null,
+      "label": { "en": "Aloe vera whole-leaf extract", "es": "Extracto de hoja entera de aloe vera" },
+      "classification": { "en": "IARC Group 2B: possibly carcinogenic to humans", "es": "IARC Grupo 2B: posiblemente carcinógeno para los humanos" },
+      "quote": "Aloe vera whole leaf extract is possibly carcinogenic to humans (Group 2B).",
+      "quoteEs": "El extracto de hoja entera de aloe vera es posiblemente carcinógeno para los humanos (Grupo 2B).",
+      "quoteChecked": false,
+      "exposure": { "en": "IARC does not give a typical amount in food.", "es": "La IARC no da una cantidad típica en la comida." },
+      "source": { "org": "IARC", "name": "IARC Monographs Volume 108 (2016)", "url": "https://publications.iarc.who.int/132" },
+      "words": ["aloe vera whole leaf", "whole leaf aloe", "whole-leaf aloe", "hoja entera de aloe"],
+      "tags": []
+    }
+  ],
+
+  "protective": [
+    {
+      "id": "whole-grains",
+      "wcrf": "probable-decrease",
+      "diary": "fiber",
+      "label": { "en": "Whole grains", "es": "Granos integrales" },
+      "classification": { "en": "WCRF: probably lowers colorectal cancer risk", "es": "WCRF: probablemente baja el riesgo de cáncer colorrectal" },
+      "quote": "Consuming wholegrains probably protects against colorectal cancer.",
+      "quoteEs": "Comer granos integrales probablemente protege contra el cáncer colorrectal.",
+      "quoteChecked": false,
+      "exposure": { "en": "About 90 g of whole grains a day (3 servings)", "es": "Unos 90 g de granos integrales al día (3 porciones)" },
+      "source": { "org": "WCRF", "name": "WCRF Continuous Update Project: colorectal cancer (2018)", "url": "https://www.wcrf.org/diet-activity-and-cancer/" },
+      "words": ["whole grain", "wholegrain", "whole wheat", "whole-wheat", "whole oat", "rolled oats", "oats", "oatmeal", "brown rice", "whole corn", "bulgur", "barley", "quinoa", "avena", "trigo integral", "arroz integral", "integral"],
+      "lead": true,
+      "exclude": ["barley malt", "malted barley", "barley malt extract", "oat milk", "oat flavor"]
+    },
+    {
+      "id": "legumes",
+      "wcrf": "fiber",
+      "diary": "legume",
+      "label": { "en": "Beans and lentils", "es": "Frijoles y lentejas" },
+      "classification": { "en": "WCRF: foods with fiber probably lower colorectal cancer risk", "es": "WCRF: los alimentos con fibra probablemente bajan el riesgo colorrectal" },
+      "quote": "Consuming foods containing dietary fibre probably protects against colorectal cancer.",
+      "quoteEs": "Comer alimentos con fibra probablemente protege contra el cáncer colorrectal.",
+      "quoteChecked": false,
+      "exposure": { "en": "Fiber from food, not pills", "es": "Fibra de la comida, no de pastillas" },
+      "source": { "org": "WCRF", "name": "WCRF Continuous Update Project: colorectal cancer (2018)", "url": "https://www.wcrf.org/diet-activity-and-cancer/" },
+      "words": ["black beans", "pinto beans", "kidney beans", "beans", "lentils", "chickpeas", "garbanzo", "split peas", "frijoles", "lentejas", "garbanzos", "habichuelas"],
+      "lead": true,
+      "exclude": ["coffee beans", "coffee bean", "cocoa beans", "cocoa bean", "cacao beans", "vanilla beans", "vanilla bean", "jelly beans", "green beans", "string beans", "granos de cafe"]
+    },
+    {
+      "id": "dairy",
+      "wcrf": "probable-decrease",
+      "diary": "dairy",
+      "label": { "en": "Dairy", "es": "Lácteos" },
+      "classification": { "en": "WCRF: probably lowers colorectal cancer risk", "es": "WCRF: probablemente baja el riesgo de cáncer colorrectal" },
+      "quote": "Consuming dairy products probably protects against colorectal cancer.",
+      "quoteEs": "Comer productos lácteos probablemente protege contra el cáncer colorrectal.",
+      "quoteChecked": false,
+      "exposure": { "en": "Some studies link very large amounts to prostate cancer.", "es": "Algunos estudios ligan cantidades muy grandes con el cáncer de próstata." },
+      "source": { "org": "WCRF", "name": "WCRF Continuous Update Project: colorectal cancer (2018)", "url": "https://www.wcrf.org/diet-activity-and-cancer/" },
+      "words": ["milk", "yogurt", "yoghurt", "cheese", "leche", "yogur", "queso"],
+      "lead": true,
+      "exclude": ["milk chocolate", "coconut milk", "almond milk", "oat milk", "soy milk", "rice milk", "cashew milk", "milk flavor", "cheese seasoning", "cheese flavor", "cheese flavour", "cheese flavored", "leche de coco", "leche de almendra", "leche de soya", "leche de avena", "sabor a queso"]
+    }
+  ],
+
+  "categoryGroups": {
+    "sugary": ["en:sodas", "en:sweetened-beverages", "en:carbonated-drinks", "en:energy-drinks", "en:sports-drinks", "en:iced-teas", "en:fruit-juices", "en:juice-drinks"],
+    "fried": ["en:chips-and-fries", "en:crisps", "en:potato-crisps", "en:french-fries", "en:fried-foods"],
+    "fiber": ["en:breakfast-cereals", "en:whole-grain-breads", "en:oat-flakes"],
+    "legume": ["en:legumes", "en:beans", "en:lentils", "en:chickpeas"],
+    "dairy": ["en:dairies", "en:milks", "en:yogurts", "en:cheeses"],
+    "fruit": ["en:fruits", "en:fruit-based-foods"],
+    "veg": ["en:vegetables", "en:vegetable-based-foods", "en:canned-vegetables"]
+  }
+}

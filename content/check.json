@@ -1,0 +1,158 @@
+{
+  "version": "2026.09.28",
+  "notes": "Options are written without 'you' or 'your' so the same list works when a helper answers for someone else. Titles and 'why we ask' lines have a helper version in the strings files.",
+
+  "emergencies": [
+    { "id": "em_seizure", "en": "A first seizure", "es": "Una primera convulsión" },
+    { "id": "em_stroke", "en": "Sudden weakness, numbness or confusion", "es": "Debilidad, adormecimiento o confusión de repente" },
+    { "id": "em_bleeding", "en": "Heavy bleeding that will not stop", "es": "Sangrado fuerte que no para" },
+    { "id": "em_breathing", "en": "Trouble breathing or chest pain", "es": "Dificultad para respirar o dolor en el pecho" }
+  ],
+
+  "symptoms": [
+    { "id": "sym_bowel", "cancer": "colorectal", "en": "Blood in stool, or a bowel change that lasts", "es": "Sangre en las heces, o un cambio al ir al baño que no se quita" },
+    { "id": "sym_breast", "cancer": "breast", "en": "A new lump in the breast or armpit, or a nipple change", "es": "Una bolita nueva en el seno o la axila, o un cambio en el pezón" },
+    { "id": "sym_cough", "cancer": "lung", "en": "A cough that will not go away, or coughing up blood", "es": "Una tos que no se quita, o toser sangre" },
+    { "id": "sym_vaginal", "cancer": "cervical", "en": "Bleeding after menopause or between periods", "es": "Sangrado después de la menopausia o entre reglas" },
+    { "id": "sym_mole", "cancer": "skin", "en": "A mole that changes size, shape or color", "es": "Un lunar que cambia de tamaño, forma o color" },
+    { "id": "sym_urine", "cancer": "bladder", "en": "Blood in the urine", "es": "Sangre en la orina" },
+    { "id": "sym_swallow", "cancer": "stomach", "en": "Trouble or pain when swallowing", "es": "Dificultad o dolor al tragar" },
+    { "id": "sym_weight", "cancer": null, "en": "Losing weight without trying", "es": "Bajar de peso sin intentarlo" },
+    { "id": "sym_head", "cancer": "brain", "en": "New headaches that will not stop, or vision changes", "es": "Dolores de cabeza nuevos que no paran, o cambios en la vista" },
+    { "id": "sym_fatigue", "cancer": null, "en": "Very tired for weeks, even with rest", "es": "Mucho cansancio por semanas, aun descansando" }
+  ],
+
+  "ages": [
+    { "id": "18-20", "lo": 18, "hi": 20 },
+    { "id": "21-24", "lo": 21, "hi": 24 },
+    { "id": "25-29", "lo": 25, "hi": 29 },
+    { "id": "30-34", "lo": 30, "hi": 34 },
+    { "id": "35-39", "lo": 35, "hi": 39 },
+    { "id": "40-44", "lo": 40, "hi": 44 },
+    { "id": "45-49", "lo": 45, "hi": 49 },
+    { "id": "50-54", "lo": 50, "hi": 54 },
+    { "id": "55-59", "lo": 55, "hi": 59 },
+    { "id": "60-64", "lo": 60, "hi": 64 },
+    { "id": "65-69", "lo": 65, "hi": 69 },
+    { "id": "70-74", "lo": 70, "hi": 74 },
+    { "id": "75-79", "lo": 75, "hi": 79 },
+    { "id": "80-84", "lo": 80, "hi": 84 },
+    { "id": "85+", "lo": 85, "hi": 120 }
+  ],
+
+  "sexes": [
+    { "id": "female", "en": "Female", "es": "Femenino" },
+    { "id": "male", "en": "Male", "es": "Masculino" }
+  ],
+
+  "genders": [
+    { "id": "woman", "en": "Woman", "es": "Mujer" },
+    { "id": "man", "en": "Man", "es": "Hombre" },
+    { "id": "nonbinary", "en": "Nonbinary", "es": "No binario" },
+    { "id": "other", "en": "Another word", "es": "Otra palabra" }
+  ],
+
+  "familyCancers": [
+    { "id": "colorectal", "en": "Colorectal (colon or rectum)", "es": "Colorrectal (colon o recto)" },
+    { "id": "breast", "en": "Breast", "es": "Mama" },
+    { "id": "ovarian", "en": "Ovarian", "es": "Ovario" },
+    { "id": "uterine", "en": "Uterine (womb)", "es": "Útero (matriz)" },
+    { "id": "prostate", "en": "Prostate", "es": "Próstata" },
+    { "id": "pancreatic", "en": "Pancreatic", "es": "Páncreas" },
+    { "id": "lung", "en": "Lung", "es": "Pulmón" },
+    { "id": "melanoma", "en": "Melanoma (skin)", "es": "Melanoma (piel)" },
+    { "id": "stomach", "en": "Stomach", "es": "Estómago" },
+    { "id": "liver", "en": "Liver", "es": "Hígado" },
+    { "id": "bladder", "en": "Bladder", "es": "Vejiga" },
+    { "id": "brain", "en": "Brain tumor", "es": "Tumor cerebral" }
+  ],
+
+  "yesNo": [
+    { "id": "yes", "en": "Yes", "es": "Sí" },
+    { "id": "no", "en": "No", "es": "No" },
+    { "id": "unsure", "en": "Not sure", "es": "No estoy seguro" }
+  ],
+
+  "history": [
+    { "id": "cancer", "en": "A past cancer (not skin cancer)", "es": "Un cáncer en el pasado (no de piel)" },
+    { "id": "skincancer", "en": "A past skin cancer", "es": "Un cáncer de piel en el pasado" },
+    { "id": "polyps", "en": "Colon polyps found before", "es": "Pólipos de colon encontrados antes" },
+    { "id": "ibd", "en": "Crohn’s disease or ulcerative colitis", "es": "Enfermedad de Crohn o colitis ulcerosa" },
+    { "id": "pap", "en": "An abnormal Pap or HPV test", "es": "Un resultado anormal de Papanicolaou o VPH" },
+    { "id": "hep", "en": "Hepatitis B or hepatitis C", "es": "Hepatitis B o hepatitis C" },
+    { "id": "chestrad", "en": "Radiation to the chest before age 30", "es": "Radiación al pecho antes de los 30 años" },
+    { "id": "headrad", "en": "Radiation treatment to the head before age 21", "es": "Radiación en la cabeza antes de los 21 años" },
+    { "id": "brca", "en": "A BRCA1 or BRCA2 gene change", "es": "Un cambio en el gen BRCA1 o BRCA2" },
+    { "id": "lynch", "en": "Lynch syndrome", "es": "Síndrome de Lynch" },
+    { "id": "syndrome", "en": "Li-Fraumeni, NF1, NF2 or another syndrome linked to brain tumors", "es": "Li-Fraumeni, NF1, NF2 u otro síndrome ligado a tumores cerebrales" }
+  ],
+
+  "hpvVaccine": [
+    { "id": "yes", "en": "Yes, all the shots", "es": "Sí, todas las dosis" },
+    { "id": "some", "en": "Some of the shots", "es": "Algunas dosis" },
+    { "id": "no", "en": "No", "es": "No" },
+    { "id": "unsure", "en": "Not sure", "es": "No estoy seguro" }
+  ],
+
+  "smoke": [
+    { "id": "never", "en": "Never smoked", "es": "Nunca fumó" },
+    { "id": "former", "en": "Used to smoke", "es": "Fumaba antes" },
+    { "id": "current", "en": "Smokes now", "es": "Fuma ahora" }
+  ],
+
+  "packsPerDay": [
+    { "id": "0.25", "value": 0.25, "en": "Less than half a pack", "es": "Menos de media cajetilla" },
+    { "id": "0.5", "value": 0.5, "en": "About half a pack", "es": "Media cajetilla" },
+    { "id": "1", "value": 1, "en": "About 1 pack", "es": "Una cajetilla" },
+    { "id": "1.5", "value": 1.5, "en": "About 1½ packs", "es": "Cajetilla y media" },
+    { "id": "2", "value": 2, "en": "About 2 packs", "es": "Dos cajetillas" },
+    { "id": "3", "value": 3, "en": "3 packs or more", "es": "Tres cajetillas o más" }
+  ],
+
+  "quitYears": [
+    { "id": "lt5", "en": "Less than 5 years ago", "es": "Hace menos de 5 años" },
+    { "id": "5to15", "en": "5 to 15 years ago", "es": "Hace 5 a 15 años" },
+    { "id": "gt15", "en": "More than 15 years ago", "es": "Hace más de 15 años" }
+  ],
+
+  "alcohol": [
+    { "id": "none", "drinks": 0, "en": "None", "es": "Nada" },
+    { "id": "le1", "drinks": 1, "en": "1 drink a week or less", "es": "1 trago a la semana o menos" },
+    { "id": "2to7", "drinks": 4.5, "en": "2 to 7 drinks a week", "es": "2 a 7 tragos a la semana" },
+    { "id": "8to14", "drinks": 11, "en": "8 to 14 drinks a week", "es": "8 a 14 tragos a la semana" },
+    { "id": "15plus", "drinks": 18, "en": "15 or more a week", "es": "15 o más a la semana" }
+  ],
+
+  "activity": [
+    { "id": "lt60", "en": "Less than 60 minutes a week", "es": "Menos de 60 minutos a la semana" },
+    { "id": "60to149", "en": "60 to 149 minutes a week", "es": "60 a 149 minutos a la semana" },
+    { "id": "150to299", "en": "150 to 299 minutes a week", "es": "150 a 299 minutos a la semana" },
+    { "id": "300plus", "en": "300 minutes or more a week", "es": "300 minutos o más a la semana" }
+  ],
+
+  "frequency": [
+    { "id": "most", "en": "Most days", "es": "Casi todos los días" },
+    { "id": "some", "en": "A few times a week", "es": "Algunas veces por semana" },
+    { "id": "rarely", "en": "Rarely or never", "es": "Casi nunca" }
+  ],
+
+  "plants": [
+    { "id": "most", "en": "At most meals", "es": "En casi todas las comidas" },
+    { "id": "some", "en": "Some days", "es": "Algunos días" },
+    { "id": "rarely", "en": "Rarely", "es": "Casi nunca" }
+  ],
+
+  "radon": [
+    { "id": "low", "en": "Tested, and it was low", "es": "Se hizo la prueba y salió bajo" },
+    { "id": "fixed", "en": "Tested high, and it was fixed", "es": "Salió alto y ya se arregló" },
+    { "id": "high", "en": "Tested high, not fixed yet", "es": "Salió alto y no se ha arreglado" },
+    { "id": "never", "en": "Never tested", "es": "Nunca se ha hecho la prueba" },
+    { "id": "unsure", "en": "Not sure", "es": "No estoy seguro" }
+  ],
+
+  "sun": [
+    { "id": "always", "en": "Always or usually", "es": "Siempre o casi siempre" },
+    { "id": "sometimes", "en": "Sometimes", "es": "A veces" },
+    { "id": "rarely", "en": "Rarely or never", "es": "Casi nunca" }
+  ]
+}

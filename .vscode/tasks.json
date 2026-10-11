@@ -1,0 +1,29 @@
+{
+  // Tasks for this folder. They run node and npm.cmd directly, never through
+  // PowerShell's npm script, which Windows can refuse to run ("running
+  // scripts is disabled on this system").
+  "version": "2.0.0",
+  "options": { "shell": { "executable": "cmd.exe", "args": ["/d", "/c"] } },
+  "tasks": [
+    {
+      // Started by Run (F5) before the app opens. It stays in the background:
+      // the Terminal panel only opens if something goes wrong. A second Run
+      // reuses the server that is already running.
+      "label": "FutureVitals: dev server",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/dev.mjs"],
+      "isBackground": true,
+      "presentation": { "reveal": "silent", "focus": false, "panel": "dedicated", "showReuseMessage": false, "clear": true },
+      "problemMatcher": {
+        "owner": "vite",
+        "pattern": { "regexp": "^(Port \\d+ is used by another program.*)$", "message": 1 },
+        "background": { "beginsPattern": "VITE", "endsPattern": "ready in" }
+      }
+    },
+    { "label": "FutureVitals: build", "type": "shell", "command": "npm.cmd run build", "group": "build", "problemMatcher": ["$tsc"] },
+    { "label": "FutureVitals: tests", "type": "shell", "command": "npm.cmd test", "group": "test", "problemMatcher": [] },
+    { "label": "FutureVitals: content checks", "type": "shell", "command": "npm.cmd run check:content", "problemMatcher": [] },
+    { "label": "FutureVitals: end-to-end", "type": "shell", "command": "npm.cmd run e2e", "problemMatcher": [] }
+  ]
+}

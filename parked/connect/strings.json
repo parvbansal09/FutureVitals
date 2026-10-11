@@ -1,0 +1,26 @@
+{
+  "en": {
+    "nav": {
+      "connect": "Connect"
+    },
+    "connect": {
+      "title": "Connect to care",
+      "lead": "Real cancer care and Virginia services. Tap to call or open.",
+      "note": "Links open in your browser. The app sends nothing with them.",
+      "suggested": "Suggested for you",
+      "trialsBody": "A clinical trial is a careful study. It tests a new way to find, prevent or treat cancer."
+    }
+  },
+  "es": {
+    "nav": {
+      "connect": "Conectar"
+    },
+    "connect": {
+      "title": "Conectar con atención",
+      "lead": "Servicios reales de cáncer y de Virginia. Toque para llamar o abrir.",
+      "note": "Los enlaces se abren en su navegador. La app no envía nada con ellos.",
+      "suggested": "Sugerido para usted",
+      "trialsBody": "Un ensayo clínico es un estudio cuidadoso. Prueba una nueva forma de encontrar, prevenir o tratar el cáncer."
+    }
+  }
+}

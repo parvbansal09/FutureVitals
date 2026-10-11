@@ -1,0 +1,10 @@
+node_modules/
+dist/
+public/ocr/
+screenshots/
+*.log
+.DS_Store
+android/app/build/
+android/app/src/main/assets/public/
+ios/App/App/public/
+dist-artifact/

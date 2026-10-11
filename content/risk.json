@@ -1,0 +1,194 @@
+{
+  "version": "2026.10.04",
+  "notes": "Every number here is a relative risk from the named source. Factors that apply to a cancer are multiplied (the Harvard Cancer Risk Index method) into a score: a multiple of average for someone the same age and sex. Age is NOT in the score: it is the baseline. A skipped answer is 'not counted', never 1.0. A flagged symptom, a known inherited gene change ('gene' lists the history answers that count for each cancer), long-term hepatitis (liver) or an abnormal Pap or HPV test (cervical) replaces the score. Brain: family history (Hemminki 2009), radiation treatment to the head when young (Neglia 2006) and body weight (meningioma; perUnit 1.24 per 5 BMI units is fitted to Niedermaier 2015's overweight 1.21 and obese 1.54), with Li-Fraumeni, NF1, NF2 and similar syndromes, or Lynch (Turcot), replacing the score. Cell phones, head injury and diet are not counted: the American Cancer Society finds no proof. Skin: sun protection uses Green 2011's daily sunscreen arm (0.50) for 'always'; 'sometimes' and 'rarely' are the trial's comparison group (1.0). Lung: chest radiation before 30 uses Travis 2002 (5 Gy or more, 5.9). Cervical: the HPV vaccine uses Lei 2020's figure for women vaccinated at 17 to 30 (0.47), not the lower figure for girls vaccinated before 17, since adults answer this. The app never shows a probability or a lifetime percentage, and lists cancers in a fixed order, never ranked.",
+  "bands": [
+    { "key": "lower", "below": 0.9 },
+    { "key": "about", "below": 1.15 },
+    { "key": "somewhat", "below": 1.6 },
+    { "key": "higher", "below": 3 },
+    { "key": "much", "below": null }
+  ],
+  "minCoverage": 0.5,
+  "displayCap": 30,
+  "sources": {
+    "iarc": { "name": "IARC Monographs, Volume 114: Red Meat and Processed Meat (2018)", "url": "https://publications.iarc.who.int/564" },
+    "wcrf": { "name": "World Cancer Research Fund / AICR, Diet, Nutrition, Physical Activity and Cancer (Third Expert Report, 2018)", "url": "https://www.wcrf.org/diet-activity-and-cancer/" },
+    "cghf": { "name": "Collaborative Group on Hormonal Factors in Breast Cancer, Lancet 2001 and Br J Cancer 2002", "url": "https://pubmed.ncbi.nlm.nih.gov/11705483/" },
+    "darby": { "name": "Darby et al., BMJ 2005: radon in homes and lung cancer, 13 European studies", "url": "https://pubmed.ncbi.nlm.nih.gov/15613366/" },
+    "acs": { "name": "American Cancer Society risk factor pages", "url": "https://www.cancer.org/cancer/risk-prevention.html" },
+    "nci": { "name": "National Cancer Institute risk factor pages", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk" },
+    "freedman": { "name": "Freedman et al., JAMA 2011: smoking and bladder cancer", "url": "https://pubmed.ncbi.nlm.nih.gov/21846906/" },
+    "aasld": { "name": "AASLD guidance on liver cancer surveillance (2023)", "url": "https://www.aasld.org/practice-guidelines" },
+    "lee": { "name": "Lee et al., International Journal of Epidemiology 2009: smoking and liver cancer, meta-analysis", "url": "https://pubmed.ncbi.nlm.nih.gov/19720726/" },
+    "turati": { "name": "Turati et al., Hepatology 2012: family history of liver cancer, meta-analysis", "url": "https://pubmed.ncbi.nlm.nih.gov/22095619/" },
+    "panc4": { "name": "Bosetti et al., Annals of Oncology 2012: smoking and pancreatic cancer (Panc4 consortium)", "url": "https://doi.org/10.1093/annonc/mdr541" },
+    "permuth": { "name": "Permuth-Wey and Egan, Familial Cancer 2009: family history and pancreatic cancer, meta-analysis", "url": "https://doi.org/10.1007/s10689-008-9214-8" },
+    "rota": { "name": "Rota et al., Gastric Cancer 2024: smoking and stomach cancer, meta-analysis of 205 studies", "url": "https://doi.org/10.1007/s10120-023-01459-1" },
+    "yaghoobi": { "name": "Yaghoobi et al., British Journal of Cancer 2010: family history and stomach cancer, meta-analysis", "url": "https://doi.org/10.1038/sj.bjc.6605380" },
+    "hemminki": { "name": "Hemminki et al., Lancet Oncology 2009: family history and nervous-system tumors, Sweden and Norway", "url": "https://pubmed.ncbi.nlm.nih.gov/19356978/" },
+    "neglia": { "name": "Neglia et al., JNCI 2006: radiation and brain tumors after childhood cancer (Childhood Cancer Survivor Study)", "url": "https://pubmed.ncbi.nlm.nih.gov/17077355/" },
+    "niedermaier": { "name": "Niedermaier et al., Neurology 2015: body weight, activity and brain tumors, meta-analysis", "url": "https://pubmed.ncbi.nlm.nih.gov/26377253/" },
+    "acsbrain": { "name": "American Cancer Society: risk factors for brain and spinal cord tumors in adults", "url": "https://www.cancer.org/cancer/types/brain-spinal-cord-tumors-adults/causes-risks-prevention/risk-factors.html" },
+    "lei": { "name": "Lei et al., New England Journal of Medicine 2020: HPV vaccine and invasive cervical cancer", "url": "https://pubmed.ncbi.nlm.nih.gov/32997908/" },
+    "green": { "name": "Green et al., Journal of Clinical Oncology 2011: daily sunscreen and melanoma, randomized trial", "url": "https://pubmed.ncbi.nlm.nih.gov/21135266/" },
+    "gandini": { "name": "Gandini et al., European Journal of Cancer 2005: family history and past skin cancer in melanoma, meta-analysis", "url": "https://pubmed.ncbi.nlm.nih.gov/16125929/" },
+    "travis": { "name": "Travis et al., JNCI 2002: lung cancer after treatment for Hodgkin lymphoma", "url": "https://pubmed.ncbi.nlm.nih.gov/11830608/" },
+    "yu": { "name": "Yu et al., Cancer Prevention Research 2022: family history and bladder cancer, pooled analysis", "url": "https://pubmed.ncbi.nlm.nih.gov/35027464/" }
+  },
+  "cancers": {
+    "breast": {
+      "gene": ["brca"],
+      "factors": [
+        { "id": "alcohol", "kind": "alcohol-dose", "perUnit": 1.07, "unit": 10, "best": 1, "mod": true, "src": "cghf" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.12, "minAge": 50, "mod": true, "src": "wcrf" },
+        { "id": "activity", "kind": "activity", "table": [1, 0.94, 0.88, 0.88], "best": 0.88, "mod": true, "src": "wcrf" },
+        { "id": "family", "kind": "family-breast", "cancers": ["breast", "ovarian"], "mod": false, "src": "cghf" },
+        { "id": "chestrad", "kind": "history", "key": "chestrad", "rr": 3, "mod": false, "src": "nci" }
+      ]
+    },
+    "cervical": {
+      "gene": [],
+      "surveil": "pap",
+      "src": "nci",
+      "factors": [
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 1.2, 1.2, 1.8], "mod": true, "src": "nci" },
+        { "id": "hpv", "kind": "answer", "key": "hpv", "table": { "yes": 0.47, "some": 0.47, "no": 1 }, "mod": false, "src": "lei" }
+      ]
+    },
+    "colorectal": {
+      "gene": ["lynch"],
+      "factors": [
+        { "id": "procmeat", "kind": "diet-dose", "food": "proc", "perUnit": 1.18, "unit": 50, "survey": 1.15, "best": 1, "mod": true, "src": "iarc" },
+        { "id": "redmeat", "kind": "diet-dose", "food": "red", "perUnit": 1.12, "unit": 100, "survey": 1.1, "best": 1, "mod": true, "src": "wcrf" },
+        { "id": "alcohol", "kind": "alcohol-dose", "perUnit": 1.07, "unit": 10, "best": 1, "mod": true, "src": "wcrf" },
+        { "id": "grains", "kind": "diet-dose", "food": "grain", "perUnit": 0.83, "unit": 90, "survey": 0.88, "floor": 0.75, "best": 0.83, "mod": true, "src": "wcrf" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.05, "mod": true, "src": "wcrf" },
+        { "id": "activity", "kind": "activity", "table": [1, 0.9, 0.8, 0.8], "best": 0.8, "mod": true, "src": "wcrf" },
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 1.12, 1.12, 1.2], "mod": true, "src": "acs" },
+        { "id": "family", "kind": "family", "cancers": ["colorectal"], "rr": 2.05, "rrYoung": 2.6, "mod": false, "src": "nci" },
+        { "id": "polyps", "kind": "history", "key": "polyps", "rr": 1.8, "mod": false, "src": "nci" },
+        { "id": "ibd", "kind": "history", "key": "ibd", "rr": 1.7, "mod": false, "src": "nci" }
+      ]
+    },
+    "lung": {
+      "gene": [],
+      "factors": [
+        { "id": "smoking", "kind": "smoking-lung", "status": [1, 2.5, 5, 15], "packs": [0.5, 0.8, 1, 1.4], "mod": true, "src": "acs" },
+        {
+          "id": "radon",
+          "kind": "radon",
+          "table": { "low": 1, "fixed": 1.05, "high": 1.16 },
+          "best": 1.05,
+          "mod": true,
+          "src": "darby"
+        },
+        { "id": "fruitveg", "kind": "diet-threshold", "food": "plants", "diaryAtLeast": 3, "rr": 0.9, "survey": 0.92, "best": 0.9, "mod": true, "src": "wcrf" },
+        { "id": "family", "kind": "family", "cancers": ["lung"], "rr": 1.5, "mod": false, "src": "nci" },
+        { "id": "chestrad", "kind": "history", "key": "chestrad", "rr": 5.9, "mod": false, "src": "travis" }
+      ]
+    },
+    "prostate": {
+      "gene": ["brca", "lynch"],
+      "factors": [
+        { "id": "family", "kind": "family", "cancers": ["prostate"], "rr": 2.5, "mod": false, "src": "nci" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.08, "mod": true, "src": "wcrf" },
+        { "id": "dairy", "kind": "diet-threshold", "food": "dairy", "diaryAtLeast": 2, "rr": 1.1, "survey": 1.05, "best": 1, "mod": true, "src": "wcrf" }
+      ]
+    },
+    "skin": {
+      "gene": [],
+      "factors": [
+        { "id": "sun", "kind": "answer", "key": "sun", "table": { "always": 0.5, "sometimes": 1, "rarely": 1 }, "best": 0.5, "mod": true, "src": "green" },
+        { "id": "family", "kind": "family", "cancers": ["melanoma"], "rr": 1.74, "mod": false, "src": "gandini" },
+        { "id": "skincancer", "kind": "history", "key": "skincancer", "rr": 4.28, "mod": false, "src": "gandini" }
+      ]
+    },
+    "liver": {
+      "gene": [],
+      "surveil": "hep",
+      "src": "aasld",
+      "factors": [
+        { "id": "alcohol", "kind": "alcohol-dose", "perUnit": 1.04, "unit": 10, "best": 1, "mod": true, "src": "wcrf" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.3, "mod": true, "src": "wcrf" },
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 1.12, 1.12, 1.51], "mod": true, "src": "lee" },
+        { "id": "family", "kind": "family", "cancers": ["liver"], "rr": 2.5, "mod": false, "src": "turati" }
+      ]
+    },
+    "pancreatic": {
+      "gene": ["brca", "lynch"],
+      "factors": [
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 1.2, 1.2, 2.2], "mod": true, "src": "panc4" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.1, "mod": true, "src": "wcrf" },
+        { "id": "family", "kind": "family", "cancers": ["pancreatic"], "rr": 1.8, "mod": false, "src": "permuth" }
+      ]
+    },
+    "stomach": {
+      "gene": ["lynch"],
+      "factors": [
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 1.3, 1.3, 1.53], "mod": true, "src": "rota" },
+        { "id": "procmeat", "kind": "diet-dose", "food": "proc", "perUnit": 1.18, "unit": 50, "survey": 1.15, "best": 1, "mod": true, "src": "wcrf" },
+        { "id": "family", "kind": "family", "cancers": ["stomach"], "rr": 2.35, "mod": false, "src": "yaghoobi" }
+      ]
+    },
+    "bladder": {
+      "gene": [],
+      "factors": [
+        { "id": "smoking", "kind": "smoking-status", "table": [1, 2.2, 2.2, 4.1], "mod": true, "src": "freedman" },
+        { "id": "family", "kind": "family", "cancers": ["bladder"], "rr": 2.72, "mod": false, "src": "yu" }
+      ]
+    },
+    "brain": {
+      "gene": ["syndrome", "lynch"],
+      "src": "acsbrain",
+      "factors": [
+        { "id": "family", "kind": "family", "cancers": ["brain"], "rr": 1.8, "mod": false, "src": "hemminki" },
+        { "id": "headrad", "kind": "history", "key": "headrad", "rr": 6.8, "mod": false, "src": "neglia" },
+        { "id": "weight", "kind": "bmi-dose", "perUnit": 1.24, "mod": true, "src": "niedermaier" }
+      ]
+    }
+  },
+  "labels": {
+    "en": {
+      "procmeat": { "label": "Processed meat", "why": "Bacon, ham, hot dogs and deli meat. Each 50 grams a day (about one hot dog) raises risk by about 18%." },
+      "redmeat": { "label": "Red meat", "why": "Beef, pork and lamb. Eating a lot raises risk a little. The advice is to limit it, not stop it." },
+      "alcohol": { "label": "Alcohol", "why": "Alcohol causes cancer. The more you drink, the higher the risk. For breast cancer, risk starts to rise with small amounts." },
+      "grains": { "label": "Whole grains and fiber", "why": "Oats, brown rice and beans lower colorectal cancer risk. This is one of the clearest food findings." },
+      "fruitveg": { "label": "Fruit and vegetables", "why": "About three servings a day is linked to a little less risk. Pills do not do the same thing." },
+      "dairy": { "label": "Dairy", "why": "Some studies link a lot of dairy to more prostate cancer. The proof is limited." },
+      "weight": { "label": "Body weight", "why": "Extra body fat raises the risk of at least 13 cancers. How much depends on the cancer." },
+      "activity": { "label": "Physical activity", "why": "Being active lowers risk, even if your weight does not change." },
+      "smoking": { "label": "Smoking", "why": "Smoking raises risk for many cancers, not just lung. Quitting lowers it at any age." },
+      "radon": { "label": "Radon at home", "why": "Radon is a gas you cannot see or smell. It is the second top cause of lung cancer. A test kit is cheap." },
+      "family": { "label": "Family history", "why": "A parent, brother, sister or child with this cancer about doubles risk. A diagnosis before 50 counts more." },
+      "polyps": { "label": "Past colon polyps", "why": "Polyps found before mean more may grow. Your test schedule is set by what was found." },
+      "ibd": { "label": "Crohn’s or colitis", "why": "Years of swelling in the bowel raise colorectal cancer risk." },
+      "chestrad": { "label": "Chest radiation before 30", "why": "Radiation to the chest when young raises the risk of breast cancer and lung cancer." },
+      "skincancer": { "label": "A past skin cancer", "why": "Had skin cancer before, or spots that could turn into it? Then a new one is about 4 times as likely." },
+      "headrad": { "label": "Radiation to the head when young", "why": "Radiation to the head is the one known outside cause of brain tumors. It most often comes from treating a cancer in a child." },
+      "sun": { "label": "Sun protection", "why": "People who used sunscreen each day got melanoma half as often. A study followed them for 10 years." },
+      "hpv": { "label": "HPV vaccine", "why": "The HPV vaccine prevents most cervical cancer. It works best before age 17." },
+      "hepatitis": { "label": "Hepatitis B or C", "why": "Long-term hepatitis is the main cause of liver cancer. Treatment lowers the risk." }
+    },
+    "es": {
+      "procmeat": { "label": "Carne procesada", "why": "Tocino, jamón, salchichas y fiambres. Cada 50 gramos al día (más o menos una salchicha) suben el riesgo cerca de 18%." },
+      "redmeat": { "label": "Carne roja", "why": "Res, cerdo y cordero. Comer mucha sube un poco el riesgo. El consejo es comer menos, no dejarla." },
+      "alcohol": { "label": "Alcohol", "why": "El alcohol causa cáncer. Mientras más bebe, más sube el riesgo. En el cáncer de mama, el riesgo sube incluso con poco." },
+      "grains": { "label": "Granos integrales y fibra", "why": "La avena, el arroz integral y los frijoles bajan el riesgo de cáncer colorrectal. Es uno de los datos más claros sobre comida." },
+      "fruitveg": { "label": "Frutas y verduras", "why": "Unas tres porciones al día se asocian con un poco menos de riesgo. Las pastillas no hacen lo mismo." },
+      "dairy": { "label": "Lácteos", "why": "Algunos estudios asocian muchos lácteos con más cáncer de próstata. La prueba es limitada." },
+      "weight": { "label": "Peso corporal", "why": "La grasa corporal de más sube el riesgo de al menos 13 cánceres. Cuánto depende del cáncer." },
+      "activity": { "label": "Actividad física", "why": "Estar activo baja el riesgo, aunque su peso no cambie." },
+      "smoking": { "label": "Fumar", "why": "Fumar sube el riesgo de muchos cánceres, no solo el de pulmón. Dejarlo lo baja a cualquier edad." },
+      "radon": { "label": "Radón en casa", "why": "El radón es un gas que no se ve ni se huele. Es la segunda causa principal de cáncer de pulmón. La prueba es barata." },
+      "family": { "label": "Historia familiar", "why": "Un padre, madre, hermano, hermana o hijo con este cáncer casi duplica el riesgo. Un diagnóstico antes de los 50 cuenta más." },
+      "polyps": { "label": "Pólipos de colon antes", "why": "Si tuvo pólipos, pueden salir más. Su calendario de pruebas depende de lo que se encontró." },
+      "ibd": { "label": "Crohn o colitis", "why": "Años de inflamación en el intestino suben el riesgo de cáncer colorrectal." },
+      "chestrad": { "label": "Radiación al pecho antes de los 30", "why": "La radiación en el pecho a una edad joven sube el riesgo de cáncer de mama y de pulmón." },
+      "skincancer": { "label": "Un cáncer de piel en el pasado", "why": "Si tuvo cáncer de piel, o manchas que podrían volverse cáncer, uno nuevo es unas 4 veces más probable." },
+      "headrad": { "label": "Radiación en la cabeza de joven", "why": "La radiación en la cabeza es la única causa externa conocida de los tumores cerebrales. Casi siempre viene de tratar un cáncer en un niño." },
+      "sun": { "label": "Protección del sol", "why": "Quienes usaron protector solar cada día tuvieron melanoma la mitad de las veces. Un estudio los siguió por 10 años." },
+      "hpv": { "label": "Vacuna contra el VPH", "why": "La vacuna contra el VPH previene casi todo el cáncer de cuello uterino. Funciona mejor antes de los 17 años." },
+      "hepatitis": { "label": "Hepatitis B o C", "why": "La hepatitis de largo plazo es la causa principal del cáncer de hígado. El tratamiento baja el riesgo." }
+    }
+  }
+}

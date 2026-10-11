@@ -1,0 +1,15 @@
+// From tests/scanner-geo.test.ts. Needs: import { orderConnect } from '../src/engine/connect';
+// plus buildPlan, summarize and emptyAnswers.
+describe('Connect order', () => {
+  it('a flagged symptom puts appointments first', () => {
+    const plan = buildPlan({ ...emptyAnswers(), symptoms: ['sym_cough'], age: '50-54', sex: 'male' }, { diary: summarize({}) });
+    expect(orderConnect(plan, false)[0].block.id).toBe('appointment');
+  });
+  it('a screening that is due moves the screening block up, with that program first', () => {
+    const plan = buildPlan({ ...emptyAnswers(), symptoms: 'none', age: '60-64', sex: 'male', smoke: 'current', packsPerDay: 1, yearsSmoked: 30 }, { diary: summarize({}) });
+    const blocks = orderConnect(plan, true);
+    expect(blocks[0].block.id).toBe('screening');
+    expect(blocks[0].block.actions[0].id).toMatch(/colorectal|lung|prostate/);
+    expect(blocks[1].block.id).toBe('prevention');
+  });
+});

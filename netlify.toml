@@ -1,0 +1,32 @@
+# Netlify builds and hosts the web version of FutureVitals from this repo.
+# Installing runs scripts/copy-ocr-assets.mjs (npm postinstall), which puts the
+# on-device text reader into public/ocr, so the build is complete on its own.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The offline worker lists the files of one release; it must never be served
+# stale, or a new release would not reach people who opened the app before.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# Built files carry a content hash in their names, so they can be kept for good.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The scanner uses the camera and Find a clinic can use location, both only
+# when the person taps for them; nothing else may.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(self), geolocation=(self), microphone=()"

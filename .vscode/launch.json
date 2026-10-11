@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run FutureVitals (Edge)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "preLaunchTask": "FutureVitals: dev server",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Run FutureVitals (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "preLaunchTask": "FutureVitals: dev server",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

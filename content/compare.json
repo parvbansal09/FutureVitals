@@ -1,0 +1,373 @@
+{
+  "version": "2026.09.28",
+  "notes": "One row per habit. 'quote' is the source's own wording, in English, exactly as published; Spanish shows a translation marked as such. The clinical reviewer checks each quote against the live page before release ('quoteChecked'). How gaps are scored is in src/engine/compare.ts.",
+  "rows": [
+    {
+      "id": "tobacco",
+      "title": {
+        "en": "Tobacco",
+        "es": "Tabaco"
+      },
+      "rec": {
+        "en": "Do not smoke. Quitting at any age lowers risk.",
+        "es": "No fume. Dejarlo a cualquier edad baja el riesgo."
+      },
+      "source": {
+        "org": "ACS",
+        "name": "American Cancer Society",
+        "url": "https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html"
+      },
+      "quote": "It’s never too late to quit using tobacco. The sooner you quit, the more you can reduce your chances of getting cancer and other diseases.",
+      "quoteEs": "Nunca es tarde para dejar el tabaco. Mientras antes lo deje, más puede bajar su probabilidad de tener cáncer y otras enfermedades.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Smoking causes cancer of the lung, mouth, throat, bladder, pancreas, cervix, colon and more. Quitting lowers the risk of 12 kinds of cancer.",
+        "es": "Fumar causa cáncer de pulmón, boca, garganta, vejiga, páncreas, cuello uterino, colon y más. Dejarlo baja el riesgo de 12 tipos de cáncer."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Call Quit Now Virginia. It is free, day and night.",
+          "es": "Llame a Quit Now Virginia. Es gratis, de día y de noche."
+        },
+        "actions": [
+          {
+            "type": "tel",
+            "value": "1-800-784-8669",
+            "label": {
+              "en": "1-800-QUIT-NOW",
+              "es": "1-800-QUIT-NOW (inglés)"
+            }
+          },
+          {
+            "type": "tel",
+            "value": "1-855-335-3569",
+            "label": {
+              "en": "Spanish: 1-855-DEJELO-YA",
+              "es": "Español: 1-855-DEJELO-YA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "alcohol",
+      "title": {
+        "en": "Alcohol",
+        "es": "Alcohol"
+      },
+      "rec": {
+        "en": "Less is better. None is safest for cancer.",
+        "es": "Menos es mejor. Nada es lo más seguro contra el cáncer."
+      },
+      "source": {
+        "org": "ACS / WCRF",
+        "name": "American Cancer Society; World Cancer Research Fund",
+        "url": "https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/acs-guidelines-nutrition-physical-activity-cancer-prevention.html"
+      },
+      "quote": "It is best not to drink alcohol.",
+      "quoteEs": "Lo mejor es no beber alcohol.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Alcohol raises the risk of at least 7 cancers. These include breast, colon, liver, mouth and throat cancer.",
+        "es": "El alcohol sube el riesgo de al menos 7 cánceres. Entre ellos están el de mama, colon, hígado, boca y garganta."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Set a weekly limit, and pick your alcohol-free days.",
+          "es": "Póngase un límite por semana y escoja sus días sin alcohol."
+        },
+        "actions": [
+          {
+            "type": "url",
+            "value": "https://www.rethinkingdrinking.niaaa.nih.gov/",
+            "label": {
+              "en": "Rethinking Drinking (NIH)",
+              "es": "Rethinking Drinking (NIH, en inglés)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "activity",
+      "title": {
+        "en": "Activity",
+        "es": "Actividad"
+      },
+      "rec": {
+        "en": "150 minutes of moderate activity a week. More is better.",
+        "es": "150 minutos de actividad moderada a la semana. Más es mejor."
+      },
+      "source": {
+        "org": "ACS",
+        "name": "American Cancer Society",
+        "url": "https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/acs-guidelines-nutrition-physical-activity-cancer-prevention.html"
+      },
+      "quote": "Adults should engage in 150-300 minutes of moderate-intensity physical activity per week, or 75-150 minutes of vigorous-intensity physical activity, or an equivalent combination; achieving or exceeding the upper limit of 300 minutes is optimal.",
+      "quoteEs": "Los adultos deben hacer de 150 a 300 minutos de actividad física moderada por semana, o de 75 a 150 minutos de actividad intensa, o una combinación; llegar o pasar de 300 minutos es lo ideal.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Being active lowers the risk of colon, breast and womb cancer. It helps even if your weight stays the same.",
+        "es": "Estar activo baja el riesgo de cáncer de colon, mama y útero. Ayuda aunque su peso no cambie."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Join The RAMble, a free monthly walk with VCU doctors.",
+          "es": "Únase a The RAMble, una caminata gratis cada mes con médicos de VCU."
+        },
+        "actions": [
+          {
+            "type": "url",
+            "value": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/integrative-health/the-ramble-walking-for-wellness/",
+            "label": {
+              "en": "The RAMble",
+              "es": "The RAMble"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "weight",
+      "title": {
+        "en": "Weight",
+        "es": "Peso"
+      },
+      "rec": {
+        "en": "Stay in a healthy weight range.",
+        "es": "Mantenga un peso saludable."
+      },
+      "source": {
+        "org": "WCRF",
+        "name": "World Cancer Research Fund",
+        "url": "https://www.wcrf.org/preventing-cancer/cancer-prevention/our-cancer-prevention-recommendations/"
+      },
+      "quote": "Keep your weight within the healthy range and avoid weight gain in adult life.",
+      "quoteEs": "Mantenga su peso dentro del rango saludable y evite subir de peso en la vida adulta.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Extra body fat raises the risk of 13 cancers. Some are colon, breast, womb, kidney and liver cancer.",
+        "es": "La grasa corporal de más sube el riesgo de 13 cánceres. Algunos son el de colon, mama, útero, riñón e hígado."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Join We Can Eat Well, a free nutrition program.",
+          "es": "Únase a We Can Eat Well, un programa gratis de nutrición."
+        },
+        "actions": [
+          {
+            "type": "email",
+            "value": "engagemassey@vcu.edu",
+            "label": {
+              "en": "Email We Can Eat Well",
+              "es": "Escribir a We Can Eat Well"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "meat",
+      "title": {
+        "en": "Red and processed meat",
+        "es": "Carne roja y procesada"
+      },
+      "rec": {
+        "en": "Limit red meat. Avoid processed meat.",
+        "es": "Coma poca carne roja. Evite la carne procesada."
+      },
+      "source": {
+        "org": "WCRF / IARC",
+        "name": "World Cancer Research Fund; International Agency for Research on Cancer",
+        "url": "https://www.wcrf.org/preventing-cancer/cancer-prevention/our-cancer-prevention-recommendations/"
+      },
+      "quote": "Eat no more than moderate amounts of red meat, such as beef, pork and lamb. Eat little, if any, processed meat.",
+      "quoteEs": "No coma más que cantidades moderadas de carne roja, como res, cerdo y cordero. Coma poca o nada de carne procesada.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Processed meat causes colorectal cancer. Red meat probably does too.",
+        "es": "La carne procesada causa cáncer colorrectal. La carne roja probablemente también."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Log a week in the food diary to see how often you eat it.",
+          "es": "Anote una semana en el diario de comidas para ver cada cuánto la come."
+        },
+        "actions": [
+          {
+            "type": "route",
+            "value": "/food",
+            "label": {
+              "en": "Open the food diary",
+              "es": "Abrir el diario de comidas"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "plants",
+      "title": {
+        "en": "Fruit, vegetables and whole grains",
+        "es": "Frutas, verduras y granos integrales"
+      },
+      "rec": {
+        "en": "Make them part of most meals.",
+        "es": "Inclúyalos en casi todas las comidas."
+      },
+      "source": {
+        "org": "WCRF",
+        "name": "World Cancer Research Fund",
+        "url": "https://www.wcrf.org/preventing-cancer/cancer-prevention/our-cancer-prevention-recommendations/"
+      },
+      "quote": "Make wholegrains, vegetables, fruit, and pulses (legumes) such as beans and lentils a major part of your usual daily diet.",
+      "quoteEs": "Haga de los granos integrales, las verduras, las frutas y las legumbres, como frijoles y lentejas, una parte principal de su dieta diaria.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Whole grains and fiber lower colorectal cancer risk. These foods also help keep a healthy weight.",
+        "es": "Los granos integrales y la fibra bajan el riesgo de cáncer colorrectal. Estas comidas también ayudan a mantener un peso sano."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Add one fruit or vegetable to one meal each day.",
+          "es": "Agregue una fruta o verdura a una comida cada día."
+        },
+        "actions": [
+          {
+            "type": "email",
+            "value": "engagemassey@vcu.edu",
+            "label": {
+              "en": "We Can Eat Well classes",
+              "es": "Clases de We Can Eat Well"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "radon",
+      "title": {
+        "en": "Radon",
+        "es": "Radón"
+      },
+      "rec": {
+        "en": "Test every home for radon.",
+        "es": "Haga la prueba de radón en toda casa."
+      },
+      "source": {
+        "org": "EPA / VDH",
+        "name": "U.S. Environmental Protection Agency; Virginia Department of Health",
+        "url": "https://www.epa.gov/radon/health-risk-radon"
+      },
+      "quote": "EPA recommends testing all homes below the third floor for radon.",
+      "quoteEs": "La EPA recomienda hacer la prueba de radón en todas las casas debajo del tercer piso.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Radon is the top cause of lung cancer in people who never smoked. It is a gas you cannot see or smell.",
+        "es": "El radón es la causa principal de cáncer de pulmón en quienes nunca fumaron. Es un gas que no se ve ni se huele."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Get a radon test kit. Virginia sells low-cost kits when it has them.",
+          "es": "Consiga una prueba de radón. Virginia vende pruebas de bajo costo cuando las tiene."
+        },
+        "actions": [
+          {
+            "type": "url",
+            "value": "https://www.vdh.virginia.gov/radiological-health/indoor-radon-program/",
+            "label": {
+              "en": "VDH radon program",
+              "es": "Programa de radón de VDH"
+            }
+          },
+          {
+            "type": "tel",
+            "value": "(804) 864-8161",
+            "label": {
+              "en": "Call VDH radon",
+              "es": "Llamar a VDH (radón)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sun",
+      "title": {
+        "en": "Sun",
+        "es": "Sol"
+      },
+      "rec": {
+        "en": "Shade, sleeves, a hat and SPF 30+ sunscreen.",
+        "es": "Sombra, mangas, sombrero y protector solar SPF 30 o más."
+      },
+      "source": {
+        "org": "ACS",
+        "name": "American Cancer Society",
+        "url": "https://www.cancer.org/cancer/risk-prevention/sun-and-uv/uv-protection.html"
+      },
+      "quote": "Use broad spectrum sunscreen and lip balm with an SPF of 30 or higher.",
+      "quoteEs": "Use protector solar y bálsamo labial de amplio espectro con SPF de 30 o más.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "Sun and tanning beds cause most skin cancers, including melanoma.",
+        "es": "El sol y las camas de bronceado causan la mayoría de los cánceres de piel, incluido el melanoma."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Ask for a skin check, and watch your moles for changes.",
+          "es": "Pida una revisión de la piel y vigile sus lunares."
+        },
+        "actions": [
+          {
+            "type": "route",
+            "value": "/clinics?test=skin",
+            "label": {
+              "en": "Find a skin check",
+              "es": "Buscar revisión de piel"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "hpv",
+      "title": {
+        "en": "HPV vaccine",
+        "es": "Vacuna contra el VPH"
+      },
+      "rec": {
+        "en": "Through age 26. From 27 to 45, decide with a clinician.",
+        "es": "Hasta los 26 años. De 27 a 45, decida con un profesional."
+      },
+      "source": {
+        "org": "CDC",
+        "name": "Centers for Disease Control and Prevention",
+        "url": "https://www.cdc.gov/hpv/vaccines/index.html"
+      },
+      "quote": "HPV vaccination is recommended for everyone through age 26 years, if not vaccinated already.",
+      "quoteEs": "Se recomienda la vacuna contra el VPH para todos hasta los 26 años, si no la tienen.",
+      "quoteChecked": false,
+      "acts": {
+        "en": "HPV causes almost all cervical cancer. It also causes many throat and anal cancers.",
+        "es": "El VPH causa casi todo el cáncer de cuello uterino. También causa muchos cánceres de garganta y ano."
+      },
+      "firstStep": {
+        "text": {
+          "en": "Ask your clinician about the HPV vaccine.",
+          "es": "Pregunte a su profesional de salud por la vacuna contra el VPH."
+        },
+        "actions": [
+          {
+            "type": "route",
+            "value": "/plan",
+            "label": {
+              "en": "Add to my plan",
+              "es": "Agregar a mi plan"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

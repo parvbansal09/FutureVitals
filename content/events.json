@@ -1,0 +1,80 @@
+{
+  "version": "2026.09.28",
+  "notes": "Dated events go in 'events' (date as YYYY-MM-DD). Past events hide themselves. Do not add an event until its host has confirmed the date and place. 'programs' are standing mobile services that do not have one fixed date.",
+  "events": [],
+  "programs": [
+    {
+      "id": "massey-on-the-move",
+      "name": {
+        "en": "Mobile health vans",
+        "es": "Camionetas móviles de salud"
+      },
+      "desc": {
+        "en": "Two health vans visit towns across central and southern Virginia. The team shares cancer facts and helps people get screened.",
+        "es": "Dos camionetas de salud visitan pueblos del centro y sur de Virginia. El equipo comparte información sobre el cáncer y ayuda a hacerse pruebas."
+      },
+      "areas": {
+        "en": "Petersburg, Colonial Heights, Hopewell, Portsmouth, Martinsville, Brunswick County and more",
+        "es": "Petersburg, Colonial Heights, Hopewell, Portsmouth, Martinsville, el condado de Brunswick y más"
+      },
+      "howTo": {
+        "en": "Call or email to learn where the vans go next, or to invite them to your church or event.",
+        "es": "Llame o escriba para saber a dónde van las camionetas, o para invitarlas a su iglesia o evento."
+      },
+      "tests": [],
+      "contact": [
+        {
+          "type": "tel",
+          "value": "(804) 628-0896"
+        },
+        {
+          "type": "email",
+          "value": "engagemassey@vcu.edu"
+        },
+        {
+          "type": "url",
+          "value": "https://www.masseycancercenter.org/community-outreach-and-engagement/community-focused-activities/"
+        }
+      ],
+      "verified": "2026-09-28"
+    },
+    {
+      "id": "every-womans-life",
+      "name": {
+        "en": "Every Woman’s Life",
+        "es": "Every Woman’s Life"
+      },
+      "desc": {
+        "en": "Free mammograms and Pap tests for Virginia women aged 40 to 64. You must have no insurance and meet income rules. Some women 18 to 39 can get them too.",
+        "es": "Mamografías y pruebas de Papanicolaou gratis para mujeres de Virginia de 40 a 64 años sin seguro que cumplen reglas de ingresos. Algunas mujeres de 18 a 39 años también califican."
+      },
+      "areas": {
+        "en": "All of Virginia",
+        "es": "Todo Virginia"
+      },
+      "howTo": {
+        "en": "Call to find the nearest place that takes part.",
+        "es": "Llame para encontrar el lugar más cercano que participa."
+      },
+      "tests": [
+        "mammogram",
+        "pap"
+      ],
+      "contact": [
+        {
+          "type": "tel",
+          "value": "1-866-395-4968",
+          "label": {
+            "en": "1-866-EWL-4YOU",
+            "es": "1-866-EWL-4YOU"
+          }
+        },
+        {
+          "type": "url",
+          "value": "https://www.vdh.virginia.gov/every-womans-life/"
+        }
+      ],
+      "verified": "2026-09-28"
+    }
+  ]
+}

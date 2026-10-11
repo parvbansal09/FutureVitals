@@ -1,0 +1,290 @@
+{
+  "version": "2026.09.28",
+  "notes": "Plan wording. The rules that choose between these texts are in src/engine/plan.ts and are tested against the personas in tests/personas.test.ts. Never add a probability, a score, or a word that suggests someone has cancer.",
+
+  "guidelines": {
+    "colorectal": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2021, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening" },
+    "breast": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2024, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening" },
+    "cervical": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2018, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/cervical-cancer-screening" },
+    "lung": { "org": "American Cancer Society", "short": "ACS", "year": 2023, "url": "https://www.cancer.org/cancer/types/lung-cancer/detection-diagnosis-staging/detection.html" },
+    "lungAlt": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2021, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening" },
+    "prostate": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2018, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/prostate-cancer-screening" },
+    "skin": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2023, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/skin-cancer-screening" },
+    "liver": { "org": "American Association for the Study of Liver Diseases", "short": "AASLD", "year": 2023, "url": "https://www.aasld.org/practice-guidelines" },
+    "brca": { "org": "U.S. Preventive Services Task Force", "short": "USPSTF", "year": 2019, "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing" },
+    "hpv": { "org": "Centers for Disease Control and Prevention", "short": "CDC", "year": 2019, "url": "https://www.cdc.gov/hpv/vaccines/index.html" }
+  },
+
+  "items": {
+    "colorectal": {
+      "name": { "en": "Colorectal cancer screening", "es": "Prueba de cáncer colorrectal" },
+      "options": {
+        "average": [
+          { "en": "A stool test at home (FIT), every year", "es": "Una prueba de heces en casa (FIT), cada año" },
+          { "en": "A stool DNA test, every 1 to 3 years", "es": "Una prueba de ADN en heces, cada 1 a 3 años" },
+          { "en": "A colonoscopy, every 10 years", "es": "Una colonoscopia, cada 10 años" },
+          { "en": "A CT scan of the colon, every 5 years", "es": "Una tomografía del colon, cada 5 años" }
+        ],
+        "colonoscopy": [
+          { "en": "A colonoscopy, on the schedule your doctor sets", "es": "Una colonoscopia, según el calendario de su médico" }
+        ]
+      },
+      "why": {
+        "due": { "en": "Screening is advised for people 45 to 75.", "es": "Se aconseja la prueba de los 45 a los 75 años." },
+        "family": { "en": "A close relative had colorectal cancer. So checks often start at 40, or even sooner.", "es": "Un familiar cercano tuvo cáncer colorrectal. Por eso las pruebas suelen empezar a los 40, o antes." },
+        "familyYoung": { "en": "A close relative had it young. Checks often start 10 years before their age at diagnosis.", "es": "Un familiar cercano lo tuvo joven. Las pruebas suelen empezar 10 años antes de la edad de su diagnóstico." },
+        "polyps": { "en": "Polyps were found before, so the next test date depends on what was found.", "es": "Se encontraron pólipos antes, así que la próxima prueba depende de lo que se encontró." },
+        "ibd": { "en": "Crohn’s or colitis can mean a colonoscopy more often.", "es": "El Crohn o la colitis pueden requerir colonoscopias más seguido." },
+        "lynch": { "en": "A Lynch gene change means colonoscopy starts young and repeats often.", "es": "Un cambio genético de Lynch significa colonoscopias desde joven y más seguido." },
+        "older": { "en": "From 76 to 85, it depends on health and past tests.", "es": "De los 76 a los 85, depende de la salud y de las pruebas anteriores." },
+        "next": { "en": "Screening starts at 45.", "es": "La prueba empieza a los 45." },
+        "nextFamily": { "en": "With this family history, checks may start at 40.", "es": "Con esta historia familiar, las pruebas pueden empezar a los 40." }
+      },
+      "asks": {
+        "due": [
+          { "en": "Which colorectal test is right for me?", "es": "¿Qué prueba colorrectal es la mejor para mí?" },
+          { "en": "Can I do a stool test at home?", "es": "¿Puedo hacer la prueba de heces en casa?" },
+          { "en": "What happens if the test finds something?", "es": "¿Qué pasa si la prueba encuentra algo?" }
+        ],
+        "family": [
+          { "en": "Should I start before 45 because of my family?", "es": "¿Debo empezar antes de los 45 por mi familia?" },
+          { "en": "How often should I be tested?", "es": "¿Cada cuánto debo hacerme la prueba?" },
+          { "en": "Should I see a genetic counselor?", "es": "¿Debo ver a un consejero genético?" }
+        ],
+        "surveil": [
+          { "en": "When is my next colonoscopy due?", "es": "¿Cuándo me toca la próxima colonoscopia?" },
+          { "en": "What did my last test find?", "es": "¿Qué encontró mi última prueba?" }
+        ],
+        "older": [
+          { "en": "Is screening still worth it for me?", "es": "¿Todavía vale la pena la prueba para mí?" },
+          { "en": "What would I gain, and what are the risks?", "es": "¿Qué ganaría y cuáles son los riesgos?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "It can still find cancer early if you are in good health.", "es": "Todavía puede encontrar el cáncer temprano si usted está bien de salud." },
+        "against": { "en": "The benefit is smaller at this age, and a colonoscopy has risks.", "es": "El beneficio es menor a esta edad, y la colonoscopia tiene riesgos." }
+      }
+    },
+
+    "breast": {
+      "name": { "en": "Breast cancer screening (mammogram)", "es": "Prueba de cáncer de mama (mamografía)" },
+      "options": {
+        "average": [
+          { "en": "A mammogram, every 2 years", "es": "Una mamografía, cada 2 años" }
+        ],
+        "high": [
+          { "en": "A mammogram every year", "es": "Una mamografía cada año" },
+          { "en": "A breast MRI every year, often starting younger", "es": "Una resonancia de mama cada año, muchas veces desde más joven" }
+        ]
+      },
+      "why": {
+        "due": { "en": "A mammogram every 2 years is advised from 40 to 74.", "es": "Se aconseja una mamografía cada 2 años de los 40 a los 74." },
+        "brca": { "en": "A BRCA change means yearly checks that start young, often with MRI.", "es": "Un cambio BRCA significa revisiones cada año desde joven, muchas veces con resonancia." },
+        "chestrad": { "en": "Chest radiation before 30 raises risk. Checks often start early, with MRI.", "es": "La radiación al pecho antes de los 30 sube el riesgo. Las revisiones suelen empezar antes, con resonancia." },
+        "family": { "en": "A close relative had breast or ovarian cancer. Ask if you should start before 40.", "es": "Un familiar cercano tuvo cáncer de mama o de ovario. Pregunte si debe empezar antes de los 40." },
+        "older": { "en": "After 75, there is not enough proof either way.", "es": "Después de los 75 no hay suficiente prueba en ningún sentido." },
+        "next": { "en": "Mammograms start at 40.", "es": "Las mamografías empiezan a los 40." }
+      },
+      "asks": {
+        "due": [
+          { "en": "Am I due for a mammogram?", "es": "¿Me toca una mamografía?" },
+          { "en": "How do I schedule one?", "es": "¿Cómo pido una cita?" },
+          { "en": "Do I need extra imaging for dense breasts?", "es": "¿Necesito más estudios por tener senos densos?" }
+        ],
+        "high": [
+          { "en": "Should I start before 40?", "es": "¿Debo empezar antes de los 40?" },
+          { "en": "Do I need a breast MRI too?", "es": "¿También necesito una resonancia de mama?" },
+          { "en": "Should I see a genetic counselor?", "es": "¿Debo ver a un consejero genético?" }
+        ],
+        "older": [
+          { "en": "Should I keep having mammograms?", "es": "¿Debo seguir haciéndome mamografías?" },
+          { "en": "What are the benefits and risks at my age?", "es": "¿Cuáles son los beneficios y riesgos a mi edad?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "It can find breast cancer early if you are in good health.", "es": "Puede encontrar el cáncer de mama temprano si usted está bien de salud." },
+        "against": { "en": "It can find things that would never cause harm and lead to more tests.", "es": "Puede encontrar cosas que nunca harían daño y llevar a más pruebas." }
+      }
+    },
+
+    "cervical": {
+      "name": { "en": "Cervical cancer screening", "es": "Prueba de cáncer de cuello uterino" },
+      "options": {
+        "young": [
+          { "en": "A Pap test, every 3 years", "es": "Una prueba de Papanicolaou, cada 3 años" }
+        ],
+        "adult": [
+          { "en": "An HPV test, every 5 years", "es": "Una prueba de VPH, cada 5 años" },
+          { "en": "A Pap test, every 3 years", "es": "Una prueba de Papanicolaou, cada 3 años" },
+          { "en": "Both tests together, every 5 years", "es": "Las dos pruebas juntas, cada 5 años" }
+        ],
+        "followup": [
+          { "en": "Follow-up tests on the schedule your last result set", "es": "Pruebas de seguimiento según su último resultado" }
+        ]
+      },
+      "why": {
+        "young": { "en": "From 21 to 29, a Pap test every 3 years is advised.", "es": "De los 21 a los 29 se aconseja un Papanicolaou cada 3 años." },
+        "adult": { "en": "From 30 to 65, you can choose an HPV test, a Pap test, or both.", "es": "De los 30 a los 65 puede elegir una prueba de VPH, un Papanicolaou o las dos." },
+        "abnormal": { "en": "There was an abnormal result before, so the next test depends on it.", "es": "Hubo un resultado anormal antes, así que la próxima prueba depende de eso." },
+        "older": { "en": "Screening can often stop at 65 if past tests were normal.", "es": "La prueba muchas veces puede parar a los 65 si las anteriores salieron normales." },
+        "next": { "en": "Cervical screening starts at 21.", "es": "La prueba de cuello uterino empieza a los 21." },
+        "note": { "en": "If the cervix was removed, this test may not be needed. Ask.", "es": "Si le quitaron el cuello uterino, puede que no necesite esta prueba. Pregunte." }
+      },
+      "asks": {
+        "due": [
+          { "en": "Which test should I have, and when?", "es": "¿Qué prueba debo hacerme y cuándo?" },
+          { "en": "Can I stop after 65?", "es": "¿Puedo dejar de hacerla después de los 65?" }
+        ],
+        "followup": [
+          { "en": "What follow-up do I need after my last result?", "es": "¿Qué seguimiento necesito después de mi último resultado?" },
+          { "en": "When is my next test?", "es": "¿Cuándo es mi próxima prueba?" }
+        ],
+        "older": [
+          { "en": "Were my past tests normal enough to stop?", "es": "¿Mis pruebas anteriores salieron normales para poder parar?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "If past tests were not regular, one more can still help.", "es": "Si las pruebas anteriores no fueron regulares, una más todavía puede ayudar." },
+        "against": { "en": "If past tests were normal, more tests add little.", "es": "Si las pruebas anteriores salieron normales, más pruebas ayudan poco." }
+      }
+    },
+
+    "lung": {
+      "name": { "en": "Lung cancer screening (low-dose CT)", "es": "Prueba de cáncer de pulmón (tomografía de dosis baja)" },
+      "options": {
+        "average": [
+          { "en": "A low-dose CT scan, every year", "es": "Una tomografía de dosis baja, cada año" }
+        ]
+      },
+      "why": {
+        "eligible": { "en": "Yearly scans are advised from 50 to 80 for people with 20 pack-years or more.", "es": "Se aconseja una tomografía cada año de los 50 a los 80 para quienes tienen 20 paquetes-año o más." },
+        "quitLong": { "en": "The Task Force rule stops 15 years after quitting. Some insurance uses that rule, so ask.", "es": "La regla del Grupo de Trabajo termina 15 años después de dejar de fumar. Algunos seguros usan esa regla, así que pregunte." },
+        "age80": { "en": "At 80 you may still qualify. Scans stop after 80.", "es": "A los 80 todavía puede calificar. Las tomografías paran después de los 80." },
+        "unknownAmount": { "en": "The amount smoked was not given. Ask if you qualify.", "es": "No se dio cuánto fumaba. Pregunte si califica." },
+        "next": { "en": "Lung screening can start at 50.", "es": "La prueba de pulmón puede empezar a los 50." }
+      },
+      "asks": {
+        "due": [
+          { "en": "Do I qualify for a lung scan?", "es": "¿Califico para una tomografía de pulmón?" },
+          { "en": "Will my insurance pay for it?", "es": "¿Mi seguro la paga?" }
+        ],
+        "quit": [
+          { "en": "Can you help me quit smoking?", "es": "¿Me puede ayudar a dejar de fumar?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "A yearly scan can find lung cancer early, when it is easier to treat.", "es": "Una tomografía cada año puede encontrar el cáncer de pulmón temprano, cuando es más fácil de tratar." },
+        "against": { "en": "It can find spots that are not cancer, which can mean more tests.", "es": "Puede encontrar manchas que no son cáncer, y eso puede traer más pruebas." }
+      }
+    },
+
+    "prostate": {
+      "name": { "en": "Prostate cancer screening (PSA test)", "es": "Prueba de cáncer de próstata (PSA)" },
+      "options": {
+        "average": [
+          { "en": "A PSA blood test, if you decide to have one", "es": "Un análisis de sangre de PSA, si decide hacérselo" }
+        ]
+      },
+      "why": {
+        "decide": { "en": "Men 55 to 69 can choose a PSA test after talking with a clinician.", "es": "Los hombres de 55 a 69 pueden elegir un PSA después de hablar con un profesional de salud." },
+        "early": { "en": "With a father or brother who had it, the talk can start at 45.", "es": "Si su padre o hermano lo tuvo, la conversación puede empezar a los 45." },
+        "gene": { "en": "With a BRCA or Lynch gene change, the talk can start at 45 or sooner.", "es": "Con un cambio en el gen BRCA o Lynch, la conversación puede empezar a los 45 o antes." },
+        "black": { "en": "Black men have higher risk and may want to talk about it sooner.", "es": "Los hombres afroamericanos tienen más riesgo y pueden querer hablarlo antes." },
+        "next": { "en": "The PSA choice starts at 55.", "es": "La decisión del PSA empieza a los 55." }
+      },
+      "asks": {
+        "decide": [
+          { "en": "Should I have a PSA test?", "es": "¿Debo hacerme el PSA?" },
+          { "en": "What happens if my PSA is high?", "es": "¿Qué pasa si mi PSA sale alto?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "It can find prostate cancer early.", "es": "Puede encontrar el cáncer de próstata temprano." },
+        "against": { "en": "It can find cancers that would never cause harm, and follow-up tests have risks.", "es": "Puede encontrar cánceres que nunca harían daño, y las pruebas que siguen tienen riesgos." }
+      }
+    },
+
+    "skin": {
+      "name": { "en": "Skin checks", "es": "Revisión de la piel" },
+      "options": {
+        "average": [
+          { "en": "A skin check by a clinician", "es": "Una revisión de la piel por un profesional" }
+        ]
+      },
+      "why": {
+        "history": { "en": "There is no routine skin screening. With this history, ask about regular checks.", "es": "No hay una prueba de piel de rutina. Con esta historia, pregunte por revisiones regulares." }
+      },
+      "asks": {
+        "history": [
+          { "en": "Should I have regular skin checks?", "es": "¿Debo hacerme revisiones de piel regulares?" },
+          { "en": "What changes in a mole should I watch for?", "es": "¿Qué cambios en un lunar debo vigilar?" }
+        ]
+      },
+      "sides": {
+        "for": { "en": "A trained eye can spot changes early.", "es": "Un ojo entrenado puede ver cambios temprano." },
+        "against": { "en": "There is not enough proof that checks help everyone.", "es": "No hay suficiente prueba de que las revisiones ayuden a todos." }
+      }
+    },
+
+    "liver": {
+      "name": { "en": "Liver checks", "es": "Revisión del hígado" },
+      "options": {
+        "average": [
+          { "en": "A liver ultrasound every 6 months, for some people", "es": "Un ultrasonido del hígado cada 6 meses, para algunas personas" }
+        ]
+      },
+      "why": {
+        "hep": { "en": "Some people with hepatitis B or C need liver checks every 6 months.", "es": "Algunas personas con hepatitis B o C necesitan revisiones del hígado cada 6 meses." }
+      },
+      "asks": {
+        "hep": [
+          { "en": "Do I need liver checks every 6 months?", "es": "¿Necesito revisiones del hígado cada 6 meses?" },
+          { "en": "Can my hepatitis be treated or cured?", "es": "¿Se puede tratar o curar mi hepatitis?" }
+        ]
+      }
+    }
+  },
+
+  "symptoms": {
+    "sym_bowel": {
+      "what": { "en": "Often hemorrhoids or another minor cause. It can also be an early sign of colorectal cancer. Only a doctor can tell.", "es": "Muchas veces son hemorroides u otra causa menor. También puede ser una señal temprana de cáncer colorrectal. Solo un médico puede saberlo." },
+      "do": { "en": "Book a visit soon. Ask about a colonoscopy. Stool tests are for people without symptoms.", "es": "Pida una cita pronto. Pregunte por una colonoscopia. Las pruebas de heces son para personas sin síntomas." }
+    },
+    "sym_breast": {
+      "what": { "en": "Most breast lumps are not cancer. But you cannot tell by feel.", "es": "La mayoría de las bolitas en el seno no son cáncer. Pero no se puede saber al tocarlas." },
+      "do": { "en": "Book a visit now. A lump needs a closer look with imaging, not a routine mammogram.", "es": "Pida una cita ya. Una bolita necesita estudios de imagen, no una mamografía de rutina." }
+    },
+    "sym_cough": {
+      "what": { "en": "A cough that lasts more than 3 weeks should be checked. So should any blood.", "es": "Una tos de más de 3 semanas se debe revisar. También cualquier sangre." },
+      "do": { "en": "Book a visit. If you cough up blood, get seen this week.", "es": "Pida una cita. Si tose sangre, que lo vean esta semana." }
+    },
+    "sym_vaginal": {
+      "what": { "en": "Bleeding after menopause is never normal. It is often not cancer, but it must be checked.", "es": "El sangrado después de la menopausia nunca es normal. Muchas veces no es cáncer, pero se debe revisar." },
+      "do": { "en": "Book a visit soon. This is checked with an ultrasound or a biopsy, not a Pap test.", "es": "Pida una cita pronto. Esto se revisa con un ultrasonido o una biopsia, no con un Papanicolaou." }
+    },
+    "sym_mole": {
+      "what": { "en": "A mole that changes is the most useful sign of melanoma.", "es": "Un lunar que cambia es la señal más útil de melanoma." },
+      "do": { "en": "Ask for a skin check. Take a photo of it today.", "es": "Pida una revisión de la piel. Tómele una foto hoy." }
+    },
+    "sym_urine": {
+      "what": { "en": "Often an infection or a kidney stone. It can also be a sign of bladder or kidney cancer.", "es": "Muchas veces es una infección o una piedra en el riñón. También puede ser señal de cáncer de vejiga o de riñón." },
+      "do": { "en": "Book a visit, even if it happened once and stopped.", "es": "Pida una cita, aunque haya pasado una sola vez y se haya quitado." }
+    },
+    "sym_swallow": {
+      "what": { "en": "Food that sticks, or pain when you swallow, for more than 2 weeks needs a check.", "es": "La comida que se atora, o el dolor al tragar, por más de 2 semanas necesita revisión." },
+      "do": { "en": "Book a visit. A doctor may look at your throat with a small camera.", "es": "Pida una cita. Un médico puede revisar su garganta con una cámara pequeña." }
+    },
+    "sym_weight": {
+      "what": { "en": "Losing weight without trying has many causes. Many can be treated.", "es": "Bajar de peso sin intentarlo tiene muchas causas. Muchas se pueden tratar." },
+      "do": { "en": "Book a visit. Say how much weight was lost, and how fast.", "es": "Pida una cita. Diga cuánto peso bajó y en cuánto tiempo." }
+    },
+    "sym_head": {
+      "what": { "en": "Brain tumors are rare. New headaches or vision changes still need a check.", "es": "Los tumores cerebrales son raros. Los dolores de cabeza nuevos o cambios en la vista igual se deben revisar." },
+      "do": { "en": "Call a doctor soon. For a first seizure or sudden vision loss, call 911.", "es": "Llame a un médico pronto. Ante una primera convulsión o pérdida repentina de la vista, llame al 911." }
+    },
+    "sym_fatigue": {
+      "what": { "en": "Most tiredness is not cancer. Heavy tiredness that does not get better needs a check.", "es": "Casi todo el cansancio no es cáncer. El cansancio fuerte que no mejora se debe revisar." },
+      "do": { "en": "Book a visit. Simple blood tests often find the cause.", "es": "Pida una cita. Unos análisis de sangre sencillos muchas veces encuentran la causa." }
+    }
+  }
+}

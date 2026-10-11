@@ -1,0 +1,119 @@
+{
+  "version": "2026.09.28",
+  "notes": "Food diary groups. 'grams' turns one logged serving into the amount the evidence is written in (used by the risk picture once 3 or more days are logged). 'minDays' is the point where diary amounts replace the check answers. 'evidence' sets the food's ingredient grade in the scanner's search (points in content/ingredients.json → grade).",
+  "minDays": 3,
+  "servingGuide": {
+    "en": "Count rough servings: a palm of meat, a cup of vegetables, a slice of bread, or one drink.",
+    "es": "Cuente porciones aproximadas: una palma de carne, una taza de verduras, una rebanada de pan o un trago."
+  },
+  "foods": [
+    {
+      "id": "proc", "group": "limit", "evidence": "iarc1", "grams": 50,
+      "name": { "en": "Processed meat", "es": "Carne procesada" },
+      "examples": { "en": "Bacon, ham, hot dogs, deli meat, sausage", "es": "Tocino, jamón, salchichas, fiambres, chorizo" },
+      "serving": { "en": "1 serving = 1 hot dog or 2 slices of deli meat", "es": "1 porción = 1 salchicha o 2 rebanadas de fiambre" },
+      "level": { "en": "IARC Group 1: causes cancer in people", "es": "IARC Grupo 1: causa cáncer en personas" },
+      "cancers": { "en": ["Colorectal", "Stomach"], "es": ["Colorrectal", "Estómago"] },
+      "source": { "org": "IARC", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf" }
+    },
+    {
+      "id": "red", "group": "limit", "evidence": "iarc2A", "grams": 100,
+      "name": { "en": "Red meat", "es": "Carne roja" },
+      "examples": { "en": "Beef, pork, lamb", "es": "Res, cerdo, cordero" },
+      "serving": { "en": "1 serving = a piece the size of your palm", "es": "1 porción = un pedazo del tamaño de su palma" },
+      "level": { "en": "IARC Group 2A: probably causes cancer", "es": "IARC Grupo 2A: probablemente causa cáncer" },
+      "cancers": { "en": ["Colorectal"], "es": ["Colorrectal"] },
+      "source": { "org": "IARC", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf" }
+    },
+    {
+      "id": "alcohol", "group": "limit", "evidence": "iarc1", "grams": 14,
+      "name": { "en": "Alcohol", "es": "Alcohol" },
+      "examples": { "en": "Beer, wine, liquor", "es": "Cerveza, vino, licor" },
+      "serving": { "en": "1 drink = 12 oz beer, 5 oz wine or 1.5 oz liquor", "es": "1 trago = 12 oz de cerveza, 5 oz de vino o 1.5 oz de licor" },
+      "level": { "en": "IARC Group 1: causes cancer in people", "es": "IARC Grupo 1: causa cáncer en personas" },
+      "cancers": { "en": ["Breast", "Colorectal", "Liver", "Mouth and throat", "Esophagus"], "es": ["Mama", "Colorrectal", "Hígado", "Boca y garganta", "Esófago"] },
+      "source": { "org": "NCI", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/alcohol/alcohol-fact-sheet" }
+    },
+    {
+      "id": "salted", "group": "limit", "evidence": "wcrf", "grams": null,
+      "name": { "en": "Salt-preserved food", "es": "Comida conservada en sal" },
+      "examples": { "en": "Salted fish, very salty pickles", "es": "Pescado salado, encurtidos muy salados" },
+      "serving": { "en": "1 serving = a small piece or a few pickles", "es": "1 porción = un pedazo pequeño o unos encurtidos" },
+      "level": { "en": "WCRF: probably causes stomach cancer", "es": "WCRF: probablemente causa cáncer de estómago" },
+      "cancers": { "en": ["Stomach"], "es": ["Estómago"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "hotdrink", "group": "limit", "evidence": "iarc2A", "grams": null,
+      "name": { "en": "Very hot drinks", "es": "Bebidas muy calientes" },
+      "examples": { "en": "Tea or coffee hotter than 149°F (65°C)", "es": "Té o café a más de 65 °C (149 °F)" },
+      "serving": { "en": "1 serving = 1 cup drunk very hot", "es": "1 porción = 1 taza tomada muy caliente" },
+      "level": { "en": "IARC Group 2A: probably causes cancer", "es": "IARC Grupo 2A: probablemente causa cáncer" },
+      "cancers": { "en": ["Esophagus"], "es": ["Esófago"] },
+      "source": { "org": "IARC", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr244_E.pdf" }
+    },
+    {
+      "id": "sugary", "group": "limit", "evidence": "weight", "grams": null,
+      "name": { "en": "Sugary drinks", "es": "Bebidas azucaradas" },
+      "examples": { "en": "Soda, sweet tea, sports and energy drinks", "es": "Refrescos, té dulce, bebidas deportivas y energéticas" },
+      "serving": { "en": "1 serving = 1 can (12 oz)", "es": "1 porción = 1 lata (12 oz)" },
+      "level": { "en": "WCRF: causes weight gain, which raises cancer risk", "es": "WCRF: hace subir de peso, y eso sube el riesgo de cáncer" },
+      "cancers": { "en": ["Cancers linked to weight"], "es": ["Cánceres ligados al peso"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "fried", "group": "limit", "evidence": "limited", "grams": null,
+      "name": { "en": "Fried or charred food", "es": "Comida frita o quemada" },
+      "examples": { "en": "French fries, chips, blackened meat", "es": "Papas fritas, chips, carne muy quemada" },
+      "serving": { "en": "1 serving = a small order of fries", "es": "1 porción = una orden pequeña de papas" },
+      "level": { "en": "Limited evidence (acrylamide is IARC Group 2A)", "es": "Evidencia limitada (la acrilamida es IARC Grupo 2A)" },
+      "cancers": { "en": ["Studied, not proven"], "es": ["Estudiado, no comprobado"] },
+      "source": { "org": "NCI", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/acrylamide-fact-sheet" }
+    },
+    {
+      "id": "veg", "group": "choose", "grams": 80,
+      "name": { "en": "Vegetables", "es": "Verduras" },
+      "examples": { "en": "Greens, broccoli, carrots, squash", "es": "Hojas verdes, brócoli, zanahoria, calabaza" },
+      "serving": { "en": "1 serving = 1 cup raw or ½ cup cooked", "es": "1 porción = 1 taza cruda o ½ taza cocida" },
+      "level": { "en": "WCRF: may lower risk", "es": "WCRF: puede bajar el riesgo" },
+      "cancers": { "en": ["Mouth, throat and stomach"], "es": ["Boca, garganta y estómago"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "fruit", "group": "choose", "grams": 80,
+      "name": { "en": "Fruit", "es": "Fruta" },
+      "examples": { "en": "Whole fruit rather than juice", "es": "Fruta entera mejor que jugo" },
+      "serving": { "en": "1 serving = 1 medium fruit or ½ cup", "es": "1 porción = 1 fruta mediana o ½ taza" },
+      "level": { "en": "WCRF: may lower risk", "es": "WCRF: puede bajar el riesgo" },
+      "cancers": { "en": ["Lung", "Stomach"], "es": ["Pulmón", "Estómago"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "fiber", "group": "choose", "grams": 30,
+      "name": { "en": "Whole grains", "es": "Granos integrales" },
+      "examples": { "en": "Oatmeal, brown rice, whole-wheat bread", "es": "Avena, arroz integral, pan integral" },
+      "serving": { "en": "1 serving = 1 slice of bread or ½ cup cooked", "es": "1 porción = 1 rebanada de pan o ½ taza cocida" },
+      "level": { "en": "WCRF: probably lowers risk", "es": "WCRF: probablemente baja el riesgo" },
+      "cancers": { "en": ["Colorectal"], "es": ["Colorrectal"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "legume", "group": "choose", "grams": 30,
+      "name": { "en": "Beans and lentils", "es": "Frijoles y lentejas" },
+      "examples": { "en": "Black beans, chickpeas, lentils", "es": "Frijoles negros, garbanzos, lentejas" },
+      "serving": { "en": "1 serving = ½ cup cooked", "es": "1 porción = ½ taza cocida" },
+      "level": { "en": "WCRF: adds fiber, which lowers risk", "es": "WCRF: aporta fibra, que baja el riesgo" },
+      "cancers": { "en": ["Colorectal"], "es": ["Colorrectal"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    },
+    {
+      "id": "dairy", "group": "choose", "grams": null,
+      "name": { "en": "Milk, yogurt or cheese", "es": "Leche, yogur o queso" },
+      "examples": { "en": "Milk, yogurt, cheese", "es": "Leche, yogur, queso" },
+      "serving": { "en": "1 serving = 1 cup milk or yogurt, or 1.5 oz cheese", "es": "1 porción = 1 taza de leche o yogur, o 1.5 oz de queso" },
+      "level": { "en": "WCRF: probably lowers colorectal risk", "es": "WCRF: probablemente baja el riesgo colorrectal" },
+      "cancers": { "en": ["Colorectal (lower)", "Prostate (higher at large amounts)"], "es": ["Colorrectal (menos)", "Próstata (más en cantidades grandes)"] },
+      "source": { "org": "WCRF", "url": "https://www.wcrf.org/diet-activity-and-cancer/" }
+    }
+  ]
+}

@@ -1,0 +1,2271 @@
+{
+  "version": "2026.09.28",
+  "coverage": "Virginia",
+  "staleAfterDays": 180,
+  "notes": "Edit a site by changing its fields and its 'verified' date. Use null when something is not known: the app then says 'Call to ask' instead of guessing, and filters leave that site out. 'tests' lists only screenings the site's own public pages (or a federal requirement, see testsBasis) show it offers.",
+  "sites": [
+    {
+      "id": "massey-main",
+      "name": "VCU Massey Comprehensive Cancer Center",
+      "type": "massey",
+      "nci": true,
+      "address": "1001 E Leigh St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.543,
+      "lng": -77.4302,
+      "phone": "(800) 762-6161",
+      "phoneNote": {
+        "en": "VCU Health appointment line for screening. Mon–Fri, 8 a.m.–5 p.m.",
+        "es": "Línea de citas de VCU Health para pruebas de detección. Lun–Vie, 8 a. m.–5 p. m."
+      },
+      "website": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/",
+      "tests": [
+        "mammogram",
+        "colonoscopy",
+        "ldct",
+        "skin"
+      ],
+      "testsBasis": "the cancer center’s screening pages",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": true,
+        "medicaid": true
+      },
+      "costNote": {
+        "en": "Takes Medicaid. Financial help for people without insurance: (804) 828-0966.",
+        "es": "Acepta Medicaid. Ayuda económica para personas sin seguro: (804) 828-0966."
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": {
+        "en": "Phone line Mon–Fri, 8 a.m.–5 p.m.",
+        "es": "Teléfono Lun–Vie, 8 a. m.–5 p. m."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": "some",
+      "referralNote": {
+        "en": "A colonoscopy needs a referral from your doctor. Ask about other tests when you call.",
+        "es": "La colonoscopia necesita una referencia de su médico. Pregunte por las otras pruebas al llamar."
+      },
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/request-an-appointment/"
+    },
+    {
+      "id": "vcu-breast-imaging",
+      "name": "VCU Health Breast Imaging",
+      "type": "massey",
+      "nci": false,
+      "address": "9000 Stony Point Pkwy",
+      "city": "Richmond",
+      "zip": "23235",
+      "lat": 37.5528,
+      "lng": -77.566,
+      "phone": "(804) 237-6666",
+      "phoneNote": {
+        "en": "Mammogram scheduling. VCU Health also does mammograms downtown; ask which is closer.",
+        "es": "Citas de mamografía. VCU Health también hace mamografías en el centro; pregunte cuál le queda más cerca."
+      },
+      "website": "https://www.vcuhealth.org/services/breast-imaging/",
+      "tests": [
+        "mammogram"
+      ],
+      "testsBasis": "VCU Health Breast Imaging pages",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": true,
+        "medicaid": true
+      },
+      "costNote": {
+        "en": "Takes Medicaid. Free screening may be possible through Every Woman’s Life.",
+        "es": "Acepta Medicaid. Puede haber pruebas gratis por Every Woman’s Life."
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.vcuhealth.org/services/breast-imaging/contact-us/"
+    },
+    {
+      "id": "vcu-lung-screening",
+      "name": "VCU Health Lung Cancer Screening",
+      "type": "massey",
+      "nci": false,
+      "address": "9000 Stony Point Pkwy",
+      "city": "Richmond",
+      "zip": "23235",
+      "lat": 37.5529,
+      "lng": -77.5658,
+      "phone": "(804) 827-5864",
+      "phoneNote": {
+        "en": "804-827-LUNG. Screening also runs downtown on weekdays.",
+        "es": "804-827-LUNG. También hay pruebas en el centro entre semana."
+      },
+      "website": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/lung-cancer-screening/",
+      "tests": [
+        "ldct"
+      ],
+      "testsBasis": "the cancer center’s lung screening page",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": false,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": {
+        "en": "Stony Point lung screening clinic: Wednesdays",
+        "es": "Clínica de pulmón en Stony Point: los miércoles"
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": true,
+      "referralNote": {
+        "en": "Your primary care provider orders the scan.",
+        "es": "Su proveedor de atención primaria pide el escáner."
+      },
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/lung-cancer-screening/"
+    },
+    {
+      "id": "vcu-colonoscopy",
+      "name": "VCU Health Digestive Health (colonoscopy)",
+      "type": "massey",
+      "nci": false,
+      "address": "1250 E Marshall St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.54,
+      "lng": -77.4302,
+      "phone": "(804) 828-8508",
+      "website": "https://www.vcuhealth.org/services/digestive-health/our-services/colonoscopy/",
+      "tests": [
+        "colonoscopy"
+      ],
+      "testsBasis": "VCU Health colonoscopy page",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": false,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": true,
+      "referralNote": {
+        "en": "A referral from your primary care provider is needed.",
+        "es": "Necesita una referencia de su proveedor de atención primaria."
+      },
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/cancer-types-and-treatments/cancer-testing-and-diagnosis/cancer-screening/colon-cancer-screening/"
+    },
+    {
+      "id": "massey-stony-point",
+      "name": "VCU Massey Cancer Center at Stony Point",
+      "type": "massey",
+      "nci": true,
+      "address": "9000 Stony Point Pkwy, 2nd Floor",
+      "city": "Richmond",
+      "zip": "23235",
+      "lat": 37.5527,
+      "lng": -77.5662,
+      "phone": "(804) 327-3055",
+      "website": "https://www.masseycancercenter.org/locations/stony-point-9000/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/locations/stony-point-9000/"
+    },
+    {
+      "id": "massey-hanover",
+      "name": "VCU Massey Cancer Center at Hanover Medical Park",
+      "type": "massey",
+      "nci": true,
+      "address": "8222 Meadowbridge Rd",
+      "city": "Mechanicsville",
+      "zip": "23116",
+      "lat": 37.6265,
+      "lng": -77.3859,
+      "phone": "(804) 559-1835",
+      "website": "https://www.masseycancercenter.org/locations/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": false,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/locations/"
+    },
+    {
+      "id": "vcu-cmh",
+      "name": "VCU Health Community Memorial Hospital",
+      "type": "massey",
+      "nci": false,
+      "address": "1755 N Mecklenburg Ave",
+      "city": "South Hill",
+      "zip": "23970",
+      "lat": 36.748,
+      "lng": -78.1032,
+      "phone": "(434) 447-3151",
+      "website": "https://www.vcuhealth.org/community-memorial-hospital/",
+      "tests": [
+        "mammogram"
+      ],
+      "testsBasis": "VCU Health CMH digital mammography page",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": false,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.vcuhealth.org/community-memorial-hospital/contact-us/"
+    },
+    {
+      "id": "vcu-tappahannock",
+      "name": "VCU Health Tappahannock Hospital",
+      "type": "massey",
+      "nci": false,
+      "address": "618 Hospital Rd",
+      "city": "Tappahannock",
+      "zip": "22560",
+      "lat": 37.9005,
+      "lng": -76.8771,
+      "phone": "(888) 803-1928",
+      "phoneNote": {
+        "en": "Mammogram scheduling. Main hospital line: (804) 443-3311.",
+        "es": "Citas de mamografía. Línea principal del hospital: (804) 443-3311."
+      },
+      "website": "https://www.vcuhealth.org/tappahannock/",
+      "tests": [
+        "mammogram"
+      ],
+      "testsBasis": "VCU Health Tappahannock imaging listing (digital and 3D mammography)",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": false,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.vcuhealth.org/tappahannock/locations/tappahannock-hospital/"
+    },
+    {
+      "id": "dp-grace",
+      "name": "Daily Planet Health Services – West Grace",
+      "type": "fqhc",
+      "nci": false,
+      "address": "517 W Grace St",
+      "city": "Richmond",
+      "zip": "23220",
+      "lat": 37.5474,
+      "lng": -77.4473,
+      "phone": "(804) 783-2505",
+      "website": "https://dailyplanetva.org/locations/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health centers must offer cancer screening in primary care (Public Health Service Act, section 330). Mammograms are usually by referral.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": true,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": {
+        "en": "Mon–Fri, 8 a.m.–4:30 p.m. Walk-in care next door at 511 W Grace St.",
+        "es": "Lun–Vie, 8 a. m.–4:30 p. m. Atención sin cita al lado, en 511 W Grace St."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://dailyplanetva.org/locations/"
+    },
+    {
+      "id": "dp-southside",
+      "name": "Daily Planet Health Services – Southside",
+      "type": "fqhc",
+      "nci": false,
+      "address": "180 E Belt Blvd",
+      "city": "Richmond",
+      "zip": "23224",
+      "lat": 37.5062,
+      "lng": -77.4819,
+      "phone": "(804) 783-2505",
+      "website": "https://dailyplanetva.org/locations/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": {
+        "en": "Mon–Fri, 8 a.m.–4:30 p.m.",
+        "es": "Lun–Vie, 8 a. m.–4:30 p. m."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://dailyplanetva.org/locations/"
+    },
+    {
+      "id": "dp-cary",
+      "name": "Daily Planet Health Services – East Cary",
+      "type": "fqhc",
+      "nci": false,
+      "address": "24 E Cary St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.5421,
+      "lng": -77.4449,
+      "phone": "(804) 783-2505",
+      "website": "https://dailyplanetva.org/locations/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": {
+        "en": "Mon–Fri, 8 a.m.–4:30 p.m.",
+        "es": "Lun–Vie, 8 a. m.–4:30 p. m."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://dailyplanetva.org/locations/"
+    },
+    {
+      "id": "cahn-harris",
+      "name": "Capital Area Health Network – Vernon J. Harris",
+      "type": "fqhc",
+      "nci": false,
+      "address": "719 N 25th St",
+      "city": "Richmond",
+      "zip": "23223",
+      "lat": 37.5353,
+      "lng": -77.4152,
+      "phone": "(804) 780-0840",
+      "website": "https://cahealthnet.org/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "costNote": {
+        "en": "Sliding fee scale. Care regardless of ability to pay.",
+        "es": "Tarifa según ingresos. Atención sin importar si puede pagar."
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://cahealthnet.org/"
+    },
+    {
+      "id": "cahn-northside",
+      "name": "Capital Area Health Network – Northside",
+      "type": "fqhc",
+      "nci": false,
+      "address": "2809 North Ave",
+      "city": "Richmond",
+      "zip": "23222",
+      "lat": 37.5686,
+      "lng": -77.4329,
+      "phone": "(804) 780-0840",
+      "website": "https://cahealthnet.org/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://cahealthnet.org/"
+    },
+    {
+      "id": "cahn-bermuda",
+      "name": "Capital Area Health Network – Bermuda",
+      "type": "fqhc",
+      "nci": false,
+      "address": "2740 Bensley Commons Blvd",
+      "city": "Richmond",
+      "zip": "23237",
+      "lat": 37.4243,
+      "lng": -77.4401,
+      "phone": "(804) 780-0840",
+      "website": "https://cahealthnet.org/",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://cahealthnet.org/"
+    },
+    {
+      "id": "crossover-richmond",
+      "name": "CrossOver Healthcare Ministry – Richmond",
+      "type": "free",
+      "nci": false,
+      "address": "108 Cowardin Ave",
+      "city": "Richmond",
+      "zip": "23224",
+      "lat": 37.5194,
+      "lng": -77.4495,
+      "phone": "(804) 655-2794",
+      "website": "https://www.crossoverministry.org/cliniclocations/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": false
+      },
+      "costNote": {
+        "en": "For people without insurance with income at or below 200% of the federal poverty level.",
+        "es": "Para personas sin seguro con ingresos iguales o menores al 200% del nivel federal de pobreza."
+      },
+      "language": {
+        "spanish": true,
+        "interpreter": true
+      },
+      "languageNote": {
+        "en": "Arabic, English, Portuguese and Spanish.",
+        "es": "Árabe, inglés, portugués y español."
+      },
+      "bus": null,
+      "hours": {
+        "en": "Mon–Thu, 8 a.m.–5 p.m. Fri, 8 a.m.–12:30 p.m.",
+        "es": "Lun–Jue, 8 a. m.–5 p. m. Vie, 8 a. m.–12:30 p. m."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.crossoverministry.org/cliniclocations/"
+    },
+    {
+      "id": "crossover-henrico",
+      "name": "CrossOver Healthcare Ministry – Henrico",
+      "type": "free",
+      "nci": false,
+      "address": "8600 Quioccasin Rd",
+      "city": "Richmond",
+      "zip": "23229",
+      "lat": 37.6019,
+      "lng": -77.5642,
+      "phone": "(804) 655-2794",
+      "website": "https://www.crossoverministry.org/cliniclocations/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": false
+      },
+      "costNote": {
+        "en": "For people without insurance with income at or below 200% of the federal poverty level.",
+        "es": "Para personas sin seguro con ingresos iguales o menores al 200% del nivel federal de pobreza."
+      },
+      "language": {
+        "spanish": true,
+        "interpreter": true
+      },
+      "languageNote": {
+        "en": "Arabic, English, Portuguese and Spanish.",
+        "es": "Árabe, inglés, portugués y español."
+      },
+      "bus": null,
+      "hours": {
+        "en": "Mon, 8 a.m.–7:30 p.m. Tue–Thu, 8 a.m.–5 p.m. Fri, 8 a.m.–12:30 p.m.",
+        "es": "Lun, 8 a. m.–7:30 p. m. Mar–Jue, 8 a. m.–5 p. m. Vie, 8 a. m.–12:30 p. m."
+      },
+      "evening": true,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.crossoverministry.org/cliniclocations/"
+    },
+    {
+      "id": "health-brigade",
+      "name": "Health Brigade",
+      "type": "free",
+      "nci": false,
+      "address": "1010 N Thompson St",
+      "city": "Richmond",
+      "zip": "23230",
+      "lat": 37.5673,
+      "lng": -77.4792,
+      "phone": "(804) 358-6343",
+      "website": "https://www.healthbrigade.org/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": false
+      },
+      "costNote": {
+        "en": "Free clinic for people without insurance with income at or below 200% of the federal poverty level. Offers women’s health services.",
+        "es": "Clínica gratuita para personas sin seguro con ingresos iguales o menores al 200% del nivel federal de pobreza. Ofrece servicios de salud de la mujer."
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": {
+        "en": "Medical clinic: Mon–Thu, 9 a.m.–5 p.m. Fri, 9 a.m.–12 p.m.",
+        "es": "Clínica médica: Lun–Jue, 9 a. m.–5 p. m. Vie, 9 a. m.–12 p. m."
+      },
+      "evening": false,
+      "weekend": false,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.healthbrigade.org/contact/"
+    },
+    {
+      "id": "rhhd-downtown",
+      "name": "Richmond City Health District – Downtown Clinic",
+      "type": "healthdept",
+      "nci": false,
+      "address": "400 E Cary St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.5401,
+      "lng": -77.4415,
+      "phone": "(804) 205-3500",
+      "website": "https://www.vdh.virginia.gov/richmond-city/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "costNote": {
+        "en": "Ask about Every Woman’s Life for free breast and cervical screening.",
+        "es": "Pregunte por Every Woman’s Life para pruebas gratis de mama y cuello uterino."
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.vdh.virginia.gov/richmond-city/"
+    },
+    {
+      "id": "henrico-east",
+      "name": "Henrico Health District – East Clinic",
+      "type": "healthdept",
+      "nci": false,
+      "address": "1400 N Laburnum Ave",
+      "city": "Richmond",
+      "zip": "23223",
+      "lat": 37.5645,
+      "lng": -77.3776,
+      "phone": "(804) 652-3190",
+      "website": "https://www.vdh.virginia.gov/richmond-city/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.vdh.virginia.gov/richmond-city/"
+    },
+    {
+      "id": "henrico-west",
+      "name": "Henrico Health District – West Clinic",
+      "type": "healthdept",
+      "nci": false,
+      "address": "8600 Dixon Powers Dr",
+      "city": "Richmond",
+      "zip": "23228",
+      "lat": 37.6284,
+      "lng": -77.5096,
+      "phone": "(804) 501-4651",
+      "website": "https://www.vdh.virginia.gov/richmond-city/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.vdh.virginia.gov/richmond-city/"
+    },
+    {
+      "id": "bs-breast-stmarys",
+      "name": "Bon Secours Virginia Breast Center – St. Mary’s",
+      "type": "hospital",
+      "nci": false,
+      "address": "5875 Bremo Rd, MOB South, Suite G-11",
+      "city": "Richmond",
+      "zip": "23226",
+      "lat": 37.5838,
+      "lng": -77.5139,
+      "phone": "(804) 594-3130",
+      "website": "https://www.bonsecours.com/locations/specialty-locations/breast-health/bon-secours-virginia-breast-center-st-marys",
+      "tests": [
+        "mammogram"
+      ],
+      "testsBasis": "Bon Secours breast health listing",
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-28",
+      "source": "https://www.bonsecours.com/locations/specialty-locations/breast-health"
+    },
+    {
+      "id": "goochland-cares",
+      "name": "GoochlandCares Free Clinic",
+      "type": "free",
+      "nci": false,
+      "address": "2999 River Road West",
+      "city": "Goochland",
+      "zip": "23063",
+      "lat": 37.6862,
+      "lng": -77.8856,
+      "phone": "(804) 556-6260",
+      "website": "https://goochlandcares.org/services/medical-care/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": false,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://goochlandcares.org/services/medical-care/"
+    },
+    {
+      "id": "cvhs-westmoreland",
+      "name": "Central Virginia Health Services – Petersburg",
+      "type": "fqhc",
+      "nci": false,
+      "address": "321C Poplar Dr",
+      "city": "Petersburg",
+      "zip": "23805",
+      "lat": 37.1894,
+      "lng": -77.3627,
+      "phone": "(804) 733-5591",
+      "website": "https://www.cvhsinc.org/petersburg",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.cvhsinc.org/petersburg"
+    },
+    {
+      "id": "cvhs-downtown",
+      "name": "Central Virginia Health Services – Downtown Petersburg",
+      "type": "fqhc",
+      "nci": false,
+      "address": "541 S Sycamore St",
+      "city": "Petersburg",
+      "zip": "23803",
+      "lat": 37.2193,
+      "lng": -77.4,
+      "phone": "(804) 957-9601",
+      "website": "https://cvhsinc.org/downtown-petersburg",
+      "tests": [
+        "pap",
+        "fit"
+      ],
+      "testsBasis": "Federally funded health center (section 330). Confirm by phone.",
+      "cost": {
+        "uninsured": true,
+        "slidingScale": true,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://cvhsinc.org/downtown-petersburg"
+    },
+    {
+      "id": "crc-hub25",
+      "name": "Massey Community Resource Center – VCU Health Hub at 25th",
+      "type": "resource",
+      "nci": false,
+      "address": "1330 N 25th St, Suite A",
+      "city": "Richmond",
+      "zip": "23223",
+      "lat": 37.5407,
+      "lng": -77.4103,
+      "phone": "(804) 628-0896",
+      "website": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/cancer-research-and-resource-centers/",
+      "tests": [],
+      "costNote": {
+        "en": "Free help finding screening, plus cancer information. No tests are done here.",
+        "es": "Ayuda gratis para encontrar pruebas e información sobre el cáncer. Aquí no se hacen pruebas."
+      },
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/cancer-research-and-resource-centers/"
+    },
+    {
+      "id": "crc-petersburg",
+      "name": "Massey Community Resource Center – Petersburg Public Library",
+      "type": "resource",
+      "nci": false,
+      "address": "201 W Washington St",
+      "city": "Petersburg",
+      "zip": "23803",
+      "lat": 37.2272,
+      "lng": -77.4068,
+      "phone": "(804) 628-0896",
+      "website": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/cancer-research-and-resource-centers/",
+      "tests": [],
+      "costNote": {
+        "en": "Free help finding screening, plus cancer information. No tests are done here.",
+        "es": "Ayuda gratis para encontrar pruebas e información sobre el cáncer. Aquí no se hacen pruebas."
+      },
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": false,
+      "verified": "2026-09-28",
+      "source": "https://www.masseycancercenter.org/patients-and-families/patient-resources-and-support-services/cancer-research-and-resource-centers/"
+    },
+    {
+      "id": "vcu-medical-center",
+      "name": "VCU Medical Center",
+      "type": "hospital",
+      "nci": false,
+      "address": "1200 E Broad St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.54,
+      "lng": -77.428,
+      "phone": "(800) 762-6161",
+      "website": "https://www.vcuhealth.org/",
+      "tests": [],
+      "cost": {
+        "uninsured": true,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vcu-oncology-broad",
+      "name": "VCU Oncology",
+      "type": "cancer",
+      "nci": false,
+      "address": "1216 E Broad St",
+      "city": "Richmond",
+      "zip": "23219",
+      "lat": 37.5405,
+      "lng": -77.4255,
+      "phone": "(804) 828-9000",
+      "website": "https://www.vcuhealth.org/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": true,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vci-parham",
+      "name": "Virginia Cancer Institute",
+      "type": "cancer",
+      "nci": false,
+      "address": "7760 E Parham Rd",
+      "city": "Richmond",
+      "zip": "23294",
+      "lat": 37.621,
+      "lng": -77.523,
+      "phone": "(804) 346-3182",
+      "website": "https://www.vacancer.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vci-mechanicsville",
+      "name": "Virginia Cancer Institute – Mechanicsville",
+      "type": "cancer",
+      "nci": false,
+      "address": "7492 Right Flank Rd",
+      "city": "Mechanicsville",
+      "zip": "23116",
+      "lat": 37.61,
+      "lng": -77.37,
+      "phone": "(804) 559-2489",
+      "website": "https://www.vacancer.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vci-midlothian",
+      "name": "Virginia Cancer Institute – Midlothian",
+      "type": "cancer",
+      "nci": false,
+      "address": "14051 St Francis Blvd #1200",
+      "city": "Midlothian",
+      "zip": "23114",
+      "lat": 37.42,
+      "lng": -77.67,
+      "phone": "(804) 673-0134",
+      "website": "https://www.vacancer.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vci-prince-george",
+      "name": "Virginia Cancer Institute – Prince George",
+      "type": "cancer",
+      "nci": false,
+      "address": "4730 Puddledock Rd Ste 100",
+      "city": "Prince George",
+      "zip": "23875",
+      "lat": 37.24,
+      "lng": -77.34,
+      "phone": "(804) 452-3850",
+      "website": "https://www.vacancer.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sc-henrico-doctors",
+      "name": "Sarah Cannon Cancer Network at Henrico Doctors’ Hospital",
+      "type": "cancer",
+      "nci": false,
+      "address": "7607 Forest Ave",
+      "city": "Richmond",
+      "zip": "23229",
+      "lat": 37.596,
+      "lng": -77.534,
+      "phone": "(804) 545-7940",
+      "website": "https://www.hcavirginia.com/locations/henrico-doctors-hospital/specialties/oncology",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sc-johnston-willis",
+      "name": "Sarah Cannon Cancer Network at Johnston-Willis",
+      "type": "cancer",
+      "nci": false,
+      "address": "1401 Johnston Willis Dr",
+      "city": "Richmond",
+      "zip": "23235",
+      "lat": 37.508,
+      "lng": -77.586,
+      "phone": "(804) 330-2000",
+      "website": "https://www.hcavirginia.com/locations/sarah-cannon-cancer",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "bs-stmarys-cancer",
+      "name": "Bon Secours Cancer Institute at St. Mary’s",
+      "type": "cancer",
+      "nci": false,
+      "address": "5875 Bremo Rd #209",
+      "city": "Richmond",
+      "zip": "23226",
+      "lat": 37.584,
+      "lng": -77.5141,
+      "phone": "(804) 287-7804",
+      "website": "https://www.bonsecours.com/locations/specialty-locations/cancer-care-oncology/bon-secours-cancer-institute-at-st-marys",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "bs-memorial-regional",
+      "name": "Bon Secours Cancer Institute at Memorial Regional",
+      "type": "cancer",
+      "nci": false,
+      "address": "8262 Atlee Rd",
+      "city": "Mechanicsville",
+      "zip": "23116",
+      "lat": 37.65,
+      "lng": -77.36,
+      "phone": "(804) 764-7220",
+      "website": "https://www.bonsecours.com/locations/specialty-locations/cancer-care-oncology/bon-secours-cancer-institute-memorial-regional",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "bs-richmond-community",
+      "name": "Bon Secours Cancer Institute at Richmond Community Hospital",
+      "type": "cancer",
+      "nci": false,
+      "address": "1510 N 28th St",
+      "city": "Richmond",
+      "zip": "23223",
+      "lat": 37.542,
+      "lng": -77.411,
+      "phone": "(804) 287-7804",
+      "website": "https://www.bonsecours.com/locations/specialty-locations/cancer-care-oncology/bon-secours-cancer-institute-rch",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "bs-rappahannock",
+      "name": "Bon Secours Cancer Institute at Rappahannock General",
+      "type": "cancer",
+      "nci": false,
+      "address": "95 Harris Rd MOB 1",
+      "city": "Kilmarnock",
+      "zip": "22482",
+      "lat": 37.713,
+      "lng": -76.38,
+      "phone": "(804) 435-8689",
+      "website": "https://www.bonsecours.com/locations/specialty-locations/cancer-care-oncology/bon-secours-cancer-institute-rgh",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "uva-couric",
+      "name": "UVA Health Emily Couric Clinical Cancer Center",
+      "type": "cancer",
+      "nci": true,
+      "address": "1240 Lee St",
+      "city": "Charlottesville",
+      "zip": "22908",
+      "lat": 38.032,
+      "lng": -78.5,
+      "phone": "(434) 924-9333",
+      "website": "https://www.uvahealth.com/locations/Emily-Couric-Clinical-Cancer-Center-LOC0000234509",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "uva-pantops",
+      "name": "UVA Health Cancer Care Pantops",
+      "type": "cancer",
+      "nci": false,
+      "address": "652 Peter Jefferson Pkwy Ste 310",
+      "city": "Charlottesville",
+      "zip": "22911",
+      "lat": 38.029,
+      "lng": -78.448,
+      "phone": "(434) 924-5236",
+      "website": "https://uvahealth.com/locations/Cancer-Care-Pantops-LOC0000234470",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "uva-augusta",
+      "name": "UVA Health Cancer Center Augusta",
+      "type": "cancer",
+      "nci": false,
+      "address": "57 Beam Ln #300",
+      "city": "Fishersville",
+      "zip": "22939",
+      "lat": 38.097,
+      "lng": -78.97,
+      "phone": "(434) 297-9999",
+      "website": "https://uvahealth.com/locations/Cancer-Center-Augusta-LOC0000234401",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": true
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sentara-mj",
+      "name": "Sentara Martha Jefferson Hospital Cancer Care Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "500 Martha Jefferson Dr",
+      "city": "Charlottesville",
+      "zip": "22911",
+      "lat": 38.03,
+      "lng": -78.44,
+      "phone": "(434) 654-8401",
+      "website": "https://www.sentara.com/health-care/hospitals-and-locations/martha-jefferson-hospital/medical-services/cancer",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vcs-fairfax",
+      "name": "Virginia Cancer Specialists – Fairfax",
+      "type": "cancer",
+      "nci": false,
+      "address": "8613 US-29 N",
+      "city": "Fairfax",
+      "zip": "22031",
+      "lat": 38.86,
+      "lng": -77.29,
+      "phone": "(571) 350-8400",
+      "website": "https://www.virginiacancerspecialists.com/locations/fairfax-va/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "inova-schar",
+      "name": "Inova Schar Cancer Institute",
+      "type": "cancer",
+      "nci": false,
+      "address": "8081 Innovation Park Dr",
+      "city": "Fairfax",
+      "zip": "22031",
+      "lat": 38.865,
+      "lng": -77.23,
+      "phone": "(571) 472-4724",
+      "website": "https://www.inova.org/locations/inova-schar-cancer",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vcs-alexandria",
+      "name": "Virginia Cancer Specialists – Alexandria",
+      "type": "cancer",
+      "nci": false,
+      "address": "4660 Kenmore Ave Suite 1018",
+      "city": "Alexandria",
+      "zip": "22304",
+      "lat": 38.818,
+      "lng": -77.115,
+      "phone": "(571) 350-8400",
+      "website": "https://www.virginiacancerspecialists.com/locations/alexandria-va/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "vcs-oldtown",
+      "name": "Virginia Cancer Specialists – Alexandria Old Town",
+      "type": "cancer",
+      "nci": false,
+      "address": "277 S Washington St #100",
+      "city": "Alexandria",
+      "zip": "22314",
+      "lat": 38.801,
+      "lng": -77.047,
+      "phone": "(571) 350-8400",
+      "website": "https://www.virginiacancerspecialists.com/locations/alexandria-old-town/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "voa-norfolk",
+      "name": "Virginia Oncology Associates – Norfolk",
+      "type": "cancer",
+      "nci": false,
+      "address": "6251 E Virginia Beach Blvd Ste 200",
+      "city": "Norfolk",
+      "zip": "23502",
+      "lat": 36.87,
+      "lng": -76.2,
+      "phone": "(757) 466-8683",
+      "website": "https://www.virginiacancer.com/healthcare-team-locations/locations/norfolk-lake-wright/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sentara-brock",
+      "name": "Sentara Brock Cancer Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "6251 E Virginia Beach Blvd",
+      "city": "Norfolk",
+      "zip": "23502",
+      "lat": 36.8702,
+      "lng": -76.201,
+      "phone": "(757) 624-0000",
+      "website": "https://www.sentara.com/health-care/hospitals-and-locations/sentara-cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "voa-vb",
+      "name": "Virginia Oncology Associates – Virginia Beach",
+      "type": "cancer",
+      "nci": false,
+      "address": "1950 Glenn Mitchell Dr #102",
+      "city": "Virginia Beach",
+      "zip": "23456",
+      "lat": 36.82,
+      "lng": -76.07,
+      "phone": "(757) 368-0437",
+      "website": "https://www.virginiacancer.com/healthcare-team-locations/locations/virginia-beach-princess-anne/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "riverside-vb",
+      "name": "Riverside Cancer Specialists of Tidewater – Virginia Beach",
+      "type": "cancer",
+      "nci": false,
+      "address": "1200 First Colonial Rd Ste 204",
+      "city": "Virginia Beach",
+      "zip": "23454",
+      "lat": 36.845,
+      "lng": -76.03,
+      "phone": "(757) 363-8212",
+      "website": "https://www.riversideonline.com/locations/cancer-care/cancer-specialists-of-tidewater-and-infusion-center-southside",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "voa-suffolk",
+      "name": "Virginia Oncology Associates – Suffolk Harbour View",
+      "type": "cancer",
+      "nci": false,
+      "address": "3910 Bridge Rd Ste 400",
+      "city": "Suffolk",
+      "zip": "23435",
+      "lat": 36.89,
+      "lng": -76.44,
+      "phone": "(757) 484-0215",
+      "website": "https://www.virginiacancer.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "voa-chesapeake",
+      "name": "Virginia Oncology Associates – Chesapeake",
+      "type": "cancer",
+      "nci": false,
+      "address": "744 Battlefield Blvd N Suite 200",
+      "city": "Chesapeake",
+      "zip": "23320",
+      "lat": 36.76,
+      "lng": -76.24,
+      "phone": "(757) 549-4403",
+      "website": "https://www.virginiacancer.com/healthcare-team-locations/locations/chesapeake/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "priority-toyota",
+      "name": "Priority Toyota Cancer Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "744 Battlefield Blvd N",
+      "city": "Chesapeake",
+      "zip": "23320",
+      "lat": 36.7605,
+      "lng": -76.2405,
+      "phone": "(757) 312-3132",
+      "website": "https://chesapeakeregional.com/locations/chesapeake-priority-cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "riverside-chesapeake",
+      "name": "Riverside Cancer Specialists of Tidewater – Chesapeake",
+      "type": "cancer",
+      "nci": false,
+      "address": "110 Wimbledon Square",
+      "city": "Chesapeake",
+      "zip": "23320",
+      "lat": 36.77,
+      "lng": -76.25,
+      "phone": "(757) 436-2995",
+      "website": "https://www.riversideonline.com/en/medical-services/cancer-care",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "riverside-peninsula",
+      "name": "Riverside Peninsula Cancer Institute",
+      "type": "cancer",
+      "nci": false,
+      "address": "120 Kings Way",
+      "city": "Williamsburg",
+      "zip": "23185",
+      "lat": 37.26,
+      "lng": -76.71,
+      "phone": "(757) 345-5724",
+      "website": "https://www.riversideonline.com/en/medical-services/cancer-care",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "shore-cancer",
+      "name": "Shore Cancer Institute",
+      "type": "cancer",
+      "nci": false,
+      "address": "20480 Market St",
+      "city": "Onancock",
+      "zip": "23417",
+      "lat": 37.71,
+      "lng": -75.75,
+      "phone": "(757) 302-2600",
+      "website": "https://www.riversideonline.com/en/locations/hospitals/riverside-shore-memorial-hospital/learn-more/cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "urology-va",
+      "name": "Urology of Virginia",
+      "type": "specialist",
+      "nci": false,
+      "address": "225 Clearfield Ave",
+      "city": "Virginia Beach",
+      "zip": "23462",
+      "lat": 36.83,
+      "lng": -76.08,
+      "phone": "(757) 457-5100",
+      "website": "https://www.urologyofva.net/locations-hours/virginia-beach/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "chcp-vb",
+      "name": "Center for Health and Cancer Prevention",
+      "type": "specialist",
+      "nci": false,
+      "address": "1301 First Colonial Rd #201",
+      "city": "Virginia Beach",
+      "zip": "23454",
+      "lat": 36.848,
+      "lng": -76.033,
+      "phone": "(757) 412-4919",
+      "website": "https://virginiacolonoscopy.com/",
+      "tests": [
+        "colonoscopy"
+      ],
+      "testsBasis": "Practice website (colonoscopy practice)",
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "brcc-roanoke",
+      "name": "Blue Ridge Cancer Care – Roanoke",
+      "type": "cancer",
+      "nci": false,
+      "address": "2013 S Jefferson St",
+      "city": "Roanoke",
+      "zip": "24014",
+      "lat": 37.25,
+      "lng": -79.942,
+      "phone": "(540) 982-0237",
+      "website": "https://blueridgecancercare.com/locations/roanoke/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "carilion-cancer",
+      "name": "Carilion Clinic Cancer Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "2013 S Jefferson St",
+      "city": "Roanoke",
+      "zip": "24014",
+      "lat": 37.2502,
+      "lng": -79.9422,
+      "phone": "(540) 981-7377",
+      "website": "https://www.carilionclinic.org/locations/carilion-clinic-cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "brcc-blacksburg",
+      "name": "Blue Ridge Cancer Care – Blacksburg",
+      "type": "cancer",
+      "nci": false,
+      "address": "2600 Research Center Dr Ste A",
+      "city": "Blacksburg",
+      "zip": "24060",
+      "lat": 37.205,
+      "lng": -80.418,
+      "phone": "(540) 381-5291",
+      "website": "https://blueridgecancercare.com/locations/blacksburg/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "centra-pearson",
+      "name": "Centra Alan B. Pearson Regional Cancer Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "1701 Thomson Dr Unit 200",
+      "city": "Lynchburg",
+      "zip": "24501",
+      "lat": 37.393,
+      "lng": -79.182,
+      "phone": "(434) 200-4522",
+      "website": "https://www.centrahealth.com/locations/alan-b-pearson-regional-cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sovah-med",
+      "name": "Sovah Cancer Center – Medical Oncology and Hematology",
+      "type": "cancer",
+      "nci": false,
+      "address": "142 S Main St",
+      "city": "Danville",
+      "zip": "24541",
+      "lat": 36.586,
+      "lng": -79.395,
+      "phone": "(434) 793-0044",
+      "website": "https://sovahphysicians.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sovah-rad",
+      "name": "Sovah Cancer Center – Radiation Oncology",
+      "type": "cancer",
+      "nci": false,
+      "address": "188 S Main St",
+      "city": "Danville",
+      "zip": "24541",
+      "lat": 36.5855,
+      "lng": -79.3945,
+      "phone": "(434) 799-4592",
+      "website": "https://sovahphysicians.com/",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "ballad-bristol",
+      "name": "Ballad Health Cancer Care – Bristol",
+      "type": "cancer",
+      "nci": false,
+      "address": "743 Island Rd",
+      "city": "Bristol",
+      "zip": "24201",
+      "lat": 36.61,
+      "lng": -82.16,
+      "phone": "(276) 469-4200",
+      "website": "https://www.balladhealth.org/locations/cancer-centers/bristol-island",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "ballad-abingdon",
+      "name": "Ballad Health Cancer Care – Abingdon",
+      "type": "cancer",
+      "nci": false,
+      "address": "16000 Johnston Mem Dr",
+      "city": "Abingdon",
+      "zip": "24211",
+      "lat": 36.705,
+      "lng": -81.97,
+      "phone": "(276) 258-1880",
+      "website": "https://www.balladhealth.org/locations/cancer-centers/abingdon",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": null
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "valley-health",
+      "name": "Valley Health Cancer Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "400 Campus Blvd",
+      "city": "Winchester",
+      "zip": "22601",
+      "lat": 39.155,
+      "lng": -78.183,
+      "phone": "(855) 984-4673",
+      "website": "https://www.valleyhealthlink.com/our-locations/profile/valley-health-cancer-center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    },
+    {
+      "id": "sentara-rmh",
+      "name": "Sentara RMH Hahn Oncology Center",
+      "type": "cancer",
+      "nci": false,
+      "address": "2008 Health Campus Dr",
+      "city": "Harrisonburg",
+      "zip": "22801",
+      "lat": 38.42,
+      "lng": -78.86,
+      "phone": "(540) 689-7000",
+      "website": "https://www.sentara.com/hospitalslocations/Sentara-RMH-Hahn-Cancer-Center",
+      "tests": [],
+      "cost": {
+        "uninsured": null,
+        "slidingScale": null,
+        "ewl": null,
+        "medicaid": null
+      },
+      "language": {
+        "spanish": null,
+        "interpreter": true
+      },
+      "bus": null,
+      "hours": null,
+      "evening": null,
+      "weekend": null,
+      "referral": null,
+      "verified": "2026-09-21",
+      "source": "FutureVitals v1 directory"
+    }
+  ]
+}

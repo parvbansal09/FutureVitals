@@ -1,0 +1,24 @@
+{
+  "appId": "com.futurevitals.app",
+  "appName": "FutureVitals",
+  "webDir": "dist",
+  "appendUserAgent": "FutureVitals/2.0",
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "never"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 300,
+      "launchAutoHide": true,
+      "backgroundColor": "#E5F1EE",
+      "showSpinner": false,
+      "androidScaleType": "CENTER_CROP"
+    },
+    "StatusBar": {
+      "overlaysWebView": false
+    }
+  }
+}

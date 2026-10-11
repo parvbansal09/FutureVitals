@@ -1,0 +1,210 @@
+{
+  "version": "2026.09.28",
+  "notes": "Ten chapters, 600 words or fewer each, grade 6. Myths are a draft list to be chosen with Massey's outreach office.",
+
+  "chapters": [
+    {
+      "id": "what-is-cancer",
+      "kicker": { "en": "The basics", "es": "Lo básico" },
+      "title": { "en": "What cancer is", "es": "Qué es el cáncer" },
+      "blurb": { "en": "Cells that stop following the rules.", "es": "Células que dejan de seguir las reglas." },
+      "minutes": 3,
+      "visual": "cells",
+      "sections": [
+        { "h": { "en": "Your body is made of cells", "es": "Su cuerpo está hecho de células" }, "p": { "en": "Your body has trillions of tiny cells. Cells grow, split in two and die on a schedule. New cells take the place of old ones. This keeps your body working.", "es": "Su cuerpo tiene billones de células pequeñas. Las células crecen, se dividen y mueren según un horario. Las nuevas reemplazan a las viejas. Así su cuerpo sigue funcionando." } },
+        { "h": { "en": "Cancer breaks the schedule", "es": "El cáncer rompe el horario" }, "p": { "en": "Cancer starts when cells stop following the rules. They keep splitting when they should stop. They do not die when they should. Over time, they can form a lump called a tumor.", "es": "El cáncer empieza cuando las células dejan de seguir las reglas. Siguen dividiéndose cuando deberían parar. No mueren cuando deberían. Con el tiempo pueden formar una bolita llamada tumor." } },
+        { "h": { "en": "Not every lump is cancer", "es": "No toda bolita es cáncer" }, "p": { "en": "A benign tumor stays in one place and does not spread. A malignant tumor can grow into nearby tissue and spread. Most lumps people find are not cancer. That is why a doctor needs to check them.", "es": "Un tumor benigno se queda en un lugar y no se riega. Un tumor maligno puede crecer hacia el tejido cercano y regarse. La mayoría de las bolitas no son cáncer. Por eso un médico debe revisarlas." } },
+        { "h": { "en": "Named for where it starts", "es": "Se nombra por dónde empieza" }, "p": { "en": "Breast cancer starts in the breast. If it spreads to the lung, it is still breast cancer. It is treated as breast cancer, because the cells still act like breast cells.", "es": "El cáncer de mama empieza en el seno. Si se riega al pulmón, sigue siendo cáncer de mama. Se trata como cáncer de mama, porque las células siguen actuando como células del seno." } },
+        { "h": { "en": "More than 100 diseases", "es": "Más de 100 enfermedades" }, "p": { "en": "There are more than 100 kinds of cancer. Each one acts in its own way. That is why screening and treatment are different for each one.", "es": "Hay más de 100 tipos de cáncer. Cada uno actúa a su manera. Por eso la detección y el tratamiento son distintos para cada uno." } }
+      ],
+      "takeaway": { "en": "Most lumps are not cancer. Get any new lump checked, because you cannot tell from the outside.", "es": "La mayoría de las bolitas no son cáncer. Haga revisar cualquier bolita nueva, porque no se puede saber por fuera." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/understanding/what-is-cancer" }
+    },
+    {
+      "id": "risk-vs-cause",
+      "kicker": { "en": "Understanding risk", "es": "Entender el riesgo" },
+      "title": { "en": "Risk versus cause", "es": "Riesgo o causa" },
+      "blurb": { "en": "A risk factor raises the odds. It does not decide.", "es": "Un factor de riesgo sube la probabilidad. No decide." },
+      "minutes": 3,
+      "visual": "risk",
+      "sections": [
+        { "h": { "en": "A risk factor is not a cause", "es": "Un factor de riesgo no es una causa" }, "p": { "en": "A risk factor makes cancer more likely. It does not mean you will get it. Many people with risk factors never get cancer. Some people with no risk factors do.", "es": "Un factor de riesgo hace el cáncer más probable. No significa que le va a dar. Muchas personas con factores de riesgo nunca tienen cáncer. Algunas personas sin factores de riesgo sí." } },
+        { "h": { "en": "Some risks you can change", "es": "Algunos riesgos se pueden cambiar" }, "p": { "en": "Smoking, alcohol, weight, activity, food and sun are things you can change. Changing them lowers your chances. Small steps count.", "es": "El tabaco, el alcohol, el peso, la actividad, la comida y el sol se pueden cambiar. Cambiarlos baja su probabilidad. Los pasos pequeños cuentan." } },
+        { "h": { "en": "Some risks you cannot change", "es": "Algunos riesgos no se pueden cambiar" }, "p": { "en": "Your age, your family history and some genes cannot change. Knowing about them still helps. They can mean screening should start earlier.", "es": "Su edad, su historia familiar y algunos genes no cambian. Conocerlos igual ayuda. Pueden significar que la detección debe empezar antes." } },
+        { "h": { "en": "Age is the biggest risk", "es": "La edad es el riesgo más grande" }, "p": { "en": "Most cancers happen in older adults. Cells collect damage over many years. That is why most screening starts in middle age.", "es": "La mayoría de los cánceres pasan en adultos mayores. Las células juntan daño durante muchos años. Por eso casi toda la detección empieza en la edad media." } },
+        { "h": { "en": "Nobody earns cancer", "es": "Nadie se merece el cáncer" }, "p": { "en": "Cancer is not a punishment. People who did everything right still get cancer. Chance plays a big part.", "es": "El cáncer no es un castigo. Personas que hicieron todo bien también tienen cáncer. La suerte cuenta mucho." } }
+      ],
+      "takeaway": { "en": "A risk factor raises your chances. It does not decide what will happen to you.", "es": "Un factor de riesgo sube su probabilidad. No decide lo que le va a pasar." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk" }
+    },
+    {
+      "id": "screening-vs-diagnosis",
+      "kicker": { "en": "Testing", "es": "Pruebas" },
+      "title": { "en": "Screening versus diagnosis", "es": "Detección o diagnóstico" },
+      "blurb": { "en": "Two different paths. Knowing which one you are on matters.", "es": "Dos caminos distintos. Importa saber en cuál está." },
+      "minutes": 3,
+      "visual": "paths",
+      "sections": [
+        { "h": { "en": "Screening is for people who feel fine", "es": "La detección es para quien se siente bien" }, "p": { "en": "Screening tests look for cancer before there are signs. They run on a schedule, like a mammogram every 2 years. They work best when finding cancer early changes what can be done.", "es": "Las pruebas de detección buscan cáncer antes de que haya señales. Siguen un calendario, como una mamografía cada 2 años. Funcionan mejor cuando encontrar el cáncer temprano cambia lo que se puede hacer." } },
+        { "h": { "en": "Diagnosis is for a problem you notice", "es": "El diagnóstico es para un problema que usted nota" }, "p": { "en": "If you have a symptom, you need a diagnostic test. That is a different path. Do not wait for a screening date. Tell the clinic you have a symptom when you call.", "es": "Si tiene un síntoma, necesita una prueba de diagnóstico. Es otro camino. No espere la fecha de su prueba de detección. Diga que tiene un síntoma cuando llame." } },
+        { "h": { "en": "A result is not a diagnosis", "es": "Un resultado no es un diagnóstico" }, "p": { "en": "An abnormal screening result means more tests are needed. Most of the time, the next test shows it is not cancer. A biopsy is usually what gives the answer.", "es": "Un resultado anormal significa que se necesitan más pruebas. La mayoría de las veces, la siguiente prueba muestra que no es cáncer. Una biopsia es lo que casi siempre da la respuesta." } },
+        { "h": { "en": "Screening has trade-offs", "es": "La detección tiene pros y contras" }, "p": { "en": "A test can raise a false alarm. It can also miss something. Some tests find cancers that would never cause harm. That is why guidelines say who should be screened, and when.", "es": "Una prueba puede dar una falsa alarma. También puede no ver algo. Algunas encuentran cánceres que nunca harían daño. Por eso las guías dicen quién debe hacerse la prueba y cuándo." } }
+      ],
+      "takeaway": { "en": "Screening is for people without symptoms. If you have a symptom, get it checked now.", "es": "La detección es para personas sin síntomas. Si tiene un síntoma, que lo revisen ahora." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/screening" }
+    },
+    {
+      "id": "signs",
+      "kicker": { "en": "Awareness", "es": "Estar atento" },
+      "title": { "en": "Signs worth a phone call", "es": "Señales para llamar al médico" },
+      "blurb": { "en": "Most are not cancer. All deserve an answer.", "es": "Casi ninguna es cáncer. Todas merecen una respuesta." },
+      "minutes": 2,
+      "visual": "signs",
+      "list": {
+        "en": ["A new lump", "Weight loss you cannot explain", "A cough or hoarse voice that lasts", "Blood in stool, urine or when you cough", "A change in bowel or bladder habits", "A sore that does not heal", "A mole that changes", "Trouble swallowing", "Very tired, even with rest"],
+        "es": ["Una bolita nueva", "Bajar de peso sin razón", "Una tos o ronquera que no se quita", "Sangre en las heces, la orina o al toser", "Un cambio al ir al baño", "Una llaga que no sana", "Un lunar que cambia", "Dificultad para tragar", "Mucho cansancio aun descansando"]
+      },
+      "sections": [
+        { "h": { "en": "Most signs are not cancer", "es": "Casi ninguna señal es cáncer" }, "p": { "en": "Many things cause these signs. Most are not cancer. But a sign that lasts should be checked.", "es": "Muchas cosas causan estas señales. Casi ninguna es cáncer. Pero una señal que no se quita se debe revisar." } },
+        { "h": { "en": "Lasting is the key word", "es": "La clave es que dure" }, "p": { "en": "Think weeks, not days. If a change does not go away, or keeps getting worse, call a doctor.", "es": "Piense en semanas, no en días. Si un cambio no se quita o empeora, llame a un médico." } },
+        { "h": { "en": "When to call 911", "es": "Cuándo llamar al 911" }, "p": { "en": "Some signs cannot wait. Call 911 for a first seizure or sudden weakness. Call for sudden confusion or heavy bleeding. Call for chest pain or trouble breathing.", "es": "Algunas señales no pueden esperar. Llame al 911 ante una primera convulsión o debilidad de repente. Llame si hay confusión de repente o sangrado fuerte. Llame si hay dolor de pecho o dificultad para respirar." } }
+      ],
+      "takeaway": { "en": "If a change lasts more than a few weeks, get it checked. Do not wait for your next screening.", "es": "Si un cambio dura más de unas semanas, que lo revisen. No espere su próxima prueba." },
+      "source": { "org": "American Cancer Society", "url": "https://www.cancer.org/cancer/diagnosis-staging/signs-and-symptoms-of-cancer.html" }
+    },
+    {
+      "id": "stages",
+      "kicker": { "en": "Diagnosis", "es": "Diagnóstico" },
+      "title": { "en": "The stage ladder", "es": "La escalera de etapas" },
+      "blurb": { "en": "Stage is how far it has spread. Grade is something else.", "es": "La etapa es cuánto se ha regado. El grado es otra cosa." },
+      "minutes": 3,
+      "visual": "stages",
+      "ladder": [
+        { "s": { "en": "Stage 0", "es": "Etapa 0" }, "d": { "en": "Changed cells that have not spread. Often called in situ.", "es": "Células cambiadas que no se han regado. Se le llama in situ." } },
+        { "s": { "en": "Stage I", "es": "Etapa I" }, "d": { "en": "Small, and not in the lymph nodes.", "es": "Pequeño y no está en los ganglios." } },
+        { "s": { "en": "Stage II", "es": "Etapa II" }, "d": { "en": "Larger, or in a few nearby lymph nodes.", "es": "Más grande, o en unos ganglios cercanos." } },
+        { "s": { "en": "Stage III", "es": "Etapa III" }, "d": { "en": "Spread more in the area around it.", "es": "Se ha regado más en la zona de alrededor." } },
+        { "s": { "en": "Stage IV", "es": "Etapa IV" }, "d": { "en": "Spread to other parts of the body.", "es": "Se ha regado a otras partes del cuerpo." } }
+      ],
+      "sections": [
+        { "h": { "en": "Stage means how far it has spread", "es": "La etapa es cuánto se ha regado" }, "p": { "en": "Doctors look at the size of the tumor, the lymph nodes and other organs. Together these give the stage, from 0 to IV.", "es": "Los médicos miran el tamaño del tumor, los ganglios y otros órganos. Juntos dan la etapa, de 0 a IV." } },
+        { "h": { "en": "Grade is different", "es": "El grado es distinto" }, "p": { "en": "Grade tells how strange the cells look under a microscope. Low-grade cells look more normal and grow slowly. High-grade cells tend to grow faster.", "es": "El grado dice qué tan raras se ven las células en el microscopio. Las de grado bajo se ven más normales y crecen lento. Las de grado alto suelen crecer más rápido." } },
+        { "h": { "en": "Why stage matters", "es": "Por qué importa la etapa" }, "p": { "en": "Stage helps doctors choose treatment. Finding cancer at an early stage is the whole point of screening.", "es": "La etapa ayuda a escoger el tratamiento. Encontrar el cáncer en una etapa temprana es el propósito de la detección." } }
+      ],
+      "takeaway": { "en": "Stage is how far cancer has spread. Grade is how the cells look. They are two different things.", "es": "La etapa es cuánto se ha regado el cáncer. El grado es cómo se ven las células. Son dos cosas distintas." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/staging" }
+    },
+    {
+      "id": "treatment",
+      "kicker": { "en": "Treatment", "es": "Tratamiento" },
+      "title": { "en": "How cancer is treated", "es": "Cómo se trata el cáncer" },
+      "blurb": { "en": "Most people get more than one kind of treatment.", "es": "Casi todos reciben más de un tipo de tratamiento." },
+      "minutes": 4,
+      "visual": "none",
+      "sections": [
+        { "h": { "en": "Surgery", "es": "Cirugía" }, "p": { "en": "Surgery takes out the tumor. It is often the first step for cancers found early.", "es": "La cirugía saca el tumor. Muchas veces es el primer paso cuando el cáncer se encuentra temprano." } },
+        { "h": { "en": "Radiation", "es": "Radiación" }, "p": { "en": "Radiation uses strong beams of energy. The beams kill cancer cells in one part of the body.", "es": "La radiación usa rayos fuertes de energía. Los rayos matan células de cáncer en una parte del cuerpo." } },
+        { "h": { "en": "Chemotherapy", "es": "Quimioterapia" }, "p": { "en": "Chemotherapy is medicine that kills fast-growing cells all over the body. That is why it can cause hair loss.", "es": "La quimioterapia es medicina que mata células que crecen rápido en todo el cuerpo. Por eso puede hacer que se caiga el pelo." } },
+        { "h": { "en": "Immunotherapy", "es": "Inmunoterapia" }, "p": { "en": "Immunotherapy helps your own immune system find and fight the cancer.", "es": "La inmunoterapia ayuda a su propio sistema inmune a encontrar y atacar el cáncer." } },
+        { "h": { "en": "Targeted and hormone therapy", "es": "Terapia dirigida y hormonal" }, "p": { "en": "Targeted drugs go after one change in the cancer cells. Hormone drugs block what some breast and prostate cancers need to grow.", "es": "Los medicamentos dirigidos atacan un cambio en las células de cáncer. Los hormonales bloquean lo que algunos cánceres de mama y próstata necesitan para crecer." } },
+        { "h": { "en": "Palliative care", "es": "Cuidados paliativos" }, "p": { "en": "Palliative care eases pain and other symptoms. You can get it at any stage, even while treatment aims to cure the cancer. It is not the same as hospice.", "es": "Los cuidados paliativos alivian el dolor y otros síntomas. Se pueden recibir en cualquier etapa, aun cuando el tratamiento busca curar. No es lo mismo que el hospicio." } }
+      ],
+      "takeaway": { "en": "The plan depends on the kind of cancer, its stage and your overall health.", "es": "El plan depende del tipo de cáncer, su etapa y su salud en general." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/treatment/types" }
+    },
+    {
+      "id": "trials",
+      "kicker": { "en": "Research", "es": "Investigación" },
+      "title": { "en": "Clinical trials, plainly", "es": "Ensayos clínicos, en palabras simples" },
+      "blurb": { "en": "Every cancer medicine today was once tested in a trial.", "es": "Toda medicina contra el cáncer de hoy se probó antes en un ensayo." },
+      "minutes": 3,
+      "visual": "none",
+      "sections": [
+        { "h": { "en": "What a trial is", "es": "Qué es un ensayo" }, "p": { "en": "A clinical trial tests a new way to find, prevent or treat cancer. It follows a careful plan.", "es": "Un ensayo clínico prueba una nueva forma de encontrar, prevenir o tratar el cáncer. Sigue un plan cuidadoso." } },
+        { "h": { "en": "You are protected", "es": "Usted está protegido" }, "p": { "en": "Trials follow strict rules. A review board checks each one. You must be told the risks before you agree.", "es": "Los ensayos siguen reglas estrictas. Una junta revisa cada uno. Le deben explicar los riesgos antes de que acepte." } },
+        { "h": { "en": "You can say no, or stop", "es": "Puede decir que no, o parar" }, "p": { "en": "Joining is your choice. You can leave at any time, and your care will go on.", "es": "Participar es su decisión. Puede salirse cuando quiera, y su atención sigue." } },
+        { "h": { "en": "Why it matters who joins", "es": "Por qué importa quién participa" }, "p": { "en": "Treatments work best when they are tested on people like you. Black and Latino Americans have often been left out of trials in the past.", "es": "Los tratamientos funcionan mejor cuando se prueban en personas como usted. Muchas veces se ha dejado fuera de los ensayos a afroamericanos y latinos." } }
+      ],
+      "takeaway": { "en": "A trial is a choice. You can ask questions, say no, or stop at any time.", "es": "Un ensayo es una decisión. Puede hacer preguntas, decir que no o parar cuando quiera." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/research/participate/clinical-trials" }
+    },
+    {
+      "id": "survivorship",
+      "kicker": { "en": "After treatment", "es": "Después del tratamiento" },
+      "title": { "en": "Life after cancer", "es": "La vida después del cáncer" },
+      "blurb": { "en": "Survivorship has its own care plan.", "es": "La sobrevivencia tiene su propio plan de cuidado." },
+      "minutes": 3,
+      "visual": "none",
+      "sections": [
+        { "h": { "en": "You are a survivor from day one", "es": "Es sobreviviente desde el primer día" }, "p": { "en": "A survivor is anyone who has had cancer. You are one from the day you are told.", "es": "Un sobreviviente es cualquier persona que ha tenido cáncer. Lo es desde el día en que se lo dicen." } },
+        { "h": { "en": "Follow-up care", "es": "Cuidado de seguimiento" }, "p": { "en": "Regular checkups look for cancer coming back. They also look for side effects that can show up later.", "es": "Las revisiones regulares buscan si el cáncer regresa. También buscan efectos que pueden salir después." } },
+        { "h": { "en": "Your body and your mind", "es": "Su cuerpo y su mente" }, "p": { "en": "Tiredness, pain, worry and sadness are common. Tell your care team. Help is there.", "es": "El cansancio, el dolor, la preocupación y la tristeza son comunes. Dígale a su equipo de salud. Hay ayuda." } },
+        { "h": { "en": "Habits still count", "es": "Los hábitos siguen contando" }, "p": { "en": "Not smoking, being active and eating well help survivors too.", "es": "No fumar, mantenerse activo y comer bien también ayudan a los sobrevivientes." } },
+        { "h": { "en": "Get it in writing", "es": "Pídalo por escrito" }, "p": { "en": "Ask for your plan in writing. It should list your care and your next checkups.", "es": "Pida su plan por escrito. Debe decir su tratamiento y sus próximas revisiones." } }
+      ],
+      "takeaway": { "en": "Life after cancer comes with its own care plan. Ask for yours in writing.", "es": "La vida después del cáncer viene con su propio plan. Pida el suyo por escrito." },
+      "source": { "org": "National Cancer Institute, Office of Cancer Survivorship", "url": "https://cancercontrol.cancer.gov/ocs" }
+    },
+    {
+      "id": "numbers",
+      "kicker": { "en": "Reading the numbers", "es": "Leer los números" },
+      "title": { "en": "Numbers, honestly", "es": "Los números, con honestidad" },
+      "blurb": { "en": "What a percent can and cannot tell you.", "es": "Lo que un porcentaje puede y no puede decirle." },
+      "minutes": 3,
+      "visual": "numbers",
+      "stats": [
+        { "n": "100+", "l": { "en": "kinds of cancer", "es": "tipos de cáncer" } },
+        { "n": "5–10", "l": { "en": "in 100 cancers come from a gene passed down in a family", "es": "de cada 100 cánceres vienen de un gen heredado" } },
+        { "n": "4", "l": { "en": "in 10 cancers in U.S. adults are linked to risks people can change", "es": "de cada 10 cánceres en adultos de EE. UU. se ligan a riesgos que se pueden cambiar" } },
+        { "n": "0–IV", "l": { "en": "the stage scale you will hear", "es": "la escala de etapas que va a oír" } }
+      ],
+      "sections": [
+        { "h": { "en": "A percent is about a group", "es": "Un porcentaje habla de un grupo" }, "p": { "en": "A number like “90% live five years” is about large groups of people. It does not tell what will happen to you.", "es": "Un número como “90% viven cinco años” habla de grupos grandes de personas. No dice lo que le pasará a usted." } },
+        { "h": { "en": "Higher than what?", "es": "¿Más alto que qué?" }, "p": { "en": "When a study says risk is 20% higher, ask: higher than what? If 5 in 100 people get a cancer, 20% higher means 6 in 100.", "es": "Cuando un estudio dice que el riesgo es 20% más alto, pregunte: ¿más alto que qué? Si a 5 de cada 100 personas les da un cáncer, 20% más alto significa 6 de cada 100." } },
+        { "h": { "en": "Why this app gives no percent", "es": "Por qué esta app no da porcentajes" }, "p": { "en": "No app can know your true chance of cancer. This app shows how your answers compare to average, in words.", "es": "Ninguna app puede saber su probabilidad real de cáncer. Esta app muestra, en palabras, cómo se comparan sus respuestas con el promedio." } }
+      ],
+      "takeaway": { "en": "A percent describes a group of people, not you.", "es": "Un porcentaje describe a un grupo de personas, no a usted." },
+      "source": { "org": "American Cancer Society (Islami et al., 2024) and National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/understanding/statistics" }
+    },
+    {
+      "id": "your-visit",
+      "kicker": { "en": "Your visit", "es": "Su cita" },
+      "title": { "en": "Talking with your care team", "es": "Hablar con su equipo de salud" },
+      "blurb": { "en": "It is always fine to ask again, more simply.", "es": "Siempre está bien volver a preguntar, más simple." },
+      "minutes": 3,
+      "visual": "glossary",
+      "sections": [
+        { "h": { "en": "Bring a list", "es": "Lleve una lista" }, "p": { "en": "Write your questions before the visit. Put the most important one first. Your plan in this app has questions you can print.", "es": "Escriba sus preguntas antes de la cita. Ponga la más importante primero. Su plan en esta app tiene preguntas que puede imprimir." } },
+        { "h": { "en": "Bring someone", "es": "Vaya acompañado" }, "p": { "en": "A friend or family member can listen and take notes.", "es": "Un amigo o familiar puede escuchar y tomar notas." } },
+        { "h": { "en": "Ask for an interpreter", "es": "Pida un intérprete" }, "p": { "en": "Most clinics and hospitals must give you a free interpreter. Ask when you book.", "es": "La mayoría de las clínicas y hospitales deben darle un intérprete gratis. Pídalo al hacer la cita." } },
+        { "h": { "en": "Say it back", "es": "Repítalo" }, "p": { "en": "Say what you heard in your own words. This helps catch mix-ups.", "es": "Diga con sus palabras lo que entendió. Así se evitan confusiones." } }
+      ],
+      "glossary": [
+        { "w": { "en": "Biopsy", "es": "Biopsia" }, "d": { "en": "Taking a small piece of tissue to look at under a microscope.", "es": "Sacar un pedacito de tejido para verlo en el microscopio." } },
+        { "w": { "en": "Benign", "es": "Benigno" }, "d": { "en": "Not cancer. It does not spread.", "es": "No es cáncer. No se riega." } },
+        { "w": { "en": "Malignant", "es": "Maligno" }, "d": { "en": "Cancer. It can spread.", "es": "Es cáncer. Se puede regar." } },
+        { "w": { "en": "Polyp", "es": "Pólipo" }, "d": { "en": "A small growth, often in the colon. Some can turn into cancer.", "es": "Un crecimiento pequeño, muchas veces en el colon. Algunos se pueden volver cáncer." } },
+        { "w": { "en": "False positive", "es": "Falso positivo" }, "d": { "en": "A test says something may be wrong, but it is not.", "es": "Una prueba dice que algo puede estar mal, pero no lo está." } },
+        { "w": { "en": "Lymph nodes", "es": "Ganglios" }, "d": { "en": "Small bean-shaped glands. Cancer can spread to them first.", "es": "Glándulas pequeñas con forma de frijol. El cáncer puede llegar a ellas primero." } },
+        { "w": { "en": "Oncologist", "es": "Oncólogo" }, "d": { "en": "A doctor who treats cancer.", "es": "Un médico que trata el cáncer." } },
+        { "w": { "en": "Remission", "es": "Remisión" }, "d": { "en": "Signs of cancer have gone down or gone away.", "es": "Las señales del cáncer bajaron o se fueron." } }
+      ],
+      "takeaway": { "en": "You can always ask your doctor to explain it again, more simply.", "es": "Siempre puede pedirle a su médico que lo explique otra vez, más simple." },
+      "source": { "org": "Agency for Healthcare Research and Quality", "url": "https://www.ahrq.gov/questions/index.html" }
+    }
+  ],
+
+  "myths": [
+    { "id": "death", "myth": { "en": "Cancer is always a death sentence.", "es": "El cáncer siempre es una sentencia de muerte." }, "fact": { "en": "Many cancers can be cured, most of all when found early. Millions of people are alive today after cancer.", "es": "Muchos cánceres se pueden curar, sobre todo si se encuentran temprano. Millones de personas viven hoy después del cáncer." } },
+    { "id": "family", "myth": { "en": "No one in my family had cancer, so I will not get it.", "es": "Nadie en mi familia tuvo cáncer, así que a mí no me va a dar." }, "fact": { "en": "Most people who get cancer have no family history of it. Screening still matters.", "es": "La mayoría de las personas con cáncer no tienen historia familiar. La detección igual importa." } },
+    { "id": "air", "myth": { "en": "Surgery lets air reach the cancer and makes it spread.", "es": "La cirugía deja que el aire llegue al cáncer y lo riega." }, "fact": { "en": "Air does not make cancer spread. Surgery is one of the best ways to treat cancer found early.", "es": "El aire no hace que el cáncer se riegue. La cirugía es de las mejores formas de tratar el cáncer temprano." } },
+    { "id": "sugar", "myth": { "en": "Sugar feeds cancer, so cutting sugar cures it.", "es": "El azúcar alimenta el cáncer, así que dejarlo lo cura." }, "fact": { "en": "All your cells use sugar. Cutting sugar does not treat cancer. Keeping a healthy weight does lower risk.", "es": "Todas sus células usan azúcar. Dejar el azúcar no trata el cáncer. Mantener un peso sano sí baja el riesgo." } },
+    { "id": "contagious", "myth": { "en": "You can catch cancer from someone.", "es": "El cáncer se pega de otra persona." }, "fact": { "en": "Cancer does not spread from person to person. Some viruses that raise risk, like HPV, can spread. Vaccines help.", "es": "El cáncer no se pega entre personas. Algunos virus que suben el riesgo, como el VPH, sí se pasan. Las vacunas ayudan." } },
+    { "id": "feelfine", "myth": { "en": "If I feel fine, I do not need screening.", "es": "Si me siento bien, no necesito pruebas." }, "fact": { "en": "Screening is for people who feel fine. Early cancer often has no signs at all.", "es": "La detección es para personas que se sienten bien. El cáncer temprano muchas veces no da señales." } },
+    { "id": "colonoscopy", "myth": { "en": "A colonoscopy is the only colon cancer test.", "es": "La colonoscopia es la única prueba de cáncer de colon." }, "fact": { "en": "For people at average risk, a stool test you do at home also works. Ask which fits you.", "es": "Para personas con riesgo promedio, una prueba de heces en casa también funciona. Pregunte cuál es para usted." } },
+    { "id": "mammogram", "myth": { "en": "Mammograms are dangerous because of the radiation.", "es": "Las mamografías son peligrosas por la radiación." }, "fact": { "en": "A mammogram uses a very small amount of radiation. For women who are due, the benefit is much bigger than the risk.", "es": "La mamografía usa muy poca radiación. Para las mujeres a quienes les toca, el beneficio es mucho mayor que el riesgo." } },
+    { "id": "deodorant", "myth": { "en": "Deodorant causes breast cancer.", "es": "El desodorante causa cáncer de mama." }, "fact": { "en": "There is no good proof that deodorant causes breast cancer. That is true for antiperspirant too.", "es": "No hay buena prueba de que el desodorante cause cáncer de mama. Lo mismo pasa con el antitranspirante." } },
+    { "id": "herbal", "myth": { "en": "Herbs or natural remedies can cure cancer.", "es": "Las hierbas o remedios naturales pueden curar el cáncer." }, "fact": { "en": "No herb has been proven to cure cancer. Some can get in the way of treatment. Tell your care team what you take.", "es": "Ninguna hierba ha probado curar el cáncer. Algunas pueden estorbar el tratamiento. Dígale a su equipo de salud lo que toma." } }
+  ],
+  "mythsSource": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/myths" }
+}

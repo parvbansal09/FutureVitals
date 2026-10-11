@@ -1,0 +1,234 @@
+/*
+ * FutureVitals design tokens. The single source for color, type, space,
+ * radius, elevation and motion. Screens never hard-code a color: they read
+ * one of these, which is what lets the dark theme and the 200% text setting
+ * happen in one place.
+ *
+ * Typeface: Times New Roman, everywhere. Android does not ship it, so Tinos
+ * (metric-identical: same advance widths, so the same line breaks) is the
+ * fallback there. One family, two weights; that is the "typeface pair".
+ *
+ * Color: the brand pair from the logo. Teal #285F5A is the one accent for
+ * text, buttons and links; pink #EBC3D7 is the second brand color, used for
+ * the mark and soft surfaces only (it is too light to carry text). Amber means
+ * "get this checked", red means "call 911". Neither is ever the only signal:
+ * every status also carries an icon and a word (WCAG 1.4.1).
+ * Every text/background pair below is at least 4.5:1 (WCAG 1.4.3).
+ */
+
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tinos-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/tinos-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/tinos-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Tinos';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/tinos-700-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  /* ── type ─────────────────────────────────────────────────────────── */
+  --font: 'Times New Roman', Times, Tinos, 'Liberation Serif', serif;
+  --text-scale: 1;                     /* 1 to 2, set from Settings */
+  --fs-xs: calc(14px * var(--text-scale));
+  --fs-sm: calc(16px * var(--text-scale));
+  --fs-md: calc(18px * var(--text-scale));   /* body */
+  --fs-lg: calc(20px * var(--text-scale));
+  --fs-xl: calc(24px * var(--text-scale));
+  --fs-2xl: calc(30px * var(--text-scale));
+  --fs-3xl: calc(38px * var(--text-scale));
+  --lh-tight: 1.08;
+  --lh-snug: 1.25;
+  --lh-body: 1.5;
+  --tracking-tight: -0.018em;
+  --tracking-kicker: 0.14em;
+
+  /* ── space (4 px grid) ────────────────────────────────────────────── */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px;
+  --gutter: 16px;
+  --tap: 48px;                         /* minimum target; spec floor is 44 */
+
+  /* ── radius ───────────────────────────────────────────────────────── */
+  --r-sm: 10px; --r-md: 14px; --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
+
+  /* ── motion ───────────────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: 120ms; --dur-2: 220ms; --dur-3: 360ms; --dur-4: 560ms;
+
+  /* ── color: light (default) ───────────────────────────────────────── */
+  color-scheme: light;
+  /* A light, calm teal ground instead of white: the brand teal, very pale. */
+  --paper: #E5F1EE;          /* app background */
+  --paper-2: #D6E8E4;        /* recessed panels */
+  --surface: #F4FAF8;        /* cards: the palest teal, never pure white */
+  --surface-2: #EBF5F2;
+  --ink: #16211F;            /* 14.3:1 on paper */
+  --ink-2: #3B4845;          /* 8.3:1 on paper */
+  --ink-3: #414D4A;          /* 7.4:1 on paper, 6.5:1 on accent-soft */
+  --line: #C9DFDA;
+  --line-2: #B3D0CA;
+
+  --accent: #285F5A;         /* brand teal: 7.3:1 with white text, 6.3:1 on paper */
+  --accent-strong: #1F4B47;
+  --accent-bright: #4C8C84;  /* decorative only: bars and glows, never text */
+  --accent-ink: #285F5A;     /* accent-colored text: 6.3:1 on paper, 6.9:1 on surface */
+  --accent-soft: #D0E6E1;
+  --accent-softer: #E9F4F1;
+  --on-accent: #FFFFFF;
+
+  --pink: #EBC3D7;           /* brand pink: surfaces and the mark, never text (1.5:1) */
+  --pink-soft: #FBEFF5;      /* pink panels; ink and teal text both pass on it */
+  --pink-line: #EBC3D7;
+
+  --warn-bg: #FFF4DC;        /* amber: get this checked */
+  --warn-line: #E9B44C;
+  --warn-ink: #704400;       /* 7.4:1 on warn-bg */
+  --warn-icon: #B7770A;
+
+  --danger-bg: #FCE9E6;      /* red: call 911 */
+  --danger-line: #E0867B;
+  --danger-ink: #8E1F14;     /* 7.6:1 on danger-bg */
+  --danger: #B3261E;         /* 6.0:1 with white text */
+
+  --ok-bg: #E7F3EC;
+  --ok-ink: #1F5E3A;
+
+  /* Ingredient grade, A to F: solid discs, the same in light and dark. */
+  --grade-a: #1F6E4A;        /* 6.4:1 with white */
+  --grade-a-ink: #FFFFFF;
+  --grade-b: #5B7A1E;        /* 4.9:1 with white */
+  --grade-b-ink: #FFFFFF;
+  --grade-c: #E9B44C;        /* 9.6:1 with the ink */
+  --grade-c-ink: #2B1F00;
+  --grade-d: #D9692B;        /* 5.4:1 with the ink */
+  --grade-d-ink: #1C0C00;
+  --grade-f: #B3261E;        /* 6.0:1 with white */
+  --grade-f-ink: #FFFFFF;
+
+  --focus: #1D5FD1;          /* focus ring, distinct from the accent */
+  --scrim: rgba(12, 22, 20, 0.42);
+  --shadow-1: 0 1px 2px rgba(22, 33, 31, .06), 0 1px 1px rgba(22, 33, 31, .04);
+  --shadow-2: 0 6px 18px -6px rgba(22, 33, 31, .16), 0 2px 6px -2px rgba(22, 33, 31, .08);
+  --shadow-3: 0 22px 48px -18px rgba(22, 33, 31, .30), 0 8px 18px -8px rgba(22, 33, 31, .14);
+
+  /* ambient gradient behind the welcome screen */
+  --glow-a: rgba(40, 95, 90, .18);
+  --glow-b: rgba(235, 195, 215, .55);
+  --glow-c: rgba(233, 180, 76, .14);
+
+  /* brand mark */
+  --mark-a: #285F5A;
+  --mark-b: #EBC3D7;
+}
+
+/* ── color: dark. Follows the system unless the person picked light. ──── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #0D1715;
+    --paper-2: #121E1B;
+    --surface: #16221F;
+    --surface-2: #1A2724;
+    --ink: #EEF3F1;
+    --ink-2: #C3CECB;
+    --ink-3: #AEBBB7;
+    --line: #26332F;
+    --line-2: #33423E;
+    --accent: #2F7069;
+    --accent-strong: #3A8178;
+    --accent-bright: #6FB3A9;
+    --accent-ink: #9CCFC7;
+    --accent-soft: #1A3532;
+    --accent-softer: #142A27;
+    --on-accent: #FFFFFF;
+    --pink-soft: #3A2833;
+    --pink-line: #6E4A5C;
+    --warn-bg: #33270D;
+    --warn-line: #8C6512;
+    --warn-ink: #F6D08A;
+    --warn-icon: #E9B44C;
+    --danger-bg: #3A1512;
+    --danger-line: #8A3128;
+    --danger-ink: #FFB4AA;
+    --danger: #E5584C;
+    --ok-bg: #16301F;
+    --ok-ink: #9AD8AF;
+    --focus: #7FB0FF;
+    --scrim: rgba(0, 0, 0, .6);
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-2: 0 8px 22px -8px rgba(0, 0, 0, .6);
+    --shadow-3: 0 24px 50px -20px rgba(0, 0, 0, .75);
+    --glow-a: rgba(47, 112, 105, .22);
+    --glow-b: rgba(235, 195, 215, .12);
+    --glow-c: rgba(233, 180, 76, .08);
+    --mark-a: #7DBDB3;
+    --mark-b: #EBC3D7;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #0D1715;
+  --paper-2: #121E1B;
+  --surface: #16221F;
+  --surface-2: #1A2724;
+  --ink: #EEF3F1;
+  --ink-2: #C3CECB;
+  --ink-3: #AEBBB7;
+  --line: #26332F;
+  --line-2: #33423E;
+  --accent: #2F7069;
+  --accent-strong: #3A8178;
+  --accent-bright: #6FB3A9;
+  --accent-ink: #9CCFC7;
+  --accent-soft: #1A3532;
+  --accent-softer: #142A27;
+  --on-accent: #FFFFFF;
+  --pink-soft: #3A2833;
+  --pink-line: #6E4A5C;
+  --warn-bg: #33270D;
+  --warn-line: #8C6512;
+  --warn-ink: #F6D08A;
+  --warn-icon: #E9B44C;
+  --danger-bg: #3A1512;
+  --danger-line: #8A3128;
+  --danger-ink: #FFB4AA;
+  --danger: #E5584C;
+  --ok-bg: #16301F;
+  --ok-ink: #9AD8AF;
+  --focus: #7FB0FF;
+  --scrim: rgba(0, 0, 0, .6);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-2: 0 8px 22px -8px rgba(0, 0, 0, .6);
+  --shadow-3: 0 24px 50px -20px rgba(0, 0, 0, .75);
+  --glow-a: rgba(47, 112, 105, .22);
+  --glow-b: rgba(235, 195, 215, .12);
+  --glow-c: rgba(233, 180, 76, .08);
+  --mark-a: #7DBDB3;
+  --mark-b: #EBC3D7;
+}
+

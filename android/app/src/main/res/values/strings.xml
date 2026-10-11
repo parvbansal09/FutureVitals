@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FutureVitals</string>
+    <string name="title_activity_main">FutureVitals</string>
+    <string name="package_name">com.futurevitals.app</string>
+    <string name="custom_url_scheme">com.futurevitals.app</string>
+</resources>

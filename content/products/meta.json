@@ -1,0 +1,26 @@
+{
+  "source": "Open Food Facts",
+  "sourceUrl": "https://world.openfoodfacts.org",
+  "export": "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz",
+  "exported": "2026-10-02",
+  "license": "Open Database License (ODbL) 1.0; individual contents: Database Contents License (DbCL) 1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "count": 80000,
+  "criteria": "Sold in the United States, with a product name and an ingredient list, scanned at least once on Open Food Facts. US products first (a US or Canadian barcode, or most scanned in the US), then by number of scans; at most 80,000.",
+  "fields": [
+    "name",
+    "brand",
+    "ingredients",
+    "nova",
+    "additives",
+    "categories",
+    "kcal_100g",
+    "sugars_100g",
+    "sodium_100g",
+    "alcohol_100g"
+  ],
+  "grades": {
+    "rules": "23f9ceafbcbf93a0",
+    "note": "names.json rows end with the ingredient grade, from scripts/grade-products.mjs; rules is a fingerprint of content/ingredients.json at that time."
+  }
+}

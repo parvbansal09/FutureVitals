@@ -1,0 +1,283 @@
+{
+  "version": "2026.09.28",
+  "staleAfterMonths": 12,
+  "notes": "Each entry: 150 words or fewer, grade 6. 'quote' is the source's own words (English); 'appliesIf' names a rule in src/engine/prevention.ts that decides the 'Applies to you' tag after the check.",
+
+  "screening": {
+    "title": { "en": "Screening, in one paragraph", "es": "La detección, en un párrafo" },
+    "body": {
+      "en": "Screening looks for cancer in people who feel fine. It can find cancer early, when it is easier to treat. Some tests find changes before they turn into cancer. It works for breast, cervical, colorectal and lung cancer. For prostate and skin, it is a choice to make with a clinician. A symptom is not screening. Get it checked.",
+      "es": "La detección busca cáncer en personas que se sienten bien. Puede encontrarlo temprano, cuando es más fácil de tratar. Algunas pruebas hallan cambios antes de que sean cáncer. Funciona para el cáncer de mama, cuello uterino, colorrectal y pulmón. Para próstata y piel, se decide con un profesional. Un síntoma no es detección. Que lo revisen."
+    }
+  },
+
+  "entries": [
+    {
+      "id": "tobacco",
+      "icon": "cigarette",
+      "appliesIf": "smokes",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Tobacco", "es": "Tabaco" },
+      "body": {
+        "en": "Smoking causes lung cancer and many other kinds. It harms the mouth, throat, bladder, pancreas, cervix and colon. Chewing tobacco causes cancer too. Quitting helps at any age. Your risk drops more with each year you stay off tobacco. Free help doubles your chances of quitting for good.",
+        "es": "Fumar causa cáncer de pulmón y de muchos otros tipos. Daña la boca, la garganta, la vejiga, el páncreas, el cuello uterino y el colon. El tabaco de mascar también causa cáncer. Dejarlo ayuda a cualquier edad. Su riesgo baja más con cada año sin tabaco. La ayuda gratis duplica sus probabilidades de dejarlo para siempre."
+      },
+      "quote": "It’s never too late to quit using tobacco. The sooner you quit, the more you can reduce your chances of getting cancer and other diseases.",
+      "quoteEs": "Nunca es tarde para dejar el tabaco. Mientras antes lo deje, más puede bajar su probabilidad de tener cáncer y otras enfermedades.",
+      "firstStep": { "en": "Call Quit Now Virginia at 1-800-QUIT-NOW. It is free.", "es": "Llame a Quit Now Virginia al 1-855-DEJELO-YA. Es gratis." },
+      "source": { "org": "American Cancer Society", "url": "https://www.cancer.org/cancer/risk-prevention/tobacco/benefits-of-quitting-smoking-over-time.html" },
+      "cancers": ["lung", "colorectal", "cervical", "bladder"]
+    },
+    {
+      "id": "alcohol",
+      "icon": "wine",
+      "appliesIf": "drinks",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Alcohol", "es": "Alcohol" },
+      "body": {
+        "en": "Alcohol causes at least 7 kinds of cancer, including breast, colorectal and liver. Risk goes up with each drink. Beer, wine and liquor all count. For breast cancer, risk rises even with small amounts. Drinking less helps. None is safest.",
+        "es": "El alcohol causa al menos 7 tipos de cáncer, como el de mama, colorrectal e hígado. El riesgo sube con cada trago. La cerveza, el vino y el licor cuentan igual. En el cáncer de mama, el riesgo sube aun con poco. Beber menos ayuda. Nada es lo más seguro."
+      },
+      "quote": "Alcohol consumption is the third leading preventable cause of cancer in the United States, after tobacco and obesity.",
+      "quoteEs": "El consumo de alcohol es la tercera causa prevenible de cáncer en Estados Unidos, después del tabaco y la obesidad.",
+      "firstStep": { "en": "Pick two alcohol-free days each week.", "es": "Escoja dos días sin alcohol cada semana." },
+      "source": { "org": "U.S. Surgeon General, 2025", "url": "https://www.hhs.gov/surgeongeneral/reports-and-publications/alcohol-cancer/index.html" },
+      "cancers": ["breast", "colorectal", "liver"]
+    },
+    {
+      "id": "weight",
+      "icon": "scale",
+      "appliesIf": "weightAbove",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Weight", "es": "Peso" },
+      "body": {
+        "en": "Extra body fat raises the risk of 13 cancers. These include colorectal, breast after menopause, uterus, kidney and liver. Body fat makes hormones that can help cancer grow. Not gaining weight as an adult helps. Small changes add up over time.",
+        "es": "La grasa corporal de más sube el riesgo de 13 cánceres. Entre ellos están el colorrectal, el de mama después de la menopausia, útero, riñón e hígado. La grasa produce hormonas que pueden ayudar a que el cáncer crezca. No subir de peso de adulto ayuda. Los cambios pequeños suman con el tiempo."
+      },
+      "quote": "Overweight and obesity are associated with a higher risk of getting 13 types of cancer.",
+      "quoteEs": "El sobrepeso y la obesidad se asocian con un mayor riesgo de 13 tipos de cáncer.",
+      "firstStep": { "en": "Swap one sugary drink a day for water.", "es": "Cambie una bebida azucarada al día por agua." },
+      "source": { "org": "CDC", "url": "https://www.cdc.gov/cancer/risk-factors/obesity.html" },
+      "cancers": ["colorectal", "breast", "liver"]
+    },
+    {
+      "id": "activity",
+      "icon": "footprints",
+      "appliesIf": "lowActivity",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Physical activity", "es": "Actividad física" },
+      "body": {
+        "en": "Moving your body lowers the risk of colon, breast and uterine cancer. It helps even if your weight stays the same. Walking counts. Aim for 150 minutes a week. That is 30 minutes, 5 days a week. Sitting less helps too.",
+        "es": "Mover el cuerpo baja el riesgo de cáncer de colon, mama y útero. Ayuda aunque su peso no cambie. Caminar cuenta. La meta es 150 minutos a la semana. Son 30 minutos, 5 días a la semana. Estar menos tiempo sentado también ayuda."
+      },
+      "quote": "Adults should engage in 150-300 minutes of moderate-intensity physical activity per week, or 75-150 minutes of vigorous-intensity physical activity, or an equivalent combination; achieving or exceeding the upper limit of 300 minutes is optimal.",
+      "quoteEs": "Los adultos deben hacer de 150 a 300 minutos de actividad física moderada por semana, o de 75 a 150 minutos de actividad intensa, o una combinación; llegar o pasar de 300 minutos es lo ideal.",
+      "firstStep": { "en": "Take a 10-minute walk after one meal today.", "es": "Camine 10 minutos después de una comida hoy." },
+      "source": { "org": "American Cancer Society", "url": "https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/acs-guidelines-nutrition-physical-activity-cancer-prevention.html" },
+      "cancers": ["colorectal", "breast"]
+    },
+    {
+      "id": "diet",
+      "icon": "salad",
+      "appliesIf": "dietGap",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Diet", "es": "Alimentación" },
+      "body": {
+        "en": "Processed meat, like bacon and hot dogs, causes colorectal cancer. Red meat probably does too. Whole grains, beans, fruit and vegetables lower risk. Pills do not do the same thing. Aim for plants at most meals. Keep red meat to about 3 servings a week.",
+        "es": "La carne procesada, como el tocino y las salchichas, causa cáncer colorrectal. La carne roja probablemente también. Los granos integrales, frijoles, frutas y verduras bajan el riesgo. Las pastillas no hacen lo mismo. Coma plantas en casi todas las comidas. Deje la carne roja en unas 3 porciones por semana."
+      },
+      "quote": "The experts concluded that each 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by 18%.",
+      "quoteEs": "Los expertos concluyeron que cada porción de 50 gramos de carne procesada comida a diario aumenta el riesgo de cáncer colorrectal en 18%.",
+      "firstStep": { "en": "Log a week in the food diary.", "es": "Anote una semana en el diario de comidas." },
+      "source": { "org": "IARC", "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf" },
+      "cancers": ["colorectal"]
+    },
+    {
+      "id": "vaccines",
+      "icon": "syringe",
+      "appliesIf": "hpvGap",
+      "reviewed": "2026-09-28",
+      "title": { "en": "HPV and hepatitis B vaccines", "es": "Vacunas contra el VPH y la hepatitis B" },
+      "body": {
+        "en": "Some viruses cause cancer. HPV causes almost all cervical cancer and many throat cancers. Hepatitis B can cause liver cancer. Vaccines stop these infections before they start. The HPV vaccine is advised through age 26. Most adults under 60 should get the hepatitis B vaccine.",
+        "es": "Algunos virus causan cáncer. El VPH causa casi todo el cáncer de cuello uterino y muchos de garganta. La hepatitis B puede causar cáncer de hígado. Las vacunas detienen estas infecciones antes de que empiecen. La vacuna contra el VPH se aconseja hasta los 26 años. La mayoría de los adultos menores de 60 debe vacunarse contra la hepatitis B."
+      },
+      "quote": "HPV vaccination could prevent more than 90% of HPV-attributable cancers.",
+      "quoteEs": "La vacuna contra el VPH podría prevenir más del 90% de los cánceres causados por el VPH.",
+      "firstStep": { "en": "Ask your clinician which vaccines you need.", "es": "Pregunte a su profesional de salud qué vacunas necesita." },
+      "source": { "org": "CDC", "url": "https://www.cdc.gov/hpv/vaccines/index.html" },
+      "cancers": ["cervical", "liver"]
+    },
+    {
+      "id": "sun",
+      "icon": "sun",
+      "appliesIf": "sunGap",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Sun", "es": "Sol" },
+      "body": {
+        "en": "Most skin cancers come from the sun or tanning beds. People of every skin color can get skin cancer. Use shade, long sleeves and a hat. Use sunscreen with SPF 30 or more. Check your moles for changes each month.",
+        "es": "La mayoría de los cánceres de piel vienen del sol o de las camas de bronceado. Personas de todo color de piel pueden tenerlo. Use sombra, mangas largas y sombrero. Use protector solar SPF 30 o más. Revise sus lunares cada mes."
+      },
+      "quote": "Use broad spectrum sunscreen and lip balm with an SPF of 30 or higher.",
+      "quoteEs": "Use protector solar y bálsamo labial de amplio espectro con SPF de 30 o más.",
+      "firstStep": { "en": "Keep sunscreen by the door.", "es": "Deje el protector solar junto a la puerta." },
+      "source": { "org": "American Cancer Society", "url": "https://www.cancer.org/cancer/risk-prevention/sun-and-uv/uv-protection.html" },
+      "cancers": ["skin"]
+    },
+    {
+      "id": "radon",
+      "icon": "house",
+      "appliesIf": "radonUnknown",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Radon", "es": "Radón" },
+      "body": {
+        "en": "Radon is a gas that comes up from the ground into homes. You cannot see or smell it. It is the top cause of lung cancer in people who never smoked. A simple test tells you if your home has too much. If it does, it can be fixed.",
+        "es": "El radón es un gas que sube de la tierra a las casas. No se ve ni se huele. Es la causa principal de cáncer de pulmón en quienes nunca fumaron. Una prueba sencilla le dice si su casa tiene demasiado. Si lo tiene, se puede arreglar."
+      },
+      "quote": "Radon is the number one cause of lung cancer among non-smokers, according to EPA estimates.",
+      "quoteEs": "El radón es la causa número uno de cáncer de pulmón entre quienes no fuman, según cálculos de la EPA.",
+      "firstStep": { "en": "Get a radon test kit for your home.", "es": "Consiga una prueba de radón para su casa." },
+      "source": { "org": "EPA", "url": "https://www.epa.gov/radon/health-risk-radon" },
+      "cancers": ["lung"]
+    },
+    {
+      "id": "alcoholTobacco",
+      "icon": "flame",
+      "appliesIf": "smokesAndDrinks",
+      "reviewed": "2026-09-28",
+      "title": { "en": "Alcohol and tobacco together", "es": "Alcohol y tabaco juntos" },
+      "body": {
+        "en": "Using alcohol and tobacco together is much worse than either one alone. Together they raise the risk of mouth, throat, voice box and esophagus cancer. Cutting back on either one helps. Quitting both helps most.",
+        "es": "Usar alcohol y tabaco juntos es mucho peor que cualquiera de los dos solo. Juntos suben el riesgo de cáncer de boca, garganta, laringe y esófago. Reducir cualquiera de los dos ayuda. Dejar los dos ayuda más."
+      },
+      "quote": "People who use both alcohol and tobacco have much greater risks of developing cancers of the oral cavity, pharynx (throat), larynx, and esophagus than people who use either alcohol or tobacco alone.",
+      "quoteEs": "Las personas que usan alcohol y tabaco tienen riesgos mucho mayores de cáncer de la boca, faringe (garganta), laringe y esófago que quienes usan solo uno de los dos.",
+      "firstStep": { "en": "Call Quit Now Virginia, and set a weekly drink limit.", "es": "Llame a Quit Now Virginia y póngase un límite de tragos por semana." },
+      "source": { "org": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/alcohol/alcohol-fact-sheet" },
+      "cancers": []
+    }
+  ],
+
+  "cancers": [
+    {
+      "id": "breast",
+      "screening": "yes",
+      "guideline": "breast",
+      "name": { "en": "Breast cancer", "es": "Cáncer de mama" },
+      "blurb": { "en": "Screening works well. Family history can change when it starts.", "es": "La detección funciona bien. La historia familiar puede cambiar cuándo empieza." },
+      "raises": {
+        "en": ["Being a woman and getting older", "Close family with breast or ovarian cancer", "A BRCA gene change", "Chest radiation when young", "Drinking alcohol", "Extra weight after menopause"],
+        "es": ["Ser mujer y la edad", "Familiares cercanos con cáncer de mama u ovario", "Un cambio genético BRCA", "Radiación al pecho de joven", "Tomar alcohol", "Peso de más después de la menopausia"]
+      },
+      "change": {
+        "en": ["Drink less alcohol, or none", "Stay active", "Keep a healthy weight", "Get mammograms when they are due"],
+        "es": ["Beber menos alcohol, o nada", "Mantenerse activa", "Mantener un peso sano", "Hacerse mamografías cuando toca"]
+      },
+      "signs": {
+        "en": ["A new lump in the breast or armpit", "A change in breast size or shape", "Dimpled or red skin", "A nipple that turns in, or fluid from it"],
+        "es": ["Una bolita nueva en el seno o la axila", "Un cambio de tamaño o forma", "Piel con hoyuelos o roja", "Un pezón que se hunde, o que suelta líquido"]
+      },
+      "screeningText": { "en": "A mammogram every 2 years from 40 to 74.", "es": "Una mamografía cada 2 años de los 40 a los 74." }
+    },
+    {
+      "id": "cervical",
+      "screening": "yes",
+      "guideline": "cervical",
+      "name": { "en": "Cervical cancer", "es": "Cáncer de cuello uterino" },
+      "blurb": { "en": "One of the few cancers screening can prevent.", "es": "Uno de los pocos cánceres que la detección puede prevenir." },
+      "raises": {
+        "en": ["HPV infection that lasts", "Smoking", "A weak immune system", "Not getting screened"],
+        "es": ["Una infección de VPH que no se va", "Fumar", "Un sistema inmune débil", "No hacerse las pruebas"]
+      },
+      "change": {
+        "en": ["Get the HPV vaccine through age 26", "Get Pap or HPV tests when they are due", "Do not smoke"],
+        "es": ["Vacunarse contra el VPH hasta los 26", "Hacerse el Papanicolaou o la prueba de VPH cuando toca", "No fumar"]
+      },
+      "signs": {
+        "en": ["Bleeding after sex, between periods or after menopause", "Unusual discharge", "Pain in the pelvis"],
+        "es": ["Sangrado después de tener relaciones, entre reglas o después de la menopausia", "Flujo raro", "Dolor en la pelvis"]
+      },
+      "screeningText": { "en": "A Pap test every 3 years from 21. From 30 to 65, an HPV test every 5 years is one choice.", "es": "Un Papanicolaou cada 3 años desde los 21. De los 30 a los 65, una prueba de VPH cada 5 años es una opción." }
+    },
+    {
+      "id": "colorectal",
+      "screening": "yes",
+      "guideline": "colorectal",
+      "name": { "en": "Colorectal cancer", "es": "Cáncer colorrectal" },
+      "blurb": { "en": "Good tests exist, including one you do at home.", "es": "Hay buenas pruebas, incluso una que se hace en casa." },
+      "raises": {
+        "en": ["Getting older", "Close family with colorectal cancer", "Polyps found before", "Crohn’s disease or colitis", "Lynch syndrome", "Processed and red meat", "Alcohol and smoking", "Extra weight and little activity"],
+        "es": ["La edad", "Familiares cercanos con cáncer colorrectal", "Pólipos encontrados antes", "Enfermedad de Crohn o colitis", "Síndrome de Lynch", "Carne procesada y roja", "Alcohol y tabaco", "Peso de más y poca actividad"]
+      },
+      "change": {
+        "en": ["Eat whole grains, beans, fruit and vegetables", "Limit red meat, and avoid processed meat", "Be active", "Do not smoke, and drink less", "Get screened from 45"],
+        "es": ["Comer granos integrales, frijoles, frutas y verduras", "Comer poca carne roja y evitar la procesada", "Mantenerse activo", "No fumar y beber menos", "Hacerse la prueba desde los 45"]
+      },
+      "signs": {
+        "en": ["Blood in stool", "Bowel changes that last more than a few weeks", "Belly pain that does not go away", "Losing weight without trying"],
+        "es": ["Sangre en las heces", "Cambios al ir al baño que duran más de unas semanas", "Dolor de barriga que no se quita", "Bajar de peso sin intentarlo"]
+      },
+      "screeningText": { "en": "Ages 45 to 75. You can do a stool test at home each year. Or get a colonoscopy every 10 years.", "es": "De los 45 a los 75 años. Puede hacer una prueba de heces en casa cada año. O una colonoscopia cada 10 años." }
+    },
+    {
+      "id": "lung",
+      "screening": "yes",
+      "guideline": "lung",
+      "name": { "en": "Lung cancer", "es": "Cáncer de pulmón" },
+      "blurb": { "en": "Screening is for people who smoked a lot.", "es": "La detección es para personas que fumaron mucho." },
+      "raises": {
+        "en": ["Smoking, the biggest cause", "Radon at home", "Secondhand smoke", "Asbestos and other dusts at work", "Family history"],
+        "es": ["Fumar, la causa principal", "Radón en casa", "Humo de otros fumadores", "Asbesto y otros polvos en el trabajo", "Historia familiar"]
+      },
+      "change": {
+        "en": ["Quit smoking", "Test your home for radon", "Stay away from secondhand smoke"],
+        "es": ["Dejar de fumar", "Hacer la prueba de radón en casa", "Alejarse del humo de otros"]
+      },
+      "signs": {
+        "en": ["A cough that will not go away", "Coughing up blood", "Chest pain", "Feeling short of breath", "A hoarse voice"],
+        "es": ["Una tos que no se quita", "Toser sangre", "Dolor de pecho", "Falta de aire", "Voz ronca"]
+      },
+      "screeningText": { "en": "A low-dose CT scan each year, from age 50 to 80. It is for people who smoked 20 pack-years or more.", "es": "Una tomografía de dosis baja cada año, de los 50 a los 80. Es para quienes fumaron 20 paquetes-año o más." }
+    },
+    {
+      "id": "prostate",
+      "screening": "choice",
+      "guideline": "prostate",
+      "name": { "en": "Prostate cancer", "es": "Cáncer de próstata" },
+      "blurb": { "en": "No routine screening. A PSA test is a choice from 55.", "es": "No hay detección de rutina. El PSA es una decisión desde los 55." },
+      "raises": {
+        "en": ["Getting older", "Being Black", "A father or brother with prostate cancer", "Some gene changes, like BRCA2"],
+        "es": ["La edad", "Ser afroamericano", "Un padre o hermano con cáncer de próstata", "Algunos cambios genéticos, como BRCA2"]
+      },
+      "change": {
+        "en": ["There is no proven way to prevent it", "Stay active and keep a healthy weight", "Talk about the PSA test from 55, or 45 with higher risk"],
+        "es": ["No hay una forma comprobada de prevenirlo", "Mantenerse activo y con peso sano", "Hablar del PSA desde los 55, o 45 si tiene más riesgo"]
+      },
+      "signs": {
+        "en": ["Trouble passing urine", "Blood in urine or semen", "Hip or back pain that will not go away"],
+        "es": ["Dificultad para orinar", "Sangre en la orina o el semen", "Dolor de cadera o espalda que no se quita"]
+      },
+      "screeningText": { "en": "From 55 to 69, you can choose a PSA test after talking with a clinician.", "es": "De los 55 a los 69 puede elegir un PSA después de hablar con un profesional." }
+    },
+    {
+      "id": "skin",
+      "screening": "no",
+      "guideline": "skin",
+      "name": { "en": "Skin cancer", "es": "Cáncer de piel" },
+      "blurb": { "en": "No routine screening. Knowing your skin is the tool.", "es": "No hay detección de rutina. Conocer su piel es la herramienta." },
+      "raises": {
+        "en": ["Sun and tanning beds", "Sunburns, most of all as a child", "Skin that burns easily, though anyone can get it", "Many moles", "Family history of melanoma"],
+        "es": ["El sol y las camas de bronceado", "Quemaduras de sol, sobre todo de niño", "Piel que se quema fácil, aunque cualquiera puede tenerlo", "Muchos lunares", "Historia familiar de melanoma"]
+      },
+      "change": {
+        "en": ["Shade, sleeves, a hat and SPF 30+", "No tanning beds", "Check your skin each month"],
+        "es": ["Sombra, mangas, sombrero y SPF 30 o más", "Nada de camas de bronceado", "Revisar su piel cada mes"]
+      },
+      "signs": {
+        "en": ["A mole that changes size, shape or color", "A sore that does not heal", "A new spot that looks different from the rest"],
+        "es": ["Un lunar que cambia de tamaño, forma o color", "Una llaga que no sana", "Una mancha nueva que se ve distinta a las demás"]
+      },
+      "screeningText": { "en": "There is no routine skin screening for everyone. Ask about checks if you have a history of skin cancer.", "es": "No hay revisión de piel de rutina para todos. Pregunte si tiene historia de cáncer de piel." }
+    }
+  ]
+}
