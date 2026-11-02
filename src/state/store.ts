@@ -56,7 +56,8 @@ export const useApp = create<AppState>()(
   persist(
     (set) => ({
       lang: initialLang(),
-      theme: 'system',
+      // Light unless the person picks Dark or "Same as phone" in Settings.
+      theme: 'light',
       textScale: 1,
       seenIntro: false,
       helper: false,
@@ -105,8 +106,14 @@ export const useApp = create<AppState>()(
     }),
     {
       name: 'fv2',
-      version: 1,
+      version: 2,
       storage: createJSONStorage(appStorage),
+      // Version 1 started on "Same as phone"; the app now starts light, so a
+      // saved "system" from then (almost always the untouched default) becomes light.
+      migrate: (persisted, version) => {
+        const p = (persisted || {}) as Partial<AppState>;
+        return version < 2 && p.theme === 'system' ? { ...p, theme: 'light' } : p;
+      },
       partialize: (s) => ({
         lang: s.lang, theme: s.theme, textScale: s.textScale, seenIntro: s.seenIntro, helper: s.helper,
         answers: s.answers, step: s.step, checkDone: s.checkDone, planUpdated: s.planUpdated,

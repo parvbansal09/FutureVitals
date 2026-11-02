@@ -1,56 +1,48 @@
-// The FutureVitals mark, redrawn as vectors from the brand logo: a rounded
-// cross, teal across the top and right, pink down the left and bottom, with a
-// pink stethoscope: earpieces at the top left, the tube across the middle and
-// the chest piece in the right arm. Brand colors: teal #285F5A, pink #EBC3D7.
-// Vector strokes can draw themselves in, which is what the launch animation does.
+// The FutureVitals logo, drawn from vectors traced off the brand logo
+// (resources/logo.jpg, by scripts/trace-logo.mjs): a rounded cross, teal
+// across the top and right, pink down the left and bottom, with a pink
+// stethoscope over it, and FUTURE VITALS lettered beneath. The same paths
+// make the icons and splash screens (scripts/make-icons.mjs). Outlines can
+// draw themselves in, which is what the launch animation does.
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { ease } from '../motion/presets';
+import logo from './logo.json';
 
-// Shared with scripts/make-icons.mjs and index.html; keep them in step.
-export const MARK = {
-  teal: 'M24 24V14a8 8 0 0 1 16 0v10h10a8 8 0 0 1 0 16H40',
-  pink: 'M24 24H14a8 8 0 0 0 0 16h10v10a8 8 0 0 0 16 0V40',
-  ears: 'M9 6c0 7 2 11 5 14c3-3 5-7 5-14M14 20v4',
-  tube: 'M14 32h7c4 0 6 6 10 6s6-6 10-6h4',
-  chest: { cx: 50, cy: 32, r: 4.4 },
-  tips: [{ cx: 9, cy: 5.5 }, { cx: 19, cy: 5.5 }],
-};
+const { mark, word, lockup } = logo;
 
-export function LogoMark({ size = 40, animate = false, delay = 0, detail = true }: { size?: number; animate?: boolean; delay?: number; detail?: boolean }) {
+export function LogoMark({ size = 40, animate = false, delay = 0 }: { size?: number; animate?: boolean; delay?: number }) {
   const reduce = useReducedMotion();
   const draw = animate && !reduce;
-  const t = (d: number, dur = 0.9) => ({ pathLength: { delay: delay + d, duration: dur, ease }, opacity: { delay: delay + d, duration: 0.01 } });
-  const line = (d: string, color: string, width: number, at: number, dur?: number) => (
-    <motion.path d={d} stroke={color} strokeWidth={width}
-      initial={draw ? { pathLength: 0, opacity: 0 } : false} animate={{ pathLength: 1, opacity: 1 }} transition={t(at, dur)} />
+  // Each shape's outline draws in, then its color floods in behind it.
+  const shape = (d: string, color: string, at: number) => (
+    <motion.path d={d} fill={color} stroke={draw ? color : 'none'} strokeWidth={0.5}
+      initial={draw ? { pathLength: 0, fillOpacity: 0 } : false}
+      animate={{ pathLength: 1, fillOpacity: 1 }}
+      transition={{ pathLength: { delay: delay + at, duration: 0.8, ease }, fillOpacity: { delay: delay + at + 0.45, duration: 0.4 } }} />
   );
-  const pop = (at: number) => ({ initial: draw ? { scale: 0 } : false, animate: { scale: 1 }, transition: { delay: delay + at, type: 'spring' as const, stiffness: 420, damping: 18 } });
   return (
-    <svg viewBox="0 0 64 64" width={size} height={size} fill="none" strokeLinecap="round" strokeLinejoin="round" aria-hidden className="logo-mark">
-      {line(MARK.teal, 'var(--mark-a)', 4.6, 0)}
-      {line(MARK.pink, 'var(--mark-b)', 4.6, 0.18)}
-      {line(MARK.ears, 'var(--mark-b)', 3.4, 0.5, 0.6)}
-      {MARK.tips.map((p, i) => <motion.circle key={i} {...p} r={2} fill="var(--mark-b)" style={{ transformOrigin: `${p.cx}px ${p.cy}px` }} {...pop(0.95)} />)}
-      {detail && line(MARK.tube, 'var(--mark-b)', 3, 0.7, 0.6)}
-      <motion.circle {...MARK.chest} fill="var(--mark-b)" stroke="var(--mark-a)" strokeWidth={2.6}
-        style={{ transformOrigin: `${MARK.chest.cx}px ${MARK.chest.cy}px` }} {...pop(1.05)} />
+    <svg viewBox="0 0 100 100" width={size} height={size} aria-hidden className="logo-mark">
+      {shape(mark.teal, 'var(--mark-a)', 0)}
+      {shape(mark.pink, 'var(--mark-b)', 0.15)}
+      {shape(mark.stethoscope, 'var(--mark-b)', 0.4)}
     </svg>
   );
 }
 
+/** FUTURE VITALS in the logo's own lettering. Sized by the font size around it. */
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <span className={`wordmark ${className || ''}`}>
-      Future<span className="wordmark-accent">Vitals</span>
-    </span>
+    <svg viewBox={`0 0 ${word.w} ${word.h}`} className={`wordmark ${className || ''}`} role="img" aria-label="FutureVitals">
+      <g fill="var(--mark-a)" fillRule="evenodd">{word.glyphs.map((d, i) => <path key={i} d={d} />)}</g>
+    </svg>
   );
 }
 
 /**
- * Launch sequence: the mark draws itself, the name rises letter by letter,
- * then the whole thing lifts away. About 1.4 s the first time, 0.8 s after
- * that, instant with reduced motion. A tap skips it.
+ * Launch sequence: the mark draws itself, the letters rise one by one beneath
+ * it, as in the logo, then the whole thing lifts away. About 1.4 s the first
+ * time, 0.8 s after that, instant with reduced motion. A tap skips it.
  */
 export function Splash({ quick, onDone }: { quick: boolean; onDone: () => void }) {
   const reduce = useReducedMotion();
@@ -60,7 +52,7 @@ export function Splash({ quick, onDone }: { quick: boolean; onDone: () => void }
     const id = setTimeout(() => setShow(false), quick ? 820 : 1450);
     return () => clearTimeout(id);
   }, [quick, reduce, onDone]);
-  const letters = 'FutureVitals'.split('');
+  const size = quick ? 104 : 128;
   return (
     <AnimatePresence onExitComplete={onDone}>
       {show && (
@@ -73,21 +65,19 @@ export function Splash({ quick, onDone }: { quick: boolean; onDone: () => void }
           aria-hidden
         >
           <div className="splash-glow" />
-          <LogoMark size={quick ? 76 : 92} animate delay={0.05} />
-          <div className="splash-word" aria-label="FutureVitals">
-            {letters.map((ch, i) => (
-              <motion.span
-                key={i}
-                className={i >= 6 ? 'wordmark-accent' : undefined}
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (quick ? 0.25 : 0.55) + i * 0.035, type: 'spring', stiffness: 500, damping: 30 }}
-              >
-                {ch}
-              </motion.span>
-            ))}
-          </div>
-          <motion.div className="splash-line" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: quick ? 0.35 : 0.8, duration: 0.5, ease }} />
+          <LogoMark size={size} animate delay={0.05} />
+          {/* The lettering sits under the mark where the logo puts it. */}
+          <svg className="splash-word" viewBox={`0 0 ${word.w} ${word.h}`} width={(size * word.w) / 100}
+            style={{ marginTop: (size * (lockup.word.y - 100)) / 100 }}>
+            <g fill="var(--mark-a)" fillRule="evenodd">
+              {word.glyphs.map((d, i) => (
+                <motion.path key={i} d={d}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: (quick ? 0.25 : 0.55) + i * 0.04, type: 'spring', stiffness: 500, damping: 30 }} />
+              ))}
+            </g>
+          </svg>
         </motion.div>
       )}
     </AnimatePresence>

@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E5F1EE" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0D1715" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#E5F1EE" />
     <meta name="description" content="Answer a few questions about your health and habits. See which cancer screenings may apply to you and where to find care nearby. Your answers stay on your phone." />
     <meta name="referrer" content="no-referrer" />
     <title>FutureVitals</title>
@@ -15,22 +14,17 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="preload" href="./fonts/tinos-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <style>
-      /* Paints before the app loads, so the first frame is already on brand. */
+      /* Paints before the app loads, so the first frame is already on brand.
+         The app opens light whatever the phone's setting. */
       html, body { margin: 0; background: #E5F1EE; }
-      @media (prefers-color-scheme: dark) { html, body { background: #0D1715; } }
       #boot { position: fixed; inset: 0; display: grid; place-items: center; }
-      #boot svg { width: 72px; height: 72px; opacity: .9; }
+      #boot img { width: 88px; height: 88px; opacity: .9; }
     </style>
   </head>
   <body>
     <div id="root">
       <div id="boot" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M24 24V14a8 8 0 0 1 16 0v10h10a8 8 0 0 1 0 16H40" stroke="#285F5A" />
-          <path d="M24 24H14a8 8 0 0 0 0 16h10v10a8 8 0 0 0 16 0V40" stroke="#EBC3D7" />
-          <path d="M9 6c0 7 2 11 5 14c3-3 5-7 5-14M14 20v4" stroke="#EBC3D7" stroke-width="3.4" />
-          <circle cx="50" cy="32" r="4.4" fill="#EBC3D7" stroke="#285F5A" stroke-width="2.6" />
-        </svg>
+        <img src="./icons/mark.svg" alt="" width="88" height="88" />
       </div>
     </div>
     <noscript>FutureVitals needs JavaScript to run.</noscript>

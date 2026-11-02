@@ -141,9 +141,9 @@
   --glow-b: rgba(235, 195, 215, .55);
   --glow-c: rgba(233, 180, 76, .14);
 
-  /* brand mark */
-  --mark-a: #285F5A;
-  --mark-b: #EBC3D7;
+  /* the logo's own teal and pink (resources/logo.jpg) */
+  --mark-a: #046B63;
+  --mark-b: #EAA7C0;
 }
 
 /* ── color: dark. Follows the system unless the person picked light. ──── */
@@ -187,7 +187,7 @@
     --glow-b: rgba(235, 195, 215, .12);
     --glow-c: rgba(233, 180, 76, .08);
     --mark-a: #7DBDB3;
-    --mark-b: #EBC3D7;
+    --mark-b: #EAA7C0;
   }
 }
 :root[data-theme='dark'] {
@@ -229,6 +229,6 @@
   --glow-b: rgba(235, 195, 215, .12);
   --glow-c: rgba(233, 180, 76, .08);
   --mark-a: #7DBDB3;
-  --mark-b: #EBC3D7;
+  --mark-b: #EAA7C0;
 }
 

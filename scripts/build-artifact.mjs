@@ -55,18 +55,17 @@ const pick = (re) => [...html.matchAll(re)].map((m) => m[0]);
 const styles = pick(/<link rel="stylesheet"[^>]*>/g);
 const preloads = pick(/<link rel="modulepreload"[^>]*>/g);
 const scripts = pick(/<script type="module"[^>]*><\/script>/g);
-const root = html.match(/<div id="root">[\s\S]*?<\/div>\s*<\/div>/);
+// The boot screen's mark comes inline, since the icons folder is not shipped.
+const bootMark = fs.readFileSync(path.join(ROOT, 'public/icons/mark.svg'), 'utf8').trim();
+const root = html.match(/<div id="root">[\s\S]*?<\/div>\s*<\/div>/)?.map((r) => r.replace(/<img src="\.\/icons\/mark\.svg"[^>]*>/, bootMark));
 if (!styles.length || !scripts.length || !root) throw new Error('index.html did not have the expected stylesheet, script and root');
 
 const page = `<title>FutureVitals</title>
 <style>
-  /* Paints before the app loads, in the viewer's light or dark theme. */
-  :root { --boot-bg: #E5F1EE; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --boot-bg: #0D1715; color-scheme: dark; } }
-  :root[data-theme="dark"] { --boot-bg: #0D1715; color-scheme: dark; }
-  html, body { margin: 0; height: 100%; background: var(--paper, var(--boot-bg)); }
-  #boot { position: fixed; inset: 0; display: grid; place-items: center; }
-  #boot svg { width: 72px; height: 72px; opacity: .9; }
+  /* Paints before the app loads. The app opens light whatever the viewer's theme. */
+  html, body { margin: 0; height: 100%; background: var(--paper, #E5F1EE); }
+  #boot { position: fixed; inset: 0; display: grid; place-items: center; background: #E5F1EE; }
+  #boot svg { width: 88px; height: 88px; opacity: .9; }
 </style>
 ${styles.join('\n')}
 <style>

@@ -80,7 +80,7 @@ export function Screen({ id, title, kicker, lead, compactTitle, back, hero, top,
               </motion.button>
             ) : (
               <button type="button" className="brand-btn" onClick={() => navigate('/')} aria-label={t('nav.home')}>
-                <LogoMark size={28} detail={false} />
+                <LogoMark size={30} />
                 {/* As the big title scrolls away, the screen's name takes the wordmark's place. */}
                 <span className="brand-swap">
                   <motion.span style={{ opacity: brandOpacity }}><Wordmark /></motion.span>

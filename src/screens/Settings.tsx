@@ -126,7 +126,7 @@ function About() {
         <Card>
           <p className="mini-label">{t('about.appearance')}</p>
           <Segmented group="theme" label={t('about.appearance')} value={theme} onChange={(v) => setTheme(v as Theme)}
-            items={[{ id: 'system', label: t('about.themeSystem') }, { id: 'light', label: t('about.themeLight') }, { id: 'dark', label: t('about.themeDark') }]} />
+            items={[{ id: 'light', label: t('about.themeLight') }, { id: 'dark', label: t('about.themeDark') }, { id: 'system', label: t('about.themeSystem') }]} />
           <p className="mini-label">{t('about.textSize')}</p>
           <div className="text-size">
             <motion.button type="button" className="icon-btn big" onClick={() => setTextScale(textScale - 0.1)} disabled={textScale <= 0.9} aria-label={t('about.textSmaller')} whileTap={{ scale: 0.88 }}><AArrowDown size={22} /></motion.button>

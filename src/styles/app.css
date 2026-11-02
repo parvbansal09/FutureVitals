@@ -223,9 +223,9 @@
   color: var(--accent-ink);
   font-weight: 700;
 }
-.brand-btn { display: inline-flex; align-items: center; gap: 8px; padding: 6px; border-radius: var(--r-sm); }
-.wordmark { font-size: 21px; font-weight: 700; letter-spacing: -0.015em; color: var(--ink); white-space: nowrap; }
-.wordmark-accent { color: var(--accent-ink); }
+.brand-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px; border-radius: var(--r-sm); }
+/* The logo's lettering, as tall as the capitals of 21 px type. */
+.wordmark { display: block; height: 0.7em; width: auto; font-size: 21px; }
 .reading-progress {
   position: absolute;
   left: 0; right: 0; bottom: 0;
@@ -546,7 +546,6 @@ a.action .action-hint { overflow-wrap: anywhere; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
   background: var(--paper);
   cursor: pointer;
 }
@@ -560,10 +559,8 @@ a.action .action-hint { overflow-wrap: anywhere; }
   animation: breathe 2.6s ease-in-out infinite;
 }
 @keyframes breathe { 0%, 100% { transform: scale(0.9); opacity: 0.7; } 50% { transform: scale(1.06); opacity: 1; } }
-.splash-word { position: relative; display: flex; font-size: 40px; font-weight: 700; letter-spacing: -0.02em; }
-.splash-word span { display: inline-block; }
-.splash-line { position: relative; width: 120px; height: 2px; border-radius: 2px; background: var(--accent); }
-.logo-mark { overflow: visible; }
+.splash-word { position: relative; display: block; overflow: visible; }
+.logo-mark { position: relative; display: block; overflow: visible; }
 
 .ambient { position: absolute; inset: -30% -20% auto -20%; height: 140%; pointer-events: none; z-index: 0; overflow: hidden; }
 .blob {

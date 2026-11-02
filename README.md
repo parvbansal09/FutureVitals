@@ -74,8 +74,8 @@ machine through `playwright-core`; nothing extra is downloaded.
 
 The same build is wrapped with Capacitor, like v1. `android/` and `ios/` are
 generated and configured: camera and location permissions, backups off on
-Android, no orientation lock, the app's own icons and light and dark splash
-screens. Neither has been compiled yet (no Android SDK or Xcode on the build
+Android, no orientation lock, the app's own icons and light splash screens
+(the app opens light whatever the phone's setting). Neither has been compiled yet (no Android SDK or Xcode on the build
 machine). See [NATIVE.md](NATIVE.md).
 
 ```bash
@@ -111,7 +111,8 @@ src/components/     design system components
 src/styles/         tokens.css (the single token file), base.css, app.css, print.css
 src/platform/       native bridges, on-device storage, barcode, OCR, product lookup
 tests/              unit tests
-scripts/            content checks, link checks, e2e, screenshots, icons, ZIP table
+scripts/            content checks, link checks, e2e, screenshots, logo tracing, icons, ZIP table
+resources/          logo.jpg (the brand logo every mark and icon is traced from)
 ```
 
 Product data comes from Open Food Facts under the Open Database License. The
@@ -212,10 +213,15 @@ cancers: the cards keep a fixed order.
 - 26 Richmond-area screening sites added: Massey/VCU Health screening lines,
   federally funded health centers, free clinics, health departments and Massey
   Community Resource Centers.
-- A design system in the logo's colors (teal #285F5A for text, buttons and
-  links; pink #EBC3D7 for the mark and soft surfaces; a pale teal ground,
-  #E5F1EE, instead of white), light and dark themes (a sun/moon button in the top bar; Settings can follow the phone),
-  and motion throughout that respects "reduce motion".
+- A design system in the brand colors (teal #285F5A for text, buttons and
+  links; pink #EBC3D7 for soft surfaces; a pale teal ground, #E5F1EE, instead
+  of white). Light by default, whatever the phone's setting, with a dark theme
+  (a sun/moon button in the top bar; Settings can also follow the phone), and
+  motion throughout that respects "reduce motion".
+- The FutureVitals logo (resources/logo.jpg) traced into vectors
+  (`scripts/trace-logo.mjs` writes `src/components/logo.json`), in its own
+  teal #046B63 and pink #EAA7C0: the top bar, the launch animation, About, the
+  tab icon, and the app icons and splash screens (`npm run icons`).
 - `npm run artifact` builds a preview for a claude.ai Artifact into
   `dist-artifact/`: the same app, with camera, location, photo reading,
   barcode lookup and printing turned off (that viewer blocks them), and phone

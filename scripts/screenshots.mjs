@@ -86,7 +86,7 @@ const context = await browser.newContext({
 });
 if (!fresh) {
   await context.addInitScript((state) => {
-    try { localStorage.setItem('fv2', JSON.stringify({ state, version: 1 })); } catch { /* ignore */ }
+    try { localStorage.setItem('fv2', JSON.stringify({ state, version: 2 })); } catch { /* ignore */ }
   }, persona);
 }
 fs.mkdirSync(OUT, { recursive: true });

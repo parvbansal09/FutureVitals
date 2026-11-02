@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- The app's warm paper color, behind the adaptive icon's mark. -->
-    <color name="ic_launcher_background">#E5F1EE</color>
+    <!-- White behind the adaptive icon's mark, as in the logo. -->
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>

@@ -68,7 +68,7 @@ for (const [scale, theme] of [[1, 'light'], [2, 'light'], [1, 'dark']]) {
     viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, hasTouch: true, isMobile: true, colorScheme: theme,
   });
   await context.addInitScript((s) => {
-    try { localStorage.setItem('fv2', JSON.stringify({ state: s, version: 1 })); } catch { /* blocked */ }
+    try { localStorage.setItem('fv2', JSON.stringify({ state: s, version: 2 })); } catch { /* blocked */ }
   }, { ...persona, textScale: scale, theme });
 
   for (const route of ROUTES) {

@@ -13,7 +13,7 @@ src/ + content/  ──npm run build──▶  dist/  ──cap sync──▶  a
 npm run sync           # build, then copy dist/ into android/ and ios/
 npm run open:android   # sync, then open Android Studio
 npm run open:ios       # sync, then open Xcode (needs a Mac)
-npm run icons          # redraw launcher icons and splash screens from the vector mark
+npm run icons          # redraw launcher icons and splash screens from the traced logo
 ```
 
 Run `npm run sync` after every change to the app or its content.
@@ -33,7 +33,7 @@ Run `npm run sync` after every change to the app or its content.
 | Orientation | Not locked (WCAG 2.2 AA, 1.3.4) | Portrait and landscape |
 | Languages | Follows the in-app choice | `CFBundleLocalizations`: en, es |
 | Export compliance | n/a | `ITSAppUsesNonExemptEncryption = false` (HTTPS only) |
-| Icon and splash | Adaptive icon on the pale teal ground (#E5F1EE), legacy square and round icons, light and dark splash | App Store icon (no transparency), light and dark launch image |
+| Icon and splash | Adaptive icon on white, as in the logo, legacy square and round icons, light splash | App Store icon on white (no transparency), light launch image |
 
 The iOS permission prompts are written in English and Spanish in one line,
 because `Info.plist` holds one string per key. To show one language at a
