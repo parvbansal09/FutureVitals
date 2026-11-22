@@ -1,7 +1,7 @@
 node_modules/
 dist/
 public/ocr/
-screenshots/
+/screenshots/
 *.log
 .DS_Store
 android/app/build/
