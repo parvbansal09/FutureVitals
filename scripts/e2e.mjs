@@ -11,6 +11,7 @@
 //   8. Network audit: nothing leaves the device during all of the above.
 //
 //   npm run build && node scripts/e2e.mjs
+//   node scripts/e2e.mjs --url=https://parvbansal09.github.io/FutureVitals/
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -29,8 +30,10 @@ const browserPath = [
 ].find((p) => fs.existsSync(p));
 if (!browserPath) throw new Error('No Edge or Chrome found.');
 
-const server = await preview({ root: ROOT, preview: { port: 4181, strictPort: false }, logLevel: 'silent' });
-const base = server.resolvedUrls.local[0];
+// --url=https://... runs the same checks against a deployed copy instead of the local build.
+const urlArg = process.argv.find((a) => a.startsWith('--url='));
+const server = urlArg ? null : await preview({ root: ROOT, preview: { port: 4181, strictPort: false }, logLevel: 'silent' });
+const base = urlArg ? urlArg.slice('--url='.length) : server.resolvedUrls.local[0];
 const origin = new URL(base).origin;
 const browser = await chromium.launch({ executablePath: browserPath, headless: true });
 const context = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'en-US', hasTouch: true, isMobile: true, serviceWorkers: 'block' });
@@ -471,7 +474,7 @@ ok('Network audit: no request left the device', outbound.length === 0, outbound.
 ok('No page errors', errors.length === 0, errors.join(' | '));
 
 await browser.close();
-await new Promise((r) => server.httpServer.close(r));
+if (server) await new Promise((r) => server.httpServer.close(r));
 const failed = results.filter((r) => !r.pass).length;
 console.log(`\n${results.length - failed}/${results.length} checks passed`);
 process.exit(failed ? 1 : 0);

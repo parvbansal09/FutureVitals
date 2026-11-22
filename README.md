@@ -128,7 +128,9 @@ npm run check:links    # every outside link and phone number still works
 ```
 
 `e2e` and `a11y` drive the Microsoft Edge or Google Chrome already installed on
-your computer, so nothing else is downloaded. The same checks run on every push
+your computer, so nothing else is downloaded. To run the end-to-end checks
+against a deployed copy instead, use
+`node scripts/e2e.mjs --url=https://parvbansal09.github.io/FutureVitals/`. The same checks run on every push
 in [GitHub Actions](.github/workflows/ci.yml).
 
 The unit tests include 44 guideline personas and 4,000 randomly generated
