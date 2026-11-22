@@ -14,8 +14,7 @@
     "reviewedOn": null,
     "note": "Every screen has Spanish text. It is a draft until a native-speaking health communicator reviews it, and the Language screen says so."
   },
-  "feedbackEmail": "engagemassey@vcu.edu",
-  "feedbackEmailNote": "Massey-owned address. Confirm with Massey's Community Outreach and Engagement office before release.",
+  "feedbackUrl": "https://github.com/parvbansal09/FutureVitals/issues",
   "guidelineOrgs": [
     {
       "name": "U.S. Preventive Services Task Force (USPSTF)",

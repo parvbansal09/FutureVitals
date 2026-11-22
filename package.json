@@ -1,8 +1,14 @@
 {
   "name": "futurevitals",
   "version": "2.0.0",
-  "private": true,
   "description": "FutureVitals: a cancer screening navigation app for Virginia communities. On-device, bilingual (EN/ES), offline.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parvbansal09/FutureVitals.git"
+  },
+  "homepage": "https://parvbansal09.github.io/FutureVitals/",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",

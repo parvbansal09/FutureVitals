@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import {
-  AArrowDown, AArrowUp, ArrowRight, BookOpen, Check, Database, EyeOff, FileText, HandHelping, History, Mail,
+  AArrowDown, AArrowUp, ArrowRight, BookOpen, Check, Database, EyeOff, FileText, HandHelping, History, MessageSquareText,
   Send, ShieldCheck, Stethoscope, Trash, UserRound,
 } from 'lucide-react';
 import { Screen } from '../components/Screen';
@@ -182,7 +182,7 @@ function About() {
       </Item>
 
       <Item className="stack-sm">
-        <LinkButton href={`mailto:${meta.feedbackEmail}?subject=FutureVitals%20feedback`} value={meta.feedbackEmail} full variant="secondary" icon={<Mail size={20} aria-hidden />}>{t('about.feedback')}</LinkButton>
+        <LinkButton href={meta.feedbackUrl} full variant="secondary" icon={<MessageSquareText size={20} aria-hidden />}>{t('about.feedback')}</LinkButton>
         <p className="small muted center">{t('about.feedbackNote')}</p>
         <Button full variant="ghost" icon={<UserRound size={20} aria-hidden />} onClick={() => { resetIntro(); navigate('/start'); }}>{t('about.beforeStart')}</Button>
       </Item>
@@ -210,7 +210,7 @@ export function PolicyScreen() {
         {sections.map((s, i) => (
           <Item key={i} className="chapter-section"><h2>{s.h}</h2><p>{s.p}</p></Item>
         ))}
-        <Item><p className="small muted">{meta.feedbackEmail}</p></Item>
+        <Item><p className="small muted"><a href={meta.feedbackUrl} target="_blank" rel="noopener noreferrer">{meta.feedbackUrl}</a></p></Item>
       </Stagger>
     </Screen>
   );

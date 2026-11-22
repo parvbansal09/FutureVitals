@@ -23,7 +23,8 @@ export interface Meta {
   contentUpdated: string;
   clinicalReviewer: { name: string | null; credentials: string | null; reviewedOn: string | null };
   spanish: { status: 'draft' | 'reviewed'; reviewer: string | null; reviewedOn: string | null };
-  feedbackEmail: string;
+  /** Where feedback goes: the public issue tracker. */
+  feedbackUrl: string;
   guidelineOrgs: { name: string; url: string }[];
   productData: { name: string; url: string; license: string; licenseUrl: string };
   changelog: { date: string; en: string; es: string }[];
